@@ -2,11 +2,11 @@ Title: Home
 
 ----
 
-Headline: Welcome to Kirby's Starterkit
+Headline: 
 
 ----
 
-Subheadline: A fully documented example project
+Subheadline: 
 
 ----
 

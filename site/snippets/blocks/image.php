@@ -13,31 +13,47 @@
   https://getkirby.com/docs/guide/templates/snippets
 */
 
-$src = null;
+$alt      = $block->alt();
+$caption  = $block->caption();
+$contain  = $block->crop()->isFalse();
+$link     = $block->link();
+$ratio    = $block->ratio()->or('auto');
+$class    = $ratio != 'auto' ? 'img' : 'auto';
+$src      = null;
+$lightbox = $link->isEmpty();
 
-if ($block->location()->value() === 'web') {
-    $alt = $block->alt();
-    $src = $block->src();
-} else if ($image = $block->image()->toFile()) {
-    $alt = $block->alt()->or($image->alt());
-    $src = $image->url();
+if ($block->location() == 'web') {
+    $src      = $block->src();
+    $srcValue = $src->escape('attr');
+} elseif ($image = $block->image()->toFile()) {
+    $alt = $alt->or($image->alt());
+    $src = $srcValue = $image->url();
 }
 
-?>
-<?php if ($src): ?>
-<figure>
-  <?php snippet('image', [
-    'alt'      => $alt,
-    'contain'  => $block->crop()->isFalse(),
-    'lightbox' => $block->link()->isEmpty(),
-    'href'     => $block->link()->or($src),
-    'src'      => $src,
-    'ratio'    => $block->ratio()->or('auto')
-  ]) ?>
+if ($ratio !== 'auto') {
+  $ratio = Str::split($ratio, '/');
+  $w = $ratio[0] ?? 1;
+  $h = $ratio[1] ?? 1;
+}
 
-  <?php if ($block->caption()->isNotEmpty()): ?>
+$attrs = attr([
+  'class'         => $class,
+  'data-contain'  => $contain,
+  'data-lightbox' => $lightbox,
+  'href'          => $link->or($src),
+  'style'         => '--w:' . $w . '; --h:' . $h,
+]);
+
+?>
+<?php if ($srcValue): ?>
+<figure>
+  <a <?= $attrs ?>>
+    <img src="<?= $srcValue ?>" alt="<?= esc($alt, 'attr') ?>">
+  </a>
+
+  <?php if ($caption->isNotEmpty()): ?>
   <figcaption class="img-caption">
-    <?= $block->caption() ?>
+    <?= $caption ?>
   </figcaption>
   <?php endif ?>
 </figure>
