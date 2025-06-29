@@ -1,4 +1,4 @@
-Title: tenth Copy Copy Copy
+Title: tenth Copy Copy
 
 ----
 
@@ -6,11 +6,11 @@ Subtitle: tennner
 
 ----
 
-Number: 10
+Number: 12
 
 ----
 
-Date: 2025-07-27
+Date: 2025-07-28
 
 ----
 
@@ -30,4 +30,4 @@ Pics: - 'file://mqXaFhn01IKD1lMN'
 
 ----
 
-Uuid: svJM0qNCnZTyJ4L3
+Uuid: GDYSzw9C6E0NHsun

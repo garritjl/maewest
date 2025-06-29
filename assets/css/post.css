@@ -1,3 +1,5 @@
+@import url("satoshi.css");
+
 html {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
@@ -21,7 +23,7 @@ article {
 }
 
 h1 {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Bold, sans-serif;
     font-size: 36pt;
     font-weight: 500;
     font-style: normal;
@@ -35,7 +37,7 @@ h1 {
   }
   
   h2 {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 36pt;
     font-weight: 300;
     font-style: normal;
@@ -49,7 +51,7 @@ h1 {
   }
 
   h3 {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Bold, sans-serif;
     font-size: 22pt;
     font-weight: 500;
     font-style: normal;
@@ -61,7 +63,7 @@ h1 {
   }
 
   h4 {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -73,7 +75,7 @@ h1 {
   }
 
   h5.caption {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -85,9 +87,9 @@ h1 {
   }
   
   p {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 16pt;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     margin-top: 0;
     margin-bottom: 0;
@@ -112,7 +114,7 @@ h1 {
   }
   
   li {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 16pt;
     font-weight: 300;
     font-style: normal;
@@ -135,7 +137,7 @@ h1 {
   }
   
   .navlinks {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -149,7 +151,7 @@ h1 {
   }
 
   .logo {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -163,7 +165,7 @@ h1 {
   }
 
   .footer {
-    font-family: itc-american-typewriter, serif;
+    font-family: Satoshi-Regular, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;

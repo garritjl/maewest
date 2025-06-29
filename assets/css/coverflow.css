@@ -1,3 +1,5 @@
+@import url('satoshi.css');
+
 * {
     box-sizing: border-box;
   }
@@ -29,7 +31,7 @@
     text-align: center;
     min-width: 200px;
   }
-  
+
   .drag-proxy {
     visibility: hidden;
     position: absolute;
