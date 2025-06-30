@@ -43,7 +43,7 @@
 <!--
   <header class="header">
     <span class="logo">
-    <a class="green" href="<?= $site->url() ?>">
+    <a class="pink" href="<?= $site->url() ?>">
       <?= $site->title()->esc() ?>
     </a>
   </span>
@@ -53,17 +53,17 @@
 
       <span>
 
-      <a class="green" href="<?= $site->url() ?>">
+      <a class="pink" href="<?= $site->url() ?>">
       <img style="margin-bottom: -1.8pt; margin-right: 3pt; margin-left: -1pt;" src="/favicon-16x16.png" ><?= $site->title()->esc() ?></a>
       /
       <?php $featured = page('works')->children()->shuffle()->first(); ?>
-      <a class="green" href="<?= $featured->url() ?>">random page</a>
+      <a class="pink" href="<?= $featured->url() ?>">random page</a>
       —
       
     
 
       <?php foreach ($site->children()->listed() as $item): ?>
-      <a class="green" href="<?= $item->url() ?>">
+      <a class="pink" href="<?= $item->url() ?>">
       <?= $item->title()->esc() ?></a>,
       <?php endforeach ?>
 

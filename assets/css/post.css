@@ -24,6 +24,7 @@ article {
 
 h1 {
     font-family: Satoshi-Bold, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 36pt;
     font-weight: 500;
     font-style: normal;
@@ -38,6 +39,7 @@ h1 {
   
   h2 {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 36pt;
     font-weight: 300;
     font-style: normal;
@@ -52,6 +54,7 @@ h1 {
 
   h3 {
     font-family: Satoshi-Bold, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 22pt;
     font-weight: 500;
     font-style: normal;
@@ -64,6 +67,7 @@ h1 {
 
   h4 {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -76,6 +80,7 @@ h1 {
 
   h5.caption {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -88,12 +93,12 @@ h1 {
   
   p {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 16pt;
     font-weight: 400;
     font-style: normal;
     margin-top: 0;
     margin-bottom: 0;
-    
     margin-right: 0;
     padding: 0 0 0 0;
     line-height: 18pt;
@@ -115,6 +120,7 @@ h1 {
   
   li {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 16pt;
     font-weight: 300;
     font-style: normal;
@@ -138,6 +144,7 @@ h1 {
   
   .navlinks {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -152,6 +159,7 @@ h1 {
 
   .logo {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -166,6 +174,7 @@ h1 {
 
   .footer {
     font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
     font-weight: 300;
     font-style: normal;
@@ -177,30 +186,30 @@ h1 {
     z-index: 1000;
   }
 
-/** local links (green) **/
+/** local links (pink) **/
 
-  .green:link {
-    color: #64bc2a;
+  .pink:link {
+    color: #c755c1;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
   }
   
-  .green:hover {
-    color: #64bc2a;
+  .pink:hover {
+    color: #c755c1;
     border-radius: 2.5pt;
     background-color: yellow; 
     text-decoration: none;
   }
   
-  .green:visited {
-    color: #64bc2a;
+  .pink:visited {
+    color: #c755c1;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
   }
   
-  .green:active {
+  .pink:active {
     color: #ff0000;
     border-radius: 2.5pt;
     background-color: yellow; 
@@ -300,6 +309,11 @@ img {
   max-width: 100%;
   max-height: 98vh;
   object-fit: contain;
+}
+
+img#galleryimage {
+  border: 0.5px solid rgb(230, 230, 230);
+  border-radius: 2px; 
 }
 
 img.coverimage {

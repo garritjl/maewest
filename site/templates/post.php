@@ -3,14 +3,14 @@
 <article>
         <h1><?= $page->title()->kti() ?></h1>
         <h2><?= $page->subtitle()->kti() ?></h2>
-        <h4><?= $page->date()->toDate('D M Y') ?></h4>
+        <h4><?= $page->date()->toDate('d M Y') ?></h4>
 
         <div class="gallery">
             <ul>
                 <?php foreach ($page->pics()->toFiles() as $image): ?>
                     <li>
                         <a href="<?= $image->url() ?>">
-                            <img src="<?= $image->url() ?>">
+                            <img src="<?= $image->url() ?>" id="galleryimage">
                         </a>
                         <?php if ($image->caption()->isNotEmpty()): ?>
                         <h5 class="caption"> 
@@ -34,15 +34,7 @@
 
 
         <br>
-<div id="tags">
-        <p class="tagspindent">
-            <strong>tags:</strong> 
-            <?php foreach($page->tags()->split() as $tag): ?>
-                <a class="taglink" href="<?= url('works', ['params' => ['tag' => $tag]]) ?>">
-                <?= html($tag) ?></a>&nbsp;
-            <?php endforeach ?>
-        </p>
-</div>
+
         <a href="javascript:history.back()">
         <img src="/content/backbut.svg" alt="back button" height="151" width="136">
         </a>

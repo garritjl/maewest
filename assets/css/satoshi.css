@@ -170,3 +170,19 @@
   font-style: italic;
 }
 
+@font-feature-values Satoshi-Light,
+                     Satoshi-LightItalic,
+                     Satoshi-Regular,
+                     Satoshi-Italic,
+                     Satoshi-Medium,
+                     Satoshi-MediumItalic,
+                     Satoshi-Bold,
+                     Satoshi-BoldItalic,
+                     Satoshi-Black,
+                     Satoshi-BlackItalic,
+                     Satoshi-Variable,
+                     Satoshi-VariableItalic {
+  @styleset {
+    singlestory: 1; /* Enables feature ss06 */
+  }
+}

@@ -39,7 +39,14 @@ Cover: - 'file://YH4188pCN5GezBPb'
 
 ----
 
-Pics: - 'file://YH4188pCN5GezBPb'
+Pics:
+
+- 'file://YH4188pCN5GezBPb'
+- 'file://YvIM7U5leTSbgO02'
+- 'file://BWJYZZgspD6mSyUv'
+- 'file://XPLyuBr75kx71oQX'
+- 'file://ah6geBW4tXNkZkYd'
+- 'file://GdJAUcIdl3VpEn6Y'
 
 ----
 

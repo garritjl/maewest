@@ -22,7 +22,7 @@
             <div id="testdivthing">
             <ul>
             <li>
-              <a class="green" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+              <a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
                   <?= $item->title()->kti() ?><br>
                   <?= $item->subtitle()->kti() ?></a>
           </li>
