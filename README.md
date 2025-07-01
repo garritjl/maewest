@@ -1,4 +1,4 @@
-**Mae West**
+## Mae West
 The official webiste of Mae West, a gallery and art space located in Lausanne, Switzerland. This site is developed and designed by Garrit Lichtenberg.
 
 ### Acknowledgements
