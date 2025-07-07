@@ -295,5 +295,38 @@ document.querySelector('.prev').addEventListener('click', () => {
   updateTitle();
 });
 
-// Initialize the title on page load
 updateTitle();
+
+
+
+function setViewportHeight() {
+  const vh = window.innerHeight * 0.01; 
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+setViewportHeight();
+
+window.addEventListener('resize', setViewportHeight);
+
+
+// dynamically adjust image box heights
+
+function adjustBoxHeights() {
+  const boxes = document.querySelectorAll('.box');
+  boxes.forEach(box => {
+    const img = box.querySelector('img');
+    if (img.complete) {
+      const aspectRatio = img.naturalHeight / img.naturalWidth;
+      box.style.height = `${box.offsetWidth * aspectRatio}px`;
+    } else {
+      img.addEventListener('load', () => {
+        const aspectRatio = img.naturalHeight / img.naturalWidth;
+        box.style.height = `${box.offsetWidth * aspectRatio}px`;
+      });
+    }
+  });
+}
+
+
+adjustBoxHeights();
+window.addEventListener('resize', adjustBoxHeights);

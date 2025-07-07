@@ -28,25 +28,34 @@
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>
 
+<div id="toplogodiv"><img src="/assets/images/MWlogo_greybeads.png" alt="Mae West logo" id="logo"></div>
 
 <div class="boxes">
 <?php foreach ($item as $item): ?>
-    <?php if ($cover = $item->cover()->toFile()): ?>
-  <div class="box" ><span><?= $item->number()->esc() ?></span><a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><img src="<?= $cover->resize(850)->url() ?>"></a></div>
+  <?php if ($cover = $item->cover()->toFile()): ?>
+    <div class="box" >
+      
+      <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+        <img src="<?= $cover->resize(850)->url() ?>">
+      </a>
+    </div>
   <?php endif ?>
-  <?php endforeach ?>
+<?php endforeach ?>
   
   <div class="controls">
+
     <button class="next"><span>Previous album</span>
       <svg viewBox="0 0 448 512" width="100" title="Previous Album">
         <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
       </svg>
     </button>
+
     <button class="prev"><span>Next album</span>
       <svg viewBox="0 0 448 512" width="100" title="Next Album">
         <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
       </svg>
     </button>
+
   </div>
 </div>
 
@@ -78,6 +87,7 @@ if ($item && !$item->isEmpty()) {
     $titles[] = "No items available";
 }
 ?>
+
 <script>
   const carouselTitles = <?= json_encode($titles, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 </script>

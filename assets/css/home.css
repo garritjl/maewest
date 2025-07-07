@@ -14,12 +14,33 @@
     padding: 0;
     margin: 0;
     overflow-y: hidden;
-    /** background: var(--bg); **/
-    background-image: url('/content/bullseye.png');
+    /** background: var(--bg);**/
+    background-image: url('/content/bullseye.png'); 
     background-size: cover;
     background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; 
+  }
+
+  #toplogodiv {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    /** border: red 1px solid; **/
+    
+  }
+
+  #logo {
+    max-width: 500px;
+    max-height: 30vh;
+    display: block;
+    margin: 0 auto;
+    z-index: 1001;
   }
 
   .current-title-box {
@@ -119,27 +140,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     overflow: hidden;
     position: relative;
     transform-style: preserve-3d;
     perspective: 800px;
     touch-action: none;
+    
   }
   .box {
     transform-style: preserve-3d;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
-    height: auto;
-    width: auto;
-    display: flex;
-    min-height: var(--min-size);
-    min-width: var(--min-size);
-    justify-content: center;
-  align-items: center;
-  border-radius: 6px;
+    
+    width: var(--min-size);
+    height: 400px;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    /* border: 0.5px solid rgb(255, 0, 0); */
     /* display: none; */ /* Comment this out */
   }
   .box:after {
@@ -153,6 +177,9 @@
     background-size: cover;
     transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin);
     opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .box:before {
     content: '';
@@ -164,18 +191,24 @@
     /** background: linear-gradient(var(--bg) 50%, transparent); **/
     transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin) scale(1.01);
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   } 
   
   .box img {
     position: absolute;
     height: auto;
     max-width: 100%;
+    height: auto;
+    display: block;
     top: 0;
     left: 0;
     object-fit: contain;
     border-radius: 6px;
     border: 0.5px solid rgb(230, 230, 230);
   }
+
   /**
   .box:nth-of-type(odd) {
     background: #b3f075;
