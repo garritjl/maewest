@@ -62,6 +62,7 @@
     visibility: hidden;
     position: absolute;
   }
+  
   .controls {
     position: absolute;
     top: calc(50% + clamp(var(--min-size), 20vmin, 20vmin));
@@ -77,7 +78,6 @@
   button {
     height: 48px;
     width: 48px;
-    border-radius: 50%;
     position: absolute;
     top: 0%;
     outline: transparent;
@@ -89,8 +89,6 @@
     transform: translate(0, calc(var(--y, 0)));
   }
   button:before {
-    border: 2px solid #e6e6e6;
-    background: linear-gradient(rgba(204,204,204,0.65), #000) #000;
     content: '';
     box-sizing: border-box;
     position: absolute;
@@ -99,7 +97,6 @@
     transform: translate(-50%, -50%);
     height: 80%;
     width: 80%;
-    border-radius: 50%;
   }
   button:active:before {
     background: linear-gradient(#000, rgba(204,204,204,0.65)) #000;
@@ -124,17 +121,17 @@
   button:hover {
     --y: -5%;
   }
-  button svg {
+  button img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg) translate(2%, 0);
     height: 30%;
-    fill: #e6e6e6;
+    min-width: 44px;
+    min-height: 44px;
   }
-  button:nth-of-type(1) svg {
-    transform: translate(-50%, -50%) rotate(180deg) translate(2%, 0);
-  }
+
+
 
   .boxes {
     display: flex;
