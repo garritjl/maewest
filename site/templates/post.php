@@ -1,6 +1,6 @@
 <?php snippet('header2') ?>
 
-<article>
+<article id="mainblock">
         <h1><?= $page->title()->kti() ?></h1>
         <h2><?= $page->subtitle()->kti() ?></h2>
         <h4><?= $page->date()->toDate('d M Y') ?></h4>

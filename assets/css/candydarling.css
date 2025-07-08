@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'candydarling';
+    src: url('/assets/fonts/candydarling/candydarling-regular-trial.woff2') format('woff2'),
+         url('/assets/fonts/candydarling/candydarling-regular-trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

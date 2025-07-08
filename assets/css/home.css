@@ -1,4 +1,5 @@
 @import url('satoshi.css');
+@import url('candydarling.css');
 
 * {
     box-sizing: border-box;
@@ -7,6 +8,109 @@
     --bg: #eeeeee;
     --min-size: 200px;
   }
+
+  h2 {
+    font-family: candydarling, sans-serif;
+    font-size: 20pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 20pt;
+    word-wrap: break-word;
+    margin-top: 8pt;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+  }
+
+  h3 {
+    font-family: candydarling, sans-serif;
+    font-size: 28pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 28pt;
+    word-wrap: break-word;
+    margin-top: 8pt;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+  }
+
+  h4 {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 20pt;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+  }
+
+  /** local links (pink) **/
+
+  .pink:link {
+    color: #c755c1;
+    border-radius: 2.5pt;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .pink:hover {
+    color: #c755c1;
+    border-radius: 2.5pt;
+    background-color: yellow; 
+    text-decoration: none;
+  }
+  
+  .pink:visited {
+    color: #c755c1;
+    border-radius: 2.5pt;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .pink:active {
+    color: #ff0000;
+    border-radius: 2.5pt;
+    background-color: yellow; 
+    text-decoration: none;
+  }
+  
+/** social links (blue) **/
+  .blue:link {
+    color: #0081ff;
+    border-radius: 2.5pt;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .blue:hover {
+    color: #0081ff;
+    border-radius: 2.5pt;
+    background-color: yellow; 
+    text-decoration: none;
+  }
+  
+  .blue:visited {
+    color: #0081ff;
+    border-radius: 2.5pt;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .blue:active {
+    color: #ff0000;
+    border-radius: 2.5pt;
+    background-color: yellow; 
+    text-decoration: none;
+  }
+
   body {
     display: grid;
     place-items: center;
@@ -21,6 +125,15 @@
   background-repeat: no-repeat;
   background-attachment: fixed; 
   }
+
+#homenav {
+  position: fixed;
+  align-items: left;
+  top: 0;
+  left: 0;
+  padding: 4px 4px;
+  z-index: 1005;
+}
 
   #toplogodiv {
     display: flex;

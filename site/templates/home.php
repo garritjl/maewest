@@ -28,7 +28,29 @@
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>
 
-<div id="toplogodiv"><img src="/assets/images/MWlogo_greybeads.png" alt="Mae West logo" id="logo"></div>
+<nav id="homenav">
+    <!-- <a class="pink" href="<?= $site->url() ?>"> -->
+      <!-- <h2>mae west</h2> -->
+    <!-- </a> -->
+  
+    <?php foreach ($site->children()->listed() as $pagename): ?>
+      <h4>
+        <a class="pink" href="<?= $pagename->url() ?>">
+          <?= $pagename->title()->esc() ?>
+        </a>
+      </h4>
+    <?php endforeach ?>
+
+      <h4>
+        <a class="blue" href="https://instagram.com/starring.maewest">
+          instagram
+        </a>
+      </h4>
+</nav>
+
+<div id="toplogodiv">
+  <img src="/assets/images/MWlogo_greybeads.png" alt="Mae West logo" id="logo">
+</div>
 
 <div class="boxes">
 <?php foreach ($item as $item): ?>
@@ -42,6 +64,7 @@
   <?php endif ?>
 <?php endforeach ?>
   
+
   <div class="controls">
 
     <button class="next"><span>Previous album</span>
@@ -59,18 +82,12 @@
 
 <div class="drag-proxy"></div>
 
-<div id="current-title" class="current-title-box"></div>
+<div class="current-title-box"><h3 id="current-title"></h3></div>
 
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>
 
-<ul>
-    <?php foreach ($item as $item): ?>
-  
-      <li><p>#<?= $item->number()->esc() ?> <?= $item->title()->esc() ?></p></li>
 
-  <?php endforeach ?>
-</ul>
 
 <?php $workspage = page('works'); ?>
 <?php $item = $workspage->children()->listed()->flip(); ?>
