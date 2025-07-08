@@ -45,12 +45,12 @@
   <div class="controls">
 
     <button class="next"><span>Previous album</span>
-      <img src="/assets/images/arrowdraft.png" title="Previous Album">
+      <img src="/assets/images/arrowdraft2.png" title="Previous Album">
       </img>
     </button>
 
     <button class="prev"><span>Next album</span>
-    <img src="/assets/images/arrowdraft.png" title="Next Album">
+    <img src="/assets/images/arrowdraft2right.png" title="Next Album">
     </img>
     </button>
 

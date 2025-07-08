@@ -54,10 +54,7 @@
       <span>
 
       <a class="pink" href="<?= $site->url() ?>">
-      <img style="margin-bottom: -1.8pt; margin-right: 3pt; margin-left: -1pt;" src="/favicon-16x16.png" ><?= $site->title()->esc() ?></a>
-      /
-      <?php $featured = page('works')->children()->shuffle()->first(); ?>
-      <a class="pink" href="<?= $featured->url() ?>">random page</a>
+      <?= $site->title()->esc() ?></a>
       —
       
     
