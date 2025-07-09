@@ -104,16 +104,7 @@ h1 {
     word-wrap: break-word;
   }
 
-  p.marginleft {
-    margin-left: 72pt;
-  }
-
-  p.tagsp {
-    line-height: 34pt;
-  }
-
-  p.tagspindent {
-    line-height: 34pt;
+  p.postdescription {
     margin-left: 72pt;
   }
   
@@ -154,6 +145,8 @@ h1 {
     padding: 0 0 0 0;
     line-height: 14pt;
     word-wrap: break-word;
+    z-index: 1005;
+    
   }
 
   .logo {
@@ -183,6 +176,27 @@ h1 {
     word-wrap: break-word;
     text-align: center;
     z-index: 1000;
+  }
+
+  #toplogodiv {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24pt;
+    /** border: red 1px solid; **/
+    
+  }
+
+  #logo {
+    max-width: 98vw;
+    max-height: 20vh;
+    display: block;
+    margin: 0 auto;
+    z-index: 1001;
   }
 
 /** local links (pink) **/
@@ -269,39 +283,7 @@ h1 {
     text-decoration: none;
   }
   
-/** tag link **/
 
-.taglink:link {
-  color: white;
-  padding: 1pt 5pt 1.5pt 5pt;
-  border: 1.25pt solid white;
-  border-radius: 5pt;
-  box-shadow:
-  0 0 0 2.5pt #753e0a;
-  background-color: #753e0a;
-  text-decoration: none;
-}
-
-.taglink:hover {
-  color: rgb(255, 225, 0);
-  border: 1.25pt solid white; 
-  background-color: #753e0a;
-  text-decoration: none;
-}
-
-.taglink:visited {
-  color: white;
-  border: 1.25pt solid white;
-  background-color: #753e0a;
-  text-decoration: none;
-}
-
-.taglink:active {
-  color: rgb(190, 54, 36);
-  border: 1.25pt solid white;
-  background-color: #753e0a;
-  text-decoration: none;
-}
 /** images **/
 
 img {
@@ -335,44 +317,6 @@ li.workspagethumb {
 margin: -16pt 0 0 14pt;
 }
 
-
-
-  #tags {
-    z-index: 1001;
-    margin-left: 1.3pt;
-  }
-
-  #showtags {
-  color: white;
-  padding: 1pt 5pt 1.5pt 5pt;
-  border: 1.25pt solid white;
-  border-radius: 5pt;
-  background-color: #0e0e0e;
-  box-shadow:
-  0 0 0 2.5pt #0e0e0e;
-  text-decoration: none;
-  width: fit-content;
-  height: 24pt;
-  margin-left: 1.3pt;
-  cursor: pointer;
-  }
-
-  #showtags:hover {
-    color: rgb(255, 225, 0);
-  }
-
-  #showtags:active {
-    color: rgb(190, 54, 36);
-  }
-
-  #showalltagssection:hover {
-    color: rgb(255, 225, 0);
-  }
-
-  #showalltagssection:active {
-    color: rgb(190, 54, 36);
-  }
-
   #gridcontain {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -388,12 +332,19 @@ margin: -16pt 0 0 14pt;
   }
 
   #mainblock {
-    margin: 10px auto;
+    margin: 18.5vh auto;
     max-width: 1000px;
     padding: 18px 12px 12px;
     position: relative;
-    /** border: solid 1px red; **/
+    border: solid 1px red; 
     border-radius: 6px;
+    text-align: left;
   }
 
+  #titleblock {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
 

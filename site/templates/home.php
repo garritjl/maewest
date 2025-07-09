@@ -32,16 +32,15 @@
     <!-- <a class="pink" href="<?= $site->url() ?>"> -->
       <!-- <h2>mae west</h2> -->
     <!-- </a> -->
-  
+  <h4>
     <?php foreach ($site->children()->listed() as $pagename): ?>
-      <h4>
+      
         <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?>
-        </a>
-      </h4>
+          <?= $pagename->title()->esc() ?></a>,
+      
     <?php endforeach ?>
 
-      <h4>
+      
         <a class="blue" href="https://instagram.com/starring.maewest">
           instagram
         </a>
@@ -49,18 +48,18 @@
 </nav>
 
 <div id="toplogodiv">
-  <img src="/assets/images/MWlogo_greybeads.png" alt="Mae West logo" id="logo">
+  <img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo">
 </div>
 
 <div class="boxes">
 <?php foreach ($item as $item): ?>
   <?php if ($cover = $item->cover()->toFile()): ?>
     <div class="box" >
-      
       <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
         <img src="<?= $cover->resize(850)->url() ?>">
       </a>
     </div>
+
   <?php endif ?>
 <?php endforeach ?>
   
@@ -82,7 +81,9 @@
 
 <div class="drag-proxy"></div>
 
-<div class="current-title-box"><h3 id="current-title"></h3></div>
+<div class="current-title-box">
+  <h3 id="current-title"></h3>
+</div>
 
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>

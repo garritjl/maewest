@@ -1,10 +1,15 @@
 <?php snippet('header2') ?>
 
+<div id="toplogodiv">
+  <img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo">
+</div>
+
 <article id="mainblock">
+    <div id="titleblock">
         <h1><?= $page->title()->kti() ?></h1>
         <h2><?= $page->subtitle()->kti() ?></h2>
         <h4><?= $page->date()->toDate('d M Y') ?></h4>
-
+    </div>
         <div class="gallery">
             <ul>
                 <?php foreach ($page->pics()->toFiles() as $image): ?>
@@ -25,7 +30,7 @@
             </ul>
         </div>
 
-        <p class="marginleft" >
+        <p class="postdescription" >
             <?= $page->description()->kti() ?>
         </p>
 
