@@ -275,9 +275,10 @@ Draggable.create('.drag-proxy', {
 })
 
 const updateTitle = () => {
-  const currentIndex = Math.floor(SCRUB.vars.position * BOXES.length) % BOXES.length;
-  const currentTitle = carouselTitles[currentIndex];
-  document.getElementById('current-title').textContent = currentTitle;
+  const currentIndex = Math.round(SCRUB.vars.position * BOXES.length) % BOXES.length;
+  const wrappedIndex = (currentIndex + BOXES.length) % BOXES.length;
+  const currentTitle = carouselTitles[wrappedIndex];
+  document.getElementById('current-title').textContent = currentTitle || '';
 };
 
 ScrollTrigger.addEventListener('scrollEnd', () => {

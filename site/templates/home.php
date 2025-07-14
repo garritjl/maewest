@@ -30,7 +30,7 @@
 
 <nav id="homenav">
     <!-- <a class="pink" href="<?= $site->url() ?>"> -->
-      <!-- <h2>mae west</h2> -->
+      <!-- <h2>Mae West</h2> -->
     <!-- </a> -->
   <h4>
     <?php foreach ($site->children()->listed() as $pagename): ?>
@@ -81,8 +81,12 @@
 
 <div class="drag-proxy"></div>
 
+<div class="titleblock">
+  <img src="/assets/images/bookend_left.png" id="bookendimg">
 <div class="current-title-box">
   <h3 id="current-title"></h3>
+</div>
+<img src="/assets/images/bookend_right.png" id="bookendimg">
 </div>
 
 <?php $workspage = page('works'); ?>  

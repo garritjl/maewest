@@ -49,31 +49,26 @@
   </span>
   -->
 
-  <nav class="navlinks">
-
-      <span>
-
-      <a class="pink" href="<?= $site->url() ?>">
-      <?= $site->title()->esc() ?></a>
-      —
+  <nav id="homenav">
+    
+  <p id="navtext">
+    <a class="pink" href="<?= $site->url() ?>">
+      Mae West
+    </a>
+    —
+    <?php foreach ($site->children()->listed() as $pagename): ?>
       
-    
-
-      <?php foreach ($site->children()->listed() as $item): ?>
-      <a class="pink" href="<?= $item->url() ?>">
-      <?= $item->title()->esc() ?></a>,
-      <?php endforeach ?>
-
-    
+        <a class="pink" href="<?= $pagename->url() ?>">
+          <?= $pagename->title()->esc() ?></a>,
       
-    
-      </span>
+    <?php endforeach ?>
 
       
-
-      <?php snippet('social') ?>
-      <br>
-  </nav>
+        <a class="blue" href="https://instagram.com/starring.maewest">
+          instagram
+        </a>
+    </p>
+</nav>
 
   </header>
 
