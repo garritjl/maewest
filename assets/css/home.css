@@ -17,8 +17,8 @@
     width: 40px; 
   }
 
-  :root {
-    --min-size: 100px;
+  .box {
+    width: 100px;
   }
 }
 
