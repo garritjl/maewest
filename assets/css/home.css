@@ -6,6 +6,16 @@
     max-width: 20vw;
     max-height: 20vh;
   }
+
+  .controls {
+    width: 90vw; 
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  button {
+    height: 40px; 
+    width: 40px; 
+  }
 }
 
 @media (min-width: 1321px) {
@@ -188,6 +198,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
 
   .current-title-box {
@@ -227,7 +238,7 @@
     justify-content: space-between;
     min-width: var(--min-size);
     height: 44px;
-    width: 20vmin;
+    width: clamp(150px, 20vw, 200px);
     max-width: 98vw;
     z-index: 1050;
   }
@@ -243,6 +254,7 @@
     border: 0;
     transition: transform 0.1s;
     transform: translate(0, calc(var(--y, 0)));
+    border-radius: 50%;
     
   }
   button:before {
