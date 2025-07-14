@@ -16,6 +16,10 @@
     height: 40px; 
     width: 40px; 
   }
+
+  :root {
+    --min-size: 100px;
+  }
 }
 
 @media (min-width: 1321px) {
