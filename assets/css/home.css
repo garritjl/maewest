@@ -1,6 +1,25 @@
 @import url('satoshi.css');
 @import url('candydarling.css');
 
+@media (orientation: portrait) {
+  .box {
+    width: 150px;
+  }
+  :root {
+    --min-size: 150px;
+  }
+}
+
+@media (orientation: landscape) {
+  .box {
+    width: 200px;
+  }
+
+  :root {
+    --min-size: 200px;
+  }
+}
+
 @media (max-width: 1320px) {
   #bookendimg {
     max-width: 20vw;
@@ -15,10 +34,6 @@
   button {
     height: 40px; 
     width: 40px; 
-  }
-
-  .box {
-    width: 150px;
   }
 }
 
@@ -329,7 +344,7 @@
     top: 50%;
     left: 50%;
     
-    width: 150px;
+    width: 200px;
     height: 400px;
     max-height: 100%;
     transform: translate(-50%, -50%);
