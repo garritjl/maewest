@@ -5,7 +5,7 @@
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>
 
-        <h1><?= $page->title()->kti() ?></h1>
+        <h1 class="indextitle"><?= $page->title()->kti() ?></h1>
 
         <div>
             <?php foreach ($item as $item): ?>

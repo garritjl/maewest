@@ -23,7 +23,14 @@
         <h2><?= $page->subtitle()->kti() ?></h2>
         <h4><?= $page->date()->toDate('d M Y') ?></h4>
     </div>
-    <hr>
+<br>
+    <div class="fourstripe">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+    </div>
+
         <p class="postdescription" >
             <?= $page->description()->kti() ?>
         </p>

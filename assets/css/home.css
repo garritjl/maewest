@@ -25,7 +25,9 @@
     max-width: 20vw;
     max-height: 20vh;
   }
-
+.titleblock {
+  align-items: end;
+}
   .controls {
     width: 90vw; 
     transform: translate(-50%, -50%) scale(1);

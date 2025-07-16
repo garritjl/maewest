@@ -124,6 +124,18 @@ h1 {
     padding: 0 0 0 0;
   }
   
+  .txtpagetitle {
+    padding: 16pt 0 0 0;
+  }
+
+  .indextitle {
+    padding-top: 20pt;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-left: -4px;
+    margin-bottom: -4px;;
+  }
+
   li {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
@@ -188,7 +200,7 @@ h1 {
 
   #toplogodiv {
     display: flex;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -345,7 +357,7 @@ margin: -16pt 0 0 14pt;
   }
 
   #mainblock {
-    margin: 18.5vh auto;
+    margin: auto;
     max-width: 900px;
     padding: 28px 22px 22px;
     position: relative;
@@ -365,18 +377,30 @@ margin: -16pt 0 0 14pt;
 
   hr {
     border: none;
-    border-top: 4px double black;
+    border-top: 1.5px solid black;
     color: black;
     overflow: visible;
     text-align: center;
-    height: 5px;
+    height: 0px;
+    padding: 0;
+    margin: 4px;
     
   }
-  
-  hr::after {
+  div.fourstripe {
+    text-align: center;
+    margin: 0;
+    padding: 0 4px 0 4px;
+  }
+
+  div.fourstripe::after {
     background: #fff;
     content: "⁂";
-    padding: 0 4px;
+    padding: 3px 6.5px 5px 6.5px;
+    margin: 0;
     position: relative;
-    top: -13px;
+    top: -26px;
+    font-family: Satoshi-Bold, sans-serif;
+    font-size: 14pt;
+    border-radius: 50%;
+    
   }
