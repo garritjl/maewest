@@ -35,18 +35,22 @@ Alan Sierra
 
 ----
 
-Cover: - 'file://YH4188pCN5GezBPb'
+Poster: - 'file://YH4188pCN5GezBPb'
 
 ----
 
 Pics:
 
 - 'file://YH4188pCN5GezBPb'
+- 'file://1TpNIC3Q6WrUd3kh'
 - 'file://YvIM7U5leTSbgO02'
 - 'file://BWJYZZgspD6mSyUv'
 - 'file://XPLyuBr75kx71oQX'
+- 'file://Bnm9aRQzs1ipbxQW'
 - 'file://ah6geBW4tXNkZkYd'
 - 'file://GdJAUcIdl3VpEn6Y'
+- 'file://93GXVM10vIhxgcKM'
+- 'file://jGDu06BYgsoyxrJB'
 
 ----
 

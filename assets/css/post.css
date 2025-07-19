@@ -1,6 +1,19 @@
 @import url("satoshi.css");
 @import url("candydarling.css");
 
+@media (max-width: 1320px) {
+  p.postdescription {
+    margin-left: 10pt;
+    margin-right: 10pt;
+  }
+}
+@media (min-width: 1321px) {
+  p.postdescription {
+    margin-left: 50pt;
+    margin-right: 50pt;
+  }
+}
+
 html {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
@@ -104,10 +117,7 @@ h1 {
     word-wrap: break-word;
   }
 
-  p.postdescription {
-    margin-left: 50pt;
-    margin-right: 50pt;
-  }
+  
 
   p#navtext {
     font-family: Satoshi-Regular, sans-serif;
@@ -155,6 +165,24 @@ h1 {
   ul.marginleft {
     margin-left: 72pt;
   }
+
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 18pt;
+    word-wrap: break-word;
+    padding-bottom: 2px;
+  }
+
+tr:nth-of-type(even) {
+    background-color: #e1e1e1;
+}
 
   strong {
     font-weight: 500;
@@ -207,6 +235,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding-top: 24pt;
+    pointer-events: none;
     /** border: red 1px solid; **/
     
   }
@@ -312,11 +341,6 @@ img {
   object-fit: contain;
 }
 
-img#galleryimage {
-  border: 0.5px solid rgb(230, 230, 230);
-  border-radius: 2px; 
-}
-
 img.coverimage {
   width: 300px;
   border: 0.5px solid rgb(230, 230, 230);
@@ -328,26 +352,46 @@ figure {
   padding: 0 0 0 0;
 }
 
-.gallery {
+#gallery {
   max-width: 100%;
   margin-top: 0;
+  margin-bottom: 20px;
   text-align: center;
+  padding: 0 1% 0 1%;
 }
 
 li.workspagethumb {
 margin: -16pt 0 0 14pt;
 }
 
-  #thumbs {
+div#thumbs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    
     gap: 10px;
-    margin-right: -10px;
+    align-items: center;
+    justify-items: center;
+    max-width: 100%;
   }
 
   img#gallerythumb {
     width: 50px;
+    cursor: pointer;
+    border: 0.5px solid rgb(230, 230, 230);
+  border-radius: 2px; 
+  }
+
+  #gallerywindow {
+  
+  object-fit: contain;
+  }
+
+  #expandedImg {
+    max-height: 400px;
+    max-width: 100%;
+    border: 0.5px solid rgb(230, 230, 230);
+  border-radius: 2px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   }
 
   #testdivthing {
@@ -364,7 +408,7 @@ margin: -16pt 0 0 14pt;
     text-align: left;
     border: dotted 4px #c755c1; 
     border-radius: 6px;
-    border-image: url(/assets/images/orbborder.png) 20 20 20 20 round;
+    border-image: url(/assets/images/orbborder_goldcorner.png) 33% 33% 33% 33% round;
     border-image-width: 25px;
   }
 
@@ -389,7 +433,7 @@ margin: -16pt 0 0 14pt;
   div.fourstripe {
     text-align: center;
     margin: 0;
-    padding: 0 4px 0 4px;
+    padding: 0 1% 0 1%;
   }
 
   div.fourstripe::after {

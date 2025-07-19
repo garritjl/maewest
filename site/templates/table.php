@@ -7,18 +7,34 @@
 
         <h1 class="indextitle"><?= $page->title()->kti() ?></h1>
 
-        <div>
+        <table class="styled-table">
+            <tbody>
             <?php foreach ($item as $item): ?>
-                <div>
-                    <ul>
-                        <li>
-                            <a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
-                                #<?= $item->number()->kti() ?> <?= $item->title()->kti() ?> – <?= $item->subtitle()->kti() ?>
-                            </a>
-                        </li>
-                </div>
-            <?php endforeach ?>
-        </div>
+                <tr>
+
+                    <td>
+                        #
+                    </td>
+
+                    <td>
+                        <?= $item->number()->kti() ?>
+                    </td>
+
+                    <td><a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+                        <?= $item->title()->kti() ?>
+                    </a></td>
+
+                    <td><a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+                        <?= $item->subtitle()->kti() ?>
+                    </a></td>
+
+                </tr>
+            <?php endforeach ?>    
+            </tbody>
+        </table>
+
+
+
 
         <br>
 

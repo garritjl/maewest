@@ -53,10 +53,10 @@
 
 <div class="boxes">
 <?php foreach ($item as $item): ?>
-  <?php if ($cover = $item->cover()->toFile()): ?>
+  <?php if ($poster = $item->poster()->toFile()): ?>
     <div class="box" >
       <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
-        <img src="<?= $cover->resize(850)->url() ?>">
+        <img src="<?= $poster->resize(850)->url() ?>">
       </a>
     </div>
 
