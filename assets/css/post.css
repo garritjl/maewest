@@ -1,17 +1,23 @@
 @import url("satoshi.css");
 @import url("candydarling.css");
 
-@media (max-width: 1320px) {
+@media (max-width: 700px) {
   p.postdescription {
     margin-left: 10pt;
     margin-right: 10pt;
   }
 }
-@media (min-width: 1321px) {
+@media (min-width: 701px) {
   p.postdescription {
     margin-left: 50pt;
     margin-right: 50pt;
   }
+  @media (min-width: 1000px) {
+    p.postdescription {
+      margin-left: 80pt;
+      margin-right: 80pt;
+    }
+}
 }
 
 html {
@@ -106,14 +112,14 @@ h1 {
   p {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: 400;
     font-style: normal;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
     padding: 0 0 0 0;
-    line-height: 18pt;
+    line-height: 16pt;
     word-wrap: break-word;
   }
 
@@ -391,7 +397,7 @@ div#thumbs {
     border: 0.5px solid rgb(230, 230, 230);
   border-radius: 2px;
   margin-bottom: 15px;
-  margin-top: 15px;
+  margin-top: 1%;
   }
 
   #testdivthing {
@@ -403,7 +409,7 @@ div#thumbs {
   #mainblock {
     margin: auto;
     max-width: 900px;
-    padding: 28px 22px 22px;
+    padding: 22px 22px 22px;
     position: relative;
     text-align: left;
     border: dotted 4px #c755c1; 

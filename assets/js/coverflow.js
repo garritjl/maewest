@@ -267,7 +267,7 @@ Draggable.create('.drag-proxy', {
   },
   onDrag() {
     SCRUB.vars.position = this.startOffset + (this.startX - this.x) * 0.001
-    SCRUB.invalidate().restart() // same thing as we do in the ScrollTrigger's onUpdate
+    SCRUB.invalidate().restart() 
   },
   onDragEnd() {
     scrollToPosition(SCRUB.vars.position)

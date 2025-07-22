@@ -64,7 +64,7 @@
 <?php endforeach ?>
   
 
-  <div class="controls">
+<!--   <div class="controls">
 
     <button class="next"><span>Previous album</span>
       <img src="/assets/images/arrowdraft2.png" title="Previous Album">
@@ -76,17 +76,21 @@
     </img>
     </button>
 
-  </div>
+  </div> -->
 </div>
 
 <div class="drag-proxy"></div>
 
 <div class="titleblock">
-  <img src="/assets/images/bookend_left.png" id="bookendimg">
+<button class="next">
+  <img src="/assets/images/leftarrow_iron.png" id="bookendimg">
+  </button>
 <div class="current-title-box">
   <h3 id="current-title"></h3>
 </div>
-<img src="/assets/images/bookend_right.png" id="bookendimg">
+<button class="prev">
+<img src="/assets/images/rightarrow_iron.png" id="bookendimg">
+  </button>
 </div>
 
 <?php $workspage = page('works'); ?>  

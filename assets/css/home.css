@@ -21,10 +21,7 @@
 }
 
 @media (max-width: 1320px) {
-  #bookendimg {
-    max-width: 20vw;
-    max-height: 20vh;
-  }
+  
 .titleblock {
   align-items: end;
 }
@@ -33,18 +30,20 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-  button {
-    height: 40px; 
-    width: 40px; 
-  }
+  
 }
 
-@media (min-width: 1321px) {
-  #bookendimg {
-    max-width: 14vw;
-    max-height: 20vh;
-  }
+@media (min-height: 800px) {
+.titleblock {
+  bottom: 10vh;
 }
+}
+
+@media (max-height: 799px) {
+  .titleblock {
+    bottom: 0px;
+  }
+  }
 
 * {
     box-sizing: border-box;
@@ -203,7 +202,7 @@
 
 .titleblock {
     position: fixed;
-    bottom: 0;
+    
     left: 50%;
     transform: translateX(-50%);
     background-color: none;
@@ -219,7 +218,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
+    
   }
 
   .current-title-box {
@@ -229,7 +228,7 @@
     background-color: none;
     /* border: .5px solid black; */
     color: black;
-    padding: 10px 10px 8px 8px;
+    padding: 14px 16px 30px 10px;
     font-size: 1.2rem;
     border-radius: 6px;
     z-index: 500;
@@ -242,7 +241,7 @@
   #bookendimg {
     position: relative;
     display: flex;
-
+    max-width: 80px;
   }
 
   .drag-proxy {
@@ -263,7 +262,15 @@
     max-width: 98vw;
     z-index: 1050;
   }
+
   button {
+    cursor: pointer;
+    outline: transparent;
+    background: none;
+    appearance: none;
+    border: 0;
+  }
+ /**  button {
     height: 48px;
     width: 48px;
     position: absolute;
@@ -275,7 +282,6 @@
     border: 0;
     transition: transform 0.1s;
     transform: translate(0, calc(var(--y, 0)));
-    border-radius: 50%;
     
   }
   button:before {
@@ -287,12 +293,12 @@
     transform: translate(-50%, -50%);
     height: 80%;
     width: 80%;
-  }
+  } **/
   /**
   button:active:before {
     background: linear-gradient(#000, rgba(204,204,204,0.65)) #000;
   } **/
-  button:nth-of-type(1) {
+  /** button:nth-of-type(1) {
     right: 100%;
   }
   button:nth-of-type(2) {
@@ -308,11 +314,11 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
-  }
+  } **/
   button:hover {
     --y: -5%;
   }
-  button img {
+  /** button img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -320,7 +326,7 @@
     height: 30%;
     min-width: 44px;
     min-height: 44px;
-  }
+  } **/
 
 
 
