@@ -20,22 +20,67 @@
   }
 }
 
+@media (max-width: 400px) {
+  .box {
+    width: 75px;
+  }
+
+  :root {
+    --min-size: 75px;
+  }
+}
+
+@media (max-height: 400px) {
+  .box {
+    width: 75px;
+  }
+
+  :root {
+    --min-size: 75px;
+  }
+}
+
+@media (max-height: 600px) {
+  .box {
+    width: 125px;
+  }
+
+  :root {
+    --min-size: 125px;
+  }
+}
+
 @media (max-width: 1320px) {
   
 .titleblock {
   align-items: end;
 }
-  .controls {
-    width: 90vw; 
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  
+.controls {
+  width: 90vw; 
+  transform: translate(-50%, -50%) scale(1);
 }
+.current-title-box {
+  width: calc(100vw - 184px);
+  }
+.box {
+top: 55%;
+}
+}
+
+@media (min-width: 1321px) {
+
+.current-title-box {
+min-width: 500px;
+}
+.box {
+  top: 50%;
+  }
+}
+
 
 @media (min-height: 800px) {
 .titleblock {
-  bottom: 10vh;
+  bottom: 15vh;
 }
 }
 
@@ -44,6 +89,12 @@
     bottom: 0px;
   }
   }
+
+  @media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
+    .titleblock {
+      bottom: 0px;
+    }
+    }
 
 * {
     box-sizing: border-box;
@@ -236,6 +287,8 @@
     
     max-width: 1000px;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #bookendimg {
@@ -315,7 +368,7 @@
     white-space: nowrap;
     border-width: 0;
   } **/
-  button:hover {
+  #bookendimg:hover {
     --y: -5%;
   }
   /** button img {
@@ -349,7 +402,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
+    
     left: 50%;
     
     
