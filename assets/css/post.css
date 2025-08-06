@@ -144,6 +144,10 @@ h1 {
     padding: 16pt 0 0 0;
   }
 
+  div.text {
+    max-width: 900px;
+  }
+
   .indextitle {
     padding-top: 20pt;
     padding-left: 0;
@@ -392,7 +396,7 @@ div#thumbs {
   }
 
   #expandedImg {
-    max-height: 400px;
+    max-height: 600px;
     max-width: 100%;
     border: 0.5px solid rgb(230, 230, 230);
   border-radius: 2px;
@@ -420,7 +424,7 @@ div#thumbs {
 
   #titleblock {
     margin: 0 auto;
-    padding: 4px 0 0 0;
+    padding: 26px 0 0 0;
     position: relative;
     text-align: center;
   }

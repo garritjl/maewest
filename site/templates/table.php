@@ -12,7 +12,7 @@
             <?php foreach ($item as $item): ?>
                 <tr>
 
-                    <td>
+                    <td style="color:rgb(96, 96, 96);">
                         #
                     </td>
 

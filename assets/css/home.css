@@ -62,19 +62,35 @@
 .current-title-box {
   width: calc(100vw - 184px);
   }
-.box {
-top: 55%;
-}
 }
 
 @media (min-width: 1321px) {
 
 .current-title-box {
-min-width: 500px;
+min-width: 40vw;
 }
-.box {
-  top: 50%;
+}
+
+@media (max-width: 800px) {
+  h3 {
+    font-size: 18pt;
+    line-height: 24pt;
+    margin-top: 0;
   }
+  .box {
+    /* top: 55%; */
+    top: 50%;
+    }
+}
+@media (min-width: 801px) {
+  h3 {
+    font-size: 28pt;
+    line-height: 28pt;
+    margin-top: 8pt;
+  }
+  .box {
+    top: 50%;
+    }
 }
 
 
@@ -86,13 +102,13 @@ min-width: 500px;
 
 @media (max-height: 799px) {
   .titleblock {
-    bottom: 0px;
+    bottom: 20px;
   }
   }
 
   @media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
     .titleblock {
-      bottom: 0px;
+      bottom: 20px;
     }
     }
 
@@ -120,12 +136,12 @@ min-width: 500px;
 
   h3 {
     font-family: candydarling, sans-serif;
-    font-size: 28pt;
+
     font-weight: 300;
     font-style: normal;
-    line-height: 28pt;
+    
     word-wrap: break-word;
-    margin-top: 8pt;
+    
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -214,7 +230,7 @@ min-width: 500px;
     margin: 0;
     overflow-y: hidden;
     background: var(--bg);
-    /** background-image: url('/content/bullseye.png'); **/
+    background-image: url('/content/bullseye.png');
     background-size: cover;
     background-position: center;
   background-repeat: no-repeat;
@@ -286,9 +302,9 @@ min-width: 500px;
     text-align: center;
     
     max-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
   }
 
   #bookendimg {
@@ -472,6 +488,28 @@ min-width: 500px;
       display: none;
     }
   } **/
+
+  div#address {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+  }
+
+  p#address {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 10pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 20pt;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+  }
   @-moz-keyframes action {
     0%, 25%, 50%, 100% {
       transform: translate(0, 0);

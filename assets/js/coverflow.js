@@ -278,7 +278,9 @@ const updateTitle = () => {
   const currentIndex = Math.round(SCRUB.vars.position * BOXES.length) % BOXES.length;
   const wrappedIndex = (currentIndex + BOXES.length) % BOXES.length;
   const currentTitle = carouselTitles[wrappedIndex];
+  const currentSubtitle = carouselSubtitles[wrappedIndex];
   document.getElementById('current-title').textContent = currentTitle || '';
+  document.getElementById('current-subtitle').textContent = currentSubtitle || '';
 };
 
 ScrollTrigger.addEventListener('scrollEnd', () => {

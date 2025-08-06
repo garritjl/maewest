@@ -1,10 +1,24 @@
 <?php snippet('header2') ?>
 
 <div id="toplogodiv">
-  <img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo">
+  <a href="<?= $site->url() ?>"><img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo"></a>
 </div>
 
 <article id="mainblock">
+
+<div id="titleblock">
+        <h1><?= $page->title()->kti() ?></h1>
+        <h2><?= $page->subtitle()->kti() ?></h2>
+        <h4>#<?= $page->number()->kti()?> — <?= $page->date()->toDate('d M Y') ?></h4>
+    </div>
+
+    <br>
+    <div class="fourstripe">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+    </div>
 
         <div id="gallery">
 
@@ -37,11 +51,7 @@ function selectImg(imgs) {
 }
 </script>
 
-        <div id="titleblock">
-        <h1><?= $page->title()->kti() ?></h1>
-        <h2><?= $page->subtitle()->kti() ?></h2>
-        <h4>#<?= $page->number()->kti()?> — <?= $page->date()->toDate('d M Y') ?></h4>
-    </div>
+        
 <br>
     <div class="fourstripe">
         <hr>

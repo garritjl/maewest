@@ -85,9 +85,13 @@
 <button class="next">
   <img src="/assets/images/leftarrow_iron.png" id="bookendimg">
   </button>
+
 <div class="current-title-box">
   <h3 id="current-title"></h3>
+  
+  <h3 id="current-subtitle"></h3>
 </div>
+
 <button class="prev">
 <img src="/assets/images/rightarrow_iron.png" id="bookendimg">
   </button>
@@ -112,10 +116,26 @@ if ($item && !$item->isEmpty()) {
 }
 ?>
 
+<?php
+$subtitles = [];
+if ($item && !$item->isEmpty()) {
+    foreach ($item as $child) {
+        $subtitles[] = $child->subtitle()->value();
+    }
+} else {
+    $subtitles[] = "No items available";
+}
+?>
+
 <script>
   const carouselTitles = <?= json_encode($titles, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
+  const carouselSubtitles = <?= json_encode($subtitles, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 </script>
 
 <script type="module" src="assets/js/coverflow.js"></script>
+
+<div id="address">
+  <p id="address">Pré-Du-Marché 19, Lausanne, Switzerland 1004</p>
+</div>
 
 <?php snippet('footer2.php') ?>
