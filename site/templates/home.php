@@ -29,9 +29,7 @@
 <?php $item = $workspage->children()->listed()->flip() ?>
 
 <nav id="homenav">
-    <!-- <a class="pink" href="<?= $site->url() ?>"> -->
-      <!-- <h2>Mae West</h2> -->
-    <!-- </a> -->
+
   <h4>
     <?php foreach ($site->children()->listed() as $pagename): ?>
       

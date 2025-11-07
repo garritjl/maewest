@@ -244,8 +244,10 @@ tr:nth-of-type(even) {
     z-index: 1000;
     align-items: center;
     justify-content: center;
-    padding-top: 24pt;
-    pointer-events: none;
+    margin: 0 auto;
+    padding: 0;
+
+    /* pointer-events: none; */
     /** border: red 1px solid; **/
     
   }
@@ -256,6 +258,7 @@ tr:nth-of-type(even) {
     display: block;
     margin: 0 auto;
     z-index: 1001;
+    
   }
 
 /** local links (pink) **/
@@ -409,6 +412,20 @@ div#thumbs {
     text-align: center;
     
   }
+
+  nav#postpagenav {
+    max-width: 952px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    text-align-last: justify;
+   
+  }
+
+  #postpagenav p a {
+  display: inline-block;
+  white-space: nowrap;
+}
 
   #mainblock {
     margin: auto;

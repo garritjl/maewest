@@ -14,7 +14,7 @@ Date: 2025-05-02
 
 ----
 
-Tags: 
+Texte-de: 
 
 ----
 
@@ -39,7 +39,19 @@ Poster: - 'file://KezU0NiDFGkjFzde'
 
 ----
 
-Pics: - 'file://KezU0NiDFGkjFzde'
+Pics:
+
+- 'file://KezU0NiDFGkjFzde'
+- 'file://lLJMg0KvAtrJHH3d'
+- 'file://eRg94T7acK7aClwf'
+- 'file://zMtNjIiTAvXTOdY0'
+- 'file://xAUPgctbkHrxmo9t'
+- 'file://B8UrzLzKagsAZ2q8'
+- 'file://ppoxcPnMcDlgMHHF'
+
+----
+
+Tags: 
 
 ----
 

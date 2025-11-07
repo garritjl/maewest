@@ -239,11 +239,20 @@ min-width: 40vw;
 
 #homenav {
   position: fixed;
-  align-items: left;
+  align-items: justify;
+  text-align: justify;
+  text-align-last: justify;
   top: 0;
   left: 0;
   padding: 4px 4px;
   z-index: 1005;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#homenav h4 a {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 #toplogodiv {
@@ -468,7 +477,7 @@ min-width: 40vw;
     top: 0;
     left: 0;
     object-fit: contain;
-    border-radius: 6px;
+    border-radius: 3px;
     border: 0.5px solid rgb(230, 230, 230);
   }
 
@@ -492,7 +501,7 @@ min-width: 40vw;
   div#address {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     text-align: center;
   }
 

@@ -30,6 +30,10 @@ columns:
 
   - width: 2/3
     fields:
+      
+      texte de:
+        type: text
+      
       description:
         type: textarea
 
