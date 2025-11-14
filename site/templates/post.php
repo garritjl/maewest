@@ -130,9 +130,10 @@ function selectImg(imgs) {
 
 
         <br>
-
+<div id="backbut">
         <a href="javascript:history.back()">
-        <img src="/content/backbut.svg" alt="back button" height="151" width="136">
+        <img src="/content/backbut.svg" alt="back button" height="227" width="204">
         </a>
+</div>
     </article>
 <?php snippet('footer2') ?>

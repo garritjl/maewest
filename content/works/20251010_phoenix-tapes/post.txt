@@ -42,6 +42,7 @@ Poster: - 'file://QgqwqrfKJNE89Gme'
 Pics:
 
 - 'file://QgqwqrfKJNE89Gme'
+- 'file://lX12SDIToAKdLlC2'
 - 'file://osKEQSW9m6HTlbSN'
 - 'file://yglqfO1VI6mIZrle'
 - 'file://2QYN96dH3jrvh6UD'

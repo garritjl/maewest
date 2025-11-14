@@ -435,8 +435,9 @@ div#thumbs {
     text-align: left;
     border: dotted 4px #c755c1; 
     border-radius: 6px;
-    border-image: url(/assets/images/orbborder_goldcorner.png) 33% 33% 33% 33% round;
-    border-image-width: 25px;
+    /* border-image: url(/assets/images/orbborder_goldcorner.png) 33% 33% 33% 33% round; */
+    border-image: url(/assets/images/spiraldotborder2.png) 294 294 294 294 round;
+    border-image-width: 90px;
   }
 
   #titleblock {
@@ -474,4 +475,9 @@ div#thumbs {
     font-size: 14pt;
     border-radius: 50%;
     
+  }
+
+  #backbut {
+    width: 100%;
+    text-align: center;
   }
