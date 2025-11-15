@@ -5,14 +5,15 @@
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed()->flip() ?>
 
-        <h1 class="indextitle"><?= $page->title()->kti() ?></h1>
+        <!-- <h1 class="indextitle"><?= $page->title()->kti() ?></h1> -->
+        <img src="/assets/images/indexpencilscript.png" width="216" height="105" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
 
         <table class="styled-table">
             <tbody>
             <?php foreach ($item as $item): ?>
                 <tr>
 
-                    <td style="color:rgb(96, 96, 96);">
+                    <td style="color:rgba(145, 145, 145, 1);">
                         #
                     </td>
 

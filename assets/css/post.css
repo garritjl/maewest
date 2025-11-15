@@ -27,13 +27,13 @@ html {
 }
 
 body {
-  margin: 6px 6px 0px 6px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   isolation: isolate;
 }
 
 main {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 6px;
   padding: 0px 0px 0px 0px;
 }
 
@@ -178,6 +178,7 @@ h1 {
 
   table {
     border-collapse: collapse;
+        width: 100%;
   }
   td {
     font-family: Satoshi-Regular, sans-serif;
@@ -192,6 +193,7 @@ h1 {
 
 tr:nth-of-type(even) {
     background-color: #e1e1e1;
+
 }
 
   strong {
@@ -199,12 +201,13 @@ tr:nth-of-type(even) {
   }
   
   #homenav {
-    position: fixed;
+    position: relative;
     align-items: left;
     top: 0;
     left: 0;
     padding: 4px 4px;
     z-index: 1005;
+    margin: 0;
   }
 
   .logo {
@@ -434,10 +437,10 @@ div#thumbs {
     position: relative;
     text-align: left;
     border: dotted 4px #c755c1; 
-    border-radius: 6px;
+    border-radius: 1px;
     /* border-image: url(/assets/images/orbborder_goldcorner.png) 33% 33% 33% 33% round; */
-    border-image: url(/assets/images/spiraldotborder2.png) 294 294 294 294 round;
-    border-image-width: 90px;
+    border-image: url(/assets/images/spiraldotborder2_sm.png) 285 285 285 285 round;
+    border-image-width: 80px;
   }
 
   #titleblock {
@@ -478,6 +481,11 @@ div#thumbs {
   }
 
   #backbut {
+    width: 100%;
+    text-align: center;
+  }
+
+  div#lightswitch {
     width: 100%;
     text-align: center;
   }

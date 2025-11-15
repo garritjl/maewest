@@ -136,4 +136,8 @@ function selectImg(imgs) {
         </a>
 </div>
     </article>
+
+<div id="lightswitch">
+    <img src="/assets/images/lightswitch_right.png" alt="lightswitch" height="240" width="109">
+</div>
 <?php snippet('footer2') ?>
