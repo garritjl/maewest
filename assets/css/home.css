@@ -166,7 +166,7 @@ min-width: 40vw;
   /** local links (pink) **/
 
   .pink:link {
-    color: #c755c1;
+    color: #fcf1fb;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -180,7 +180,7 @@ min-width: 40vw;
   }
   
   .pink:visited {
-    color: #c755c1;
+    color: #fcf1fb;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -195,7 +195,7 @@ min-width: 40vw;
   
 /** social links (blue) **/
   .blue:link {
-    color: #0081ff;
+    color: #fcf1fb;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -209,7 +209,7 @@ min-width: 40vw;
   }
   
   .blue:visited {
-    color: #0081ff;
+    color: #fcf1fb;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -258,8 +258,8 @@ html::-webkit-scrollbar {
   z-index: 1005;
   margin: 0 auto;
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: solid 2px #000000;
+/*   background-color: #ffffff;
+  border-bottom: solid 2px #000000; */
 }
 
 #homenav h4 a {
@@ -490,8 +490,8 @@ html::-webkit-scrollbar {
     top: 0;
     left: 0;
     object-fit: contain;
-    border-radius: 3px;
-    border: 0.5px solid rgb(230, 230, 230);
+    border-radius: 2px;
+    /* border: 0.5px solid rgb(230, 230, 230); */
   }
 
   /**
@@ -532,6 +532,17 @@ html::-webkit-scrollbar {
     margin-right: 0;
     padding: 0 0 0 0;
   }
+
+  .vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+  pointer-events: none;
+}
+
   @-moz-keyframes action {
     0%, 25%, 50%, 100% {
       transform: translate(0, 0);

@@ -125,17 +125,37 @@ function selectImg(imgs) {
             <?= $page->description()->kti() ?>
         </p>
 
-        
-        <?php if ($page->hasChildren()) snippet('listpagechildren')?>
-
-
         <br>
+
+      <?php if ($page->map()->isNotEmpty()): ?>
+        <div id="mapcontainer">
+          <div id="mapimagewindow">
+            <a href="<?= $page->map()->toFile()->url() ?>"><img id="expandedImg" src="<?= $page->map()->toFile()->url() ?>"></a>
+          </div>
+        </div>
+      <?php endif ?>
+
+      
 <div id="backbut">
         <a href="javascript:history.back()">
         <img src="/content/backbut.svg" alt="back button" height="227" width="204">
         </a>
 </div>
     </article>
+
+    <nav id="postpagenav">
+    
+  <p id="navtext">
+        <?php if ($page->hasPrevListed()): ?>
+          <a class="pink" href="<?= $page->prevListed()->url() ?>">previous</a>
+        <?php endif ?>
+
+        <?php if ($page->hasNextListed()): ?>
+            <a class="pink" href="<?= $page->nextListed()->url() ?>">next</a>
+        <?php endif ?>
+  
+    </p>
+</nav>
 
 <div id="lightswitch">
     <img src="/assets/images/lightswitch_right.png" alt="lightswitch" height="240" width="109">

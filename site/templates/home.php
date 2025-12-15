@@ -79,6 +79,8 @@
 
 <div class="drag-proxy"></div>
 
+<div class="vignette"></div>
+
 <div class="titleblock">
 <button class="next">
   <img src="/assets/images/leftarrow_iron.png" id="bookendimg">

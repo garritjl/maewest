@@ -1,0 +1,33 @@
+Title: Foyote Cugly
+
+----
+
+Subtitle: Agatha Wara
+
+----
+
+Number: 9
+
+----
+
+Date: 2025-12-05
+
+----
+
+Texte-de: 
+
+----
+
+Description: 
+
+----
+
+Poster: - 'file://g3t4jlfksrbgIeIy'
+
+----
+
+Pics: - 'file://g3t4jlfksrbgIeIy'
+
+----
+
+Uuid: 4jrCJ33FsDd1jUel

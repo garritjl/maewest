@@ -14,7 +14,7 @@ Date: 2025-06-06
 
 ----
 
-Tags: 
+Texte-de: 
 
 ----
 
@@ -51,6 +51,14 @@ Pics:
 - 'file://GdJAUcIdl3VpEn6Y'
 - 'file://93GXVM10vIhxgcKM'
 - 'file://jGDu06BYgsoyxrJB'
+
+----
+
+Map: - 'file://JTAQ7ychGpKIOCPl'
+
+----
+
+Tags: 
 
 ----
 

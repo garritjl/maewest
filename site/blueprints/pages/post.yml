@@ -49,4 +49,9 @@ columns:
           cover: true
         min: 1
         size: small
+
+      map: 
+        type: files
+        multiple: false
+        template: image
       

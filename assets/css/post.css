@@ -6,24 +6,56 @@
     margin-left: 10pt;
     margin-right: 10pt;
   }
+
+   #titleblock {
+    padding: 65px 0 0 0;
+  }
+
+    h1 {
+    font-size: 28pt;
+    line-height: 32pt;
+  }
+
+  h2 {
+    font-size: 28pt;
+    line-height: 32pt;
+  }
 }
+
+
 @media (min-width: 701px) {
   p.postdescription {
     margin-left: 50pt;
     margin-right: 50pt;
   }
-  @media (min-width: 1000px) {
+
+   #titleblock {
+    padding: 26px 0 0 0;
+  }
+
+  h1 {
+    font-size: 36pt;
+    line-height: 40pt;
+  }
+
+  h2 {
+    font-size: 36pt;
+    line-height: 40pt;
+  }
+}
+  
+@media (min-width: 1000px) {
     p.postdescription {
       margin-left: 80pt;
       margin-right: 80pt;
     }
 }
-}
+
 
 html {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
 }
 
 body {
@@ -44,10 +76,10 @@ article {
 
 h1 {
     font-family: candydarling, sans-serif;
-    font-size: 36pt;
+    
     font-weight: 500;
     font-style: normal;
-    line-height: 40pt;
+    
     word-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
@@ -58,10 +90,10 @@ h1 {
   
   h2 {
     font-family: candydarling, sans-serif;
-    font-size: 36pt;
+    
     font-weight: 300;
     font-style: normal;
-    line-height: 40pt;
+    
     word-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
@@ -376,6 +408,14 @@ figure {
   padding: 0 1% 0 1%;
 }
 
+#mapcontainer {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0 1% 0 1%;
+}
+
 li.workspagethumb {
 margin: -16pt 0 0 14pt;
 }
@@ -401,8 +441,13 @@ div#thumbs {
   object-fit: contain;
   }
 
+  #mapimagewindow {
+    object-fit: contain;
+  }
+
   #expandedImg {
     max-height: 600px;
+    min-height: 600px;
     max-width: 100%;
     border: 0.5px solid rgb(230, 230, 230);
   border-radius: 2px;
@@ -445,7 +490,7 @@ div#thumbs {
 
   #titleblock {
     margin: 0 auto;
-    padding: 26px 0 0 0;
+    
     position: relative;
     text-align: center;
   }
