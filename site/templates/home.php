@@ -26,7 +26,7 @@
 </head>
 <body>
 <?php $workspage = page('works'); ?>  
-<?php $item = $workspage->children()->listed()->flip() ?>
+<?php $item = $workspage->children()->listed() ?>
 
 <nav id="homenav">
 
@@ -98,12 +98,12 @@
 </div>
 
 <?php $workspage = page('works'); ?>  
-<?php $item = $workspage->children()->listed()->flip() ?>
+<?php $item = $workspage->children()->listed() ?>
 
 
 
 <?php $workspage = page('works'); ?>
-<?php $item = $workspage->children()->listed()->flip(); ?>
+<?php $item = $workspage->children()->listed(); ?>
 
 <?php
 $titles = [];

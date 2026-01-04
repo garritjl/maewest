@@ -301,6 +301,24 @@ document.querySelector('.prev').addEventListener('click', () => {
 updateTitle();
 
 
+// set default landing to newest item (last in BOXES)
+// compute normalized index (0..1) then convert to LOOP_HEAD time units
+const initialIndex = Math.max(0, BOXES.length - 1);
+const normalized = initialIndex / BOXES.length;
+const initialTime = normalized * LOOP_HEAD.duration();
+
+// set the playhead + scrub to that time-based position
+PLAYHEAD.position = initialTime;
+SCRUB.vars.position = initialTime;
+
+// align the loop timeline to that position (wraps to valid time)
+LOOP_HEAD.totalTime(POSITION_WRAP(PLAYHEAD.position));
+
+// ensure the animation/scrub reflects it and UI updates
+SCRUB.invalidate().restart();
+updateTitle();
+
+
 
 function setViewportHeight() {
   const vh = window.innerHeight * 0.01; 
