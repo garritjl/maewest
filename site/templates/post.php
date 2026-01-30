@@ -40,7 +40,7 @@
 </head>
 <body>
 
-  </header>
+  
 
   <main class="main">
 
@@ -54,7 +54,8 @@
     <?php foreach ($site->children()->listed() as $pagename): ?>
       
         <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?></a>,
+          <?= $pagename->title()->esc() ?></a>
+          <span style="color: #bebdbeff;">•</span>
           
     <?php endforeach ?>
 
@@ -145,13 +146,13 @@ function selectImg(imgs) {
 
     <nav id="postpagenav">
     
-  <p id="navtext">
+  <p id="prevnext">
         <?php if ($page->hasPrevListed()): ?>
-          <a class="pink" href="<?= $page->prevListed()->url() ?>">previous</a>
+          …<a class="scriptlink" href="<?= $page->prevListed()->url() ?>">previous</a>
         <?php endif ?>
 
         <?php if ($page->hasNextListed()): ?>
-            <a class="pink" href="<?= $page->nextListed()->url() ?>">next</a>
+            <a class="scriptlink" href="<?= $page->nextListed()->url() ?>">next</a>…
         <?php endif ?>
   
     </p>

@@ -87,7 +87,7 @@
   </button>
 
 <div class="current-title-box">
-  <h3 id="current-title"></h3>
+  <h2 id="current-title"></h2>
   
   <h3 id="current-subtitle"></h3>
 </div>

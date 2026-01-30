@@ -73,7 +73,7 @@ min-width: 40vw;
 }
 
 @media (max-width: 800px) {
-  h3 {
+  h3, h2 {
     font-size: 18pt;
     line-height: 24pt;
     margin-top: 0;
@@ -94,7 +94,7 @@ min-width: 40vw;
   }
 }
 @media (min-width: 801px) {
-  h3 {
+  h3, h2 {
     font-size: 28pt;
     line-height: 28pt;
     margin-top: 8pt;
@@ -135,14 +135,14 @@ min-width: 40vw;
 
   }
 
-  h2 {
-    font-family: candydarling, sans-serif;
-    font-size: 20pt;
+h2 {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-weight: 300;
     font-style: normal;
-    line-height: 20pt;
+    
     word-wrap: break-word;
-    margin-top: 8pt;
+    
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -150,8 +150,8 @@ min-width: 40vw;
   }
 
   h3 {
-    font-family: candydarling, sans-serif;
-
+    font-family: Satoshi-Light, sans-serif;
+    font-variant-alternates: styleset(singlestory);
     font-weight: 300;
     font-style: normal;
     

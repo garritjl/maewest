@@ -171,6 +171,21 @@ h1 {
     margin-right: 0;
     padding: 0 0 0 0;
   }
+
+  p#prevnext {
+    font-family: candydarling, sans-serif;
+    font-size: 30pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 20pt;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+    z-index: 1006;
+  }
   
   .txtpagetitle {
     padding: 16pt 0 0 0;
@@ -379,6 +394,31 @@ tr:nth-of-type(even) {
     background-color: none; 
     text-decoration: none;
   }
+
+  /** candy darling link (previous and next) **/
+  .scriptlink:link {
+    color: #c755c1;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .scriptlink:hover {
+    color: #837c82;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .scriptlink:visited {
+    color: #c755c1;
+    background-color: none; 
+    text-decoration: none;
+  }
+  
+  .scriptlink:active {
+    color: #ff0000;
+    background-color: none; 
+    text-decoration: none;
+  }
   
 
 /** images **/
@@ -481,11 +521,10 @@ div#thumbs {
     padding: 22px 22px 22px;
     position: relative;
     text-align: left;
-    border: dotted 4px #c755c1; 
+/*     border: dotted 4px #c755c1; 
     border-radius: 1px;
-    /* border-image: url(/assets/images/orbborder_goldcorner.png) 33% 33% 33% 33% round; */
     border-image: url(/assets/images/spiraldotborder2_sm.png) 285 285 285 285 round;
-    border-image-width: 80px;
+    border-image-width: 80px; */
   }
 
   #titleblock {
