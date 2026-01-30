@@ -1,9 +1,39 @@
-import gsap from 'https://cdn.skypack.dev/gsap@3.7.0'
-import ScrollTrigger from 'https://cdn.skypack.dev/gsap@3.7.0/ScrollTrigger'
-import Draggable from 'https://cdn.skypack.dev/gsap@3.7.0/Draggable'
+(async () => {
+  let gsap, ScrollTrigger, Draggable;
+  try {
+    const mod = await import('https://cdn.skypack.dev/gsap@3.7.0');
+    gsap = mod.default || mod;
+    const st = await import('https://cdn.skypack.dev/gsap@3.7.0/ScrollTrigger');
+    ScrollTrigger = st.default || st;
+    const dr = await import('https://cdn.skypack.dev/gsap@3.7.0/Draggable');
+    Draggable = dr.default || dr;
+  } catch (e) {
+    await new Promise((resolve, reject) => {
+      const s1 = document.createElement('script');
+      s1.src = 'https://cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js';
+      s1.onload = () => {
+        const s2 = document.createElement('script');
+        s2.src = 'https://cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js';
+        s2.onload = () => {
+          const s3 = document.createElement('script');
+          s3.src = 'https://cdn.jsdelivr.net/npm/gsap@3.7.0/dist/Draggable.min.js';
+          s3.onload = resolve;
+          s3.onerror = reject;
+          document.head.appendChild(s3);
+        };
+        s2.onerror = reject;
+        document.head.appendChild(s2);
+      };
+      s1.onerror = reject;
+      document.head.appendChild(s1);
+    });
+    gsap = window.gsap;
+    ScrollTrigger = window.ScrollTrigger;
+    Draggable = window.Draggable;
+  }
 
-gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(Draggable)
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(Draggable);
 
 gsap.set('.box', {
   yPercent: -50,
@@ -351,3 +381,5 @@ function adjustBoxHeights() {
 
 adjustBoxHeights();
 window.addEventListener('resize', adjustBoxHeights);
+
+})();
