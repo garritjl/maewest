@@ -34,7 +34,8 @@
     <?php foreach ($site->children()->listed() as $pagename): ?>
       
         <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?></a>,
+          <?= $pagename->title()->esc() ?></a>
+          <span>⍟</span>
       
     <?php endforeach ?>
 
@@ -135,7 +136,7 @@ if ($item && !$item->isEmpty()) {
 <script type="module" src="assets/js/coverflow.js"></script>
 
 <div id="address">
-  <p id="address">Pré-Du-Marché 19, Lausanne, Switzerland 1004</p>
+  <p id="address">Pré-Du-Marché 19 1004 Lausanne Suisse</p>
 </div>
 
 <?php snippet('footer2.php') ?>

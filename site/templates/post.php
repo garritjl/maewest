@@ -55,7 +55,7 @@
       
         <a class="pink" href="<?= $pagename->url() ?>">
           <?= $pagename->title()->esc() ?></a>
-          <span style="color: #bebdbeff;">•</span>
+          <span style="color: rgb(15, 15, 15);">⍟</span>
           
     <?php endforeach ?>
 

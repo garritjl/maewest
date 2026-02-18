@@ -181,7 +181,7 @@ h2 {
   /** local links (pink) **/
 
   .pink:link {
-    color: #fcf1fb;
+    color: #f8f4f8;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -190,12 +190,12 @@ h2 {
   .pink:hover {
     color: #c755c1;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline;
   }
   
   .pink:visited {
-    color: #fcf1fb;
+    color: #f8f4f8;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -204,13 +204,13 @@ h2 {
   .pink:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: yellow; 
+    background-color: none; 
     text-decoration: none;
   }
   
 /** social links (blue) **/
   .blue:link {
-    color: #fcf1fb;
+    color: #f8f4f8;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -219,12 +219,12 @@ h2 {
   .blue:hover {
     color: #0081ff;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline
   }
   
   .blue:visited {
-    color: #fcf1fb;
+    color: #f8f4f8;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -233,7 +233,7 @@ h2 {
   .blue:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: yellow; 
+    background-color: none; 
     text-decoration: none;
   }
 
@@ -290,7 +290,7 @@ html::-webkit-scrollbar {
     z-index: 1006;
     align-items: center;
     justify-content: center;
-    padding-top: 18pt;
+    padding-top: 22pt;
     pointer-events: none;
     /** border: red 1px solid; **/
     

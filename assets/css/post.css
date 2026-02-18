@@ -82,7 +82,7 @@ h1 {
     
     word-wrap: break-word;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5pt;
     margin-left: 0;
     margin-right: 0;
     padding: 0 0 0 0;
@@ -96,7 +96,7 @@ h1 {
     
     word-wrap: break-word;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 4pt;
     margin-left: 0;
     margin-right: 0;
     padding: 0 0 0 0;
@@ -323,8 +323,8 @@ tr:nth-of-type(even) {
   .pink:hover {
     color: #c755c1;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline;
   }
   
   .pink:visited {
@@ -337,8 +337,8 @@ tr:nth-of-type(even) {
   .pink:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline;
   }
   
 /** social links (blue) **/
@@ -352,8 +352,8 @@ tr:nth-of-type(even) {
   .blue:hover {
     color: #0081ff;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline;
   }
   
   .blue:visited {
@@ -366,8 +366,8 @@ tr:nth-of-type(even) {
   .blue:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: yellow; 
-    text-decoration: none;
+    background-color: none; 
+    text-decoration: underline;
   }
   
 /** all black link **/
@@ -518,7 +518,7 @@ div#thumbs {
   #mainblock {
     margin: auto;
     max-width: 900px;
-    padding: 22px 22px 22px;
+    padding: 22px 0px 22px;
     position: relative;
     text-align: left;
 /*     border: dotted 4px #c755c1; 
