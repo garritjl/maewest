@@ -60,9 +60,9 @@
   width: 90vw; 
   transform: translate(-50%, -50%) scale(1);
 }
-.current-title-box {
+/* .current-title-box {
   width: calc(100vw - 184px);
-  }
+  } */
 }
 
 @media (min-width: 1321px) {
@@ -136,8 +136,8 @@ h3 {
   }
   }
 
-  @media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
-    .titleblock {
+@media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
+  .titleblock {
       bottom: 20px;
     }
     }
