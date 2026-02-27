@@ -59,7 +59,8 @@
     <?php foreach ($site->children()->listed() as $pagename): ?>
       
         <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?></a>,
+          <?= $pagename->title()->esc() ?></a>
+          <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
       
     <?php endforeach ?>
 

@@ -55,7 +55,7 @@
       
         <a class="pink" href="<?= $pagename->url() ?>">
           <?= $pagename->title()->esc() ?></a>
-          <span style="color: rgb(15, 15, 15);">⍟</span>
+          <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
           
     <?php endforeach ?>
 
@@ -71,7 +71,7 @@
 <div id="titleblock">
         <h1><?= $page->title()->kti() ?></h1>
         <h2><?= $page->subtitle()->kti() ?></h2>
-        <h4>#<?= $page->number()->kti()?> — <?= $page->date()->toDate('d M Y') ?></h4>
+        <h4>#<?= $page->number()->kti()?> — <?= $page->date()->toDate(new IntlDateFormatter("fr_FR", IntlDateFormatter::LONG, IntlDateFormatter::NONE, 'Europe/Berlin')) ?></h4>
     </div>
 
     <br>

@@ -35,7 +35,7 @@
       
         <a class="pink" href="<?= $pagename->url() ?>">
           <?= $pagename->title()->esc() ?></a>
-          <span>⍟</span>
+          <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
       
     <?php endforeach ?>
 
@@ -83,14 +83,16 @@
 <div class="vignette"></div>
 
 <div class="titleblock">
-<button class="next">
-  <img src="/assets/images/leftarrow_iron.png" id="bookendimg">
+  <button class="next">
+    <img src="/assets/images/leftarrow_iron.png" id="bookendimg">
   </button>
 
 <div class="current-title-box">
   <h2 id="current-title"></h2>
   
   <h3 id="current-subtitle"></h3>
+
+  <h5>#<span id="current-number"></span> – <span id="current-date">5 Nov 2025</span></h5>
 </div>
 
 <button class="prev">
@@ -128,9 +130,33 @@ if ($item && !$item->isEmpty()) {
 }
 ?>
 
+<?php
+$dates = [];
+if ($item && !$item->isEmpty()) {
+    foreach ($item as $child) {
+        $dates[] = $child->date()->toDate(new IntlDateFormatter("fr_FR", IntlDateFormatter::LONG, IntlDateFormatter::NONE, 'Europe/Berlin'));
+    }
+} else {
+    $dates[] = "No items available";
+}
+?>
+
+<?php
+$numbers = [];
+if ($item && !$item->isEmpty()) {
+    foreach ($item as $child) {
+        $numbers[] = $child->number()->value();
+    }
+} else {
+    $numbers[] = "No items available";
+}
+?>
+
 <script>
   const carouselTitles = <?= json_encode($titles, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
   const carouselSubtitles = <?= json_encode($subtitles, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
+  const carouselDates = <?= json_encode($dates, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
+  const carouselNumbers = <?= json_encode($numbers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 </script>
 
 <script type="module" src="assets/js/coverflow.js"></script>

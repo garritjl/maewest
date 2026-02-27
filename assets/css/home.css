@@ -75,9 +75,17 @@ min-width: 40vw;
 @media (max-width: 800px) {
   h3, h2 {
     font-size: 18pt;
-    line-height: 24pt;
+    line-height: 22pt;
     margin-top: 0;
+    margin-bottom: 0;
   }
+h3 {
+    margin-bottom: 4pt;
+  }
+  h5 {
+    font-size: 10pt;
+  }
+
   .box {
     /* top: 55%; */
     top: 50%;
@@ -97,7 +105,14 @@ min-width: 40vw;
   h3, h2 {
     font-size: 28pt;
     line-height: 28pt;
-    margin-top: 8pt;
+    margin-top: 4pt;
+  }
+  h3 {
+    margin-bottom: 8pt;
+  }
+  h5 {
+    font-size: 12pt;
+    line-height: 12pt;
   }
   .box {
     top: 50%;
@@ -135,6 +150,7 @@ min-width: 40vw;
 
   }
 
+/** show title **/
 h2 {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
@@ -149,6 +165,7 @@ h2 {
     padding: 0 0 0 0;
   }
 
+/** subtitle/artist name **/
   h3 {
     font-family: Satoshi-Light, sans-serif;
     font-variant-alternates: styleset(singlestory);
@@ -157,17 +174,18 @@ h2 {
     
     word-wrap: break-word;
     
-    margin-bottom: 0;
+    
     margin-left: 0;
     margin-right: 0;
     padding: 0 0 0 0;
   }
 
+/** nav links **/
   h4 {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
-    font-size: 16pt;
     font-weight: 300;
+    font-size: 16pt;
     font-style: normal;
     line-height: 20pt;
     word-wrap: break-word;
@@ -177,6 +195,22 @@ h2 {
     margin-right: 0;
     padding: 0 0 0 0;
   }
+
+/** number & date under show title **/
+   h5 {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    
+    font-weight: 300;
+    font-style: normal;
+    
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    word-wrap: break-word;
+  }
+
 
   /** local links (pink) **/
 

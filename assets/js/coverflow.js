@@ -309,8 +309,12 @@ const updateTitle = () => {
   const wrappedIndex = (currentIndex + BOXES.length) % BOXES.length;
   const currentTitle = carouselTitles[wrappedIndex];
   const currentSubtitle = carouselSubtitles[wrappedIndex];
+  const currentDate = carouselDates[wrappedIndex];
+  const currentNumber = carouselNumbers[wrappedIndex];
   document.getElementById('current-title').textContent = currentTitle || '';
   document.getElementById('current-subtitle').textContent = currentSubtitle || '';
+  document.getElementById('current-date').textContent = currentDate || '';
+  document.getElementById('current-number').textContent = currentNumber || '';
 };
 
 ScrollTrigger.addEventListener('scrollEnd', () => {

@@ -6,7 +6,7 @@
 <?php $item = $workspage->children()->listed()->flip() ?>
 
         <!-- <h1 class="indextitle"><?= $page->title()->kti() ?></h1> -->
-        <img src="/assets/images/indexpencilscript.png" width="216" height="105" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
+        <img src="/assets/images/indexv2.png" width="214" height="104" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
 
         <table class="styled-table">
             <tbody>
