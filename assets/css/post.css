@@ -8,7 +8,7 @@
   }
 
    #titleblock {
-    padding: 65px 0 0 0;
+    padding: 26px 0 0 0;
   }
 
     h1 {
@@ -85,7 +85,7 @@ h1 {
     margin-bottom: 5pt;
     margin-left: 0;
     margin-right: 0;
-    padding: 0 0 0 0;
+    padding: 0 4pt 0 0;
   }
   
   h2 {
@@ -99,7 +99,7 @@ h1 {
     margin-bottom: 4pt;
     margin-left: 0;
     margin-right: 0;
-    padding: 0 0 0 0;
+    padding: 0 4pt 0 0;
   }
 
   h3 {
@@ -187,6 +187,14 @@ h1 {
     z-index: 1006;
   }
   
+  #textede {
+    text-align: right;
+  }
+
+#prevnext {
+  width: 50px;
+}
+
   .txtpagetitle {
     padding: 16pt 0 0 0;
   }
@@ -501,13 +509,28 @@ div#thumbs {
     
   }
 
-  nav#postpagenav {
-    max-width: 952px;
+nav#arrows {
     width: 100%;
     margin: 0 auto;
     text-align: justify;
     text-align-last: justify;
+    position: fixed;
+  bottom: 0;
+  left: 0;
    
+  }
+
+  div#prevnext {
+max-width: 900px;
+    z-index: 1006;
+  }
+
+  nav#postpagenav {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    text-align-last: justify;
   }
 
   #postpagenav p a {

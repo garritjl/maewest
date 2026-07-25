@@ -31,10 +31,14 @@ columns:
   - width: 2/3
     fields:
       
-      texte de:
-        type: text
-      
       description:
+        type: textarea
+
+      textede:
+        type: textarea
+        label: Texte de
+
+      footnotes:
         type: textarea
 
       poster: fields/poster

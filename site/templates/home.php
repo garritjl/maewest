@@ -97,7 +97,7 @@
 
 <button class="prev">
 <img src="/assets/images/rightarrow_iron.png" id="bookendimg">
-  </button>
+</button>
 </div>
 
 <?php $workspage = page('works'); ?>  

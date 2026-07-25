@@ -39,9 +39,9 @@
 
         <br>
 
-        <a href="javascript:history.back()">
+        <!-- <a href="javascript:history.back()">
         <img src="/content/backbut.svg" alt="back button" height="151" width="136">
-        </a>
+        </a> -->
 
 </article>
 

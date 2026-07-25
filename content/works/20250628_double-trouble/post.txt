@@ -14,24 +14,36 @@ Date: 2025-06-28
 
 ----
 
-Texte-de: 
+Description:
+
+Une drôle de mouche Tsé Tsé a piqué Martin Bonnaz et Niels Hung, ces deux faux jumeaux du néo néo-géo ? Ils paraissent frappés du sommeil paradoxal de la géométrie, somnambules mécaniques mais sans amnésie.
+
+NH dessine des ZZZ de zombie painter à la façon d’un Snoopy rêvant sur la crête Hard Edge de sa niche. MB glorifie de *holes* ses bayadères à la Bridget Riley, comme pour percer au plus profond les mystères de l’optique.
+
+Autrefois - il n’y a encore pas si longtemps - on s’interrogeait : comment se libérer du poids de l’héritage du 20ème siècle ? Mais la crise du postmodernisme, les post-vérités et *Total Recall* en vrai ont tôt fait de provoquer un oubli trouble et généralisé, en peinture comme ailleurs.
+
+Martin Bonnaz et Niels Hung sont 2 artistes nés après la fin de l’histoire, mais ils sont aussi de ceux -peu nombreux mais tenaces- qui se sont donnés pour mission d’entretenir les machines. 
+
+Et comme peu à peu on ne sait plus vraiment à quoi elles servaient, ces machines, ils font de cet entretien un jeu, un objet de pur plaisir. Pas un plaisir d’esthètes, plutôt de découvreurs de nouvelles fonctions.
+
+Ils montrent alors un engagement sincère et *concret* à faire des formes, à tendre une toile, à appliquer de la couleur dessus, comme d’autres font des riffs de guitares. Il y a aussi quelque chose d’indicible car de profondément personnel dans l’étendue [l’étant du] monochrome, dans la ligne répétée (qui pourrait aussi bien être une fleur). Martin Bonnaz et Niels Hung s’approprient ces motifs avec délicatesse.
+
+Z va se coucher et devient signature de N tandis que M carotte ses rayures.
+
+*Trouble Double* ; trouées dans la rythmique au son de ZZ Top, c’est l’instant présent qui nous retient devant ces peintures, ici et maintenant.
+
+Et Zobi la mouche !
 
 ----
 
-Description:
+Textede:
 
-My first encounter with neutrality in art happened in the summer of 2021 in Tucson, Arizona, a few miles from where I lived in the Sonoran desert. Olivier Mosset, the Swiss painter known for his austere abstraction, was having a major retrospective at the local museum. I had time to spare, so I went. The exhibition was a maze of surfaces—repetitive, precise, mechanical. Enamel spread across the canvases with nonhuman coldness. Walking through the rooms felt like moving through a factory of sameness, each step pressing against the weight of neutrality.
+Nicolas Chardon
+Paris, 01.07.2025
 
-I left the galleries, and the desert heat hit me like a slap. It was the same heat Mosset had chosen to live under, despite his origins in the Bernese mountains. One of his most well-known works consists of two monochrome canvases, each the size of a refrigerator door. A coincidence, perhaps, but also a reminder that minimalism and conceptualism-the so-called neutral aesthe-tics-are usually associated with cold climates, artificial precision, and a modernist utopia that never fully materialized. Could this condition be reversed?
+----
 
-Mosset once said, "I think a good work of art should represent its non-existence, its insignifi-cance, or a perfect neutrality of sorts." But is such neutrality even possible? Even historical mini-malism, with its rejection of expression, was never truly neutral—it was a critique, a response, a stance. The belief that one can strip art of narrative, of affect, is itself a narrative, one that often serves particular cultural and economic forces. When art abandons meaning, meaning creeps in through other doors: the names of collectors, the prestige of institutions, the silent weight of market logic.
-
-A curator friend once confessed to me, "I don't want to be too bold or too confrontational. They don't like that, the judges." We often speak of art in terms of freedom, but what does that mean when certain gestures are rewarded and others suppressed? Thematizing oppression while satisfying the narcissism of developed countries that like to see themselves reflected in the art of their uninvited guests—is this another form of neutrality? Or just a performance of conscience?
-
-I find myself skeptical of the fantasy of the retired artist, working in solitude with a comfortable pension, painting the same thing over and over again for an international market. And I find myself equally skeptical of a certain fascination with cowboy culture-something between nostalgia and escapism, an aestheticized longing for a pastoral life that never belongs. Maybe it's just about cows and refusing intellectualism. Maybe it's about a type of cow-like-thinking.
-Mosset's move to the desert feels like a statement, whether he intended it or not. Maybe, in the end, neutrality is just another mirage, shimmering under the staggering heat.
-
-Alan Sierra
+Footnotes: 
 
 ----
 
@@ -42,16 +54,26 @@ Poster: - 'file://yYKseWxNBN6Rg9Hb'
 Pics:
 
 - 'file://yYKseWxNBN6Rg9Hb'
-- 'file://540wvjPpprpJQiaD'
-- 'file://1FlhmqLiU3miluZZ'
-- 'file://hFZk6pu4BZSrrDX1'
-- 'file://25vo8Z8kvqCUTHY7'
-- 'file://akdvDLmQDKQheaRF'
-- 'file://0ZGQK8VkzfzocoHb'
+- 'file://wadX8PDrjPBAcOzZ'
+- 'file://pztOchReIgbdznES'
+- 'file://mDWOI5KAts8HdhNl'
+- 'file://BRC6wSgCmCuxpOE9'
+- 'file://qLAs8ZZb0Yb88uzP'
+- 'file://T0JCMSDM5uCDtqEE'
+- 'file://46KrJXF8hwzrfrC8'
+- 'file://5GjmxsXktZ1gHOzO'
+- 'file://jXV1X04fbRzfLk7P'
+- 'file://wxypl9eSqmaUQ6JK'
+- 'file://3SpypKdKgRdM0QA8'
+- 'file://ZAmm7kBgg8PDD8Ez'
 
 ----
 
 Map: - 'file://66D97ZsPeIicCEFE'
+
+----
+
+Texte-de: 
 
 ----
 

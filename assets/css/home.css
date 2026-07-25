@@ -160,13 +160,13 @@ h3 {
 
 @media (max-height: 799px) {
   .titleblock {
-    bottom: 0;
+    bottom: -8pt;
   }
   }
 
 @media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
   .titleblock {
-      bottom: 0;
+      bottom: -8pt;
     }
     }
 
@@ -317,7 +317,7 @@ html::-webkit-scrollbar {
     margin: 0;
     overflow: hidden;
     background: var(--bg);
-    background-image: url('/content/bullseye.png');
+    background-image: url('/content/bullseye72526_sharp.png');
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center;

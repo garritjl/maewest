@@ -14,11 +14,15 @@ Date: 2025-12-05
 
 ----
 
-Texte-de: 
+Description: 
 
 ----
 
-Description: 
+Textede: 
+
+----
+
+Footnotes: 
 
 ----
 
@@ -26,7 +30,44 @@ Poster: - 'file://g3t4jlfksrbgIeIy'
 
 ----
 
-Pics: - 'file://g3t4jlfksrbgIeIy'
+Pics:
+
+- 'file://g3t4jlfksrbgIeIy'
+- 'file://OQ0iM9QoTJ2I1cOM'
+- 'file://VTRHkhOG3EHHxtBI'
+- 'file://vm8WlBWnXBUADdgg'
+- 'file://XSEDP2wVfW7G15jz'
+- 'file://qucRHK0QrAgZqrnj'
+- 'file://TpOLN99XUvV2Lov2'
+- 'file://axaqEymXvZguVJpf'
+- 'file://3eA5mm4n3PhgqdUz'
+- 'file://dlSY6R8Yb8HObeC8'
+- 'file://HZEcWyuw2t7qoF4G'
+- 'file://5EXaj2heywTUIXYA'
+- 'file://yPuSLTgGRLI6AWVu'
+- 'file://NxLjVjwT1mUpJW8p'
+- 'file://JnerXt9MpJtoHB5D'
+- 'file://Pse5i8jp7tzj5I4w'
+- 'file://dTOYr5HpR20yaUCB'
+- 'file://nYrqgv3I9NImhxnV'
+- 'file://UrGEUuBCi4jsITR4'
+- 'file://pDMJDc2sq91QdG4h'
+- 'file://vo891stSRPXqxOmq'
+- 'file://OD9Kdknn0KNN8L1M'
+- 'file://6Z3Sxw1heytcMa7g'
+- 'file://5ilaloRwN9m4QtbB'
+- 'file://0eCFJMwBQLS3uZW5'
+- 'file://dFBcDI9iTaUaT2D5'
+- 'file://MHeEvNWzk9iv6zAS'
+- 'file://yNj6LBMgjuBA5iq0'
+
+----
+
+Map: []
+
+----
+
+Texte-de: 
 
 ----
 

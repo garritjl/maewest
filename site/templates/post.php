@@ -128,6 +128,25 @@ function selectImg(imgs) {
 
         <br>
 
+        <p class="postdescription" id="textede">
+          <?= $page->textede()->kti() ?>
+        </p>
+
+      <?php if ($page->footnotes()->isNotEmpty()): ?>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p class="postdescription" >
+          <?= $page->footnotes()->kti() ?>
+        </p>
+      <?php endif ?>
+
+        <br>
+
       <?php if ($page->map()->isNotEmpty()): ?>
         <div id="mapcontainer">
           <div id="mapimagewindow">
@@ -137,16 +156,17 @@ function selectImg(imgs) {
       <?php endif ?>
 
       
-<div id="backbut">
+<!-- <div id="backbut">
         <a href="javascript:history.back()">
         <img src="/content/backbut.svg" alt="back button" height="227" width="204">
         </a>
-</div>
+</div> -->
+
     </article>
 
-    <nav id="postpagenav">
+<nav id="arrows">
     
-  <p id="prevnext">
+<!--   <p id="prevnext">
         <?php if ($page->hasPrevListed()): ?>
           …<a class="scriptlink" href="<?= $page->prevListed()->url() ?>">previous</a>
         <?php endif ?>
@@ -154,11 +174,23 @@ function selectImg(imgs) {
         <?php if ($page->hasNextListed()): ?>
             <a class="scriptlink" href="<?= $page->nextListed()->url() ?>">next</a>…
         <?php endif ?>
-  
-    </p>
+  </p> -->
+
+  <div id="prevnext">
+    <p id="prevnext">
+  <?php if ($page->hasPrevListed()): ?>
+          <a class="scriptlink" href="<?= $page->prevListed()->url() ?>"><img src="/assets/images/leftarrow_iron.png" id="prevnext"></a>
+        <?php endif ?>
+
+<?php if ($page->hasNextListed()): ?>
+            <a class="scriptlink" href="<?= $page->nextListed()->url() ?>"><img src="/assets/images/rightarrow_iron.png" id="prevnext"></a>
+        <?php endif ?>
+  </div>
+        </p>
+
 </nav>
 
-<div id="lightswitch">
+<!-- <div id="lightswitch">
     <img src="/assets/images/lightswitch_right.png" alt="lightswitch" height="240" width="109">
-</div>
+</div> -->
 <?php snippet('footer2') ?>

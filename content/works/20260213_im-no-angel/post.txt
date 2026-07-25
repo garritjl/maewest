@@ -14,31 +14,24 @@ Date: 2026-02-13
 
 ----
 
-Texte-de: 
+Description:
+
+K. Desbouis
+Jasmine Gregory
+Kairaan Kika
+Nolan Lucidi
+Jiří Makovec
+Sarah Morris
+Rúrí
+weecolors
 
 ----
 
-Description:
+Textede: 
 
-Get your hands on this rock solid keycap set: DSA Granite, designed by Matt3o. This colorway stands strong on its own, but also provides a beautiful foundation for further customization with its timeless mix of light gray and white.
+----
 
-This keycap set comes with low-profile, durable PBT, dye-sublimated keycaps to create a keycap set as long-lasting as Half Dome and as free-standing as the peaks of Patagonia. Novelty keys allow you to add a few flecks of color and style, while staying true to the classic look. Modifiers include text modifiers, icon modifiers, the bonus pack, secondary legends, and more.
-
-Here's what one reviewer said about the set:
-
-"I had wanted the Granite keycap set for soooo long! I couldn't find it anywhere for the longest time as it was sold out everywhere! Finally PMK got them back in stock and I bought it up right away. The quality is great! I inspected every single keycap when they arrived and they are flawless!! They feel durable and high quality . . . You can't go wrong with this set, if you like the colorway then you'll love it. No quality control issues at all, they're perfect!"
-
-In the words of Matt3o, “There are dozens of incredibly colorful and well designed keycap sets around, but nothing’s more elegant than a simple gray layout.” We couldn’t agree more. Give yourself the gift of this classic keycap set today.
-
-Product Details:
-
-This sublimated keycap set comes in GDE and GKK; the F and J keys are deep dish in the Common set.
-
-RGB Set Colors: Blue: BCT, Red: RBH, Green: VAZ, Orange: OBB, Yellow: YR
-
-Note: Sublimated Sets are printed on-demand and won't ship "same day" regardless of the shipping method chosen.
-
-**Sublimated text or image color is ONLY available as pictured.
+Footnotes: 
 
 ----
 
@@ -49,15 +42,36 @@ Poster: - 'file://MHiHCPCKRxTAgVuz'
 Pics:
 
 - 'file://MHiHCPCKRxTAgVuz'
-- 'file://hBeHT0aA03MKBKga'
-- 'file://8vYrNPy09axuQVOY'
-- 'file://4A2Sgm9CTdoXrXvO'
-- 'file://5WrgYSHYKjpEVCNH'
-- 'file://oYVsk9EdY2grjeFW'
+- 'file://BFHKOFlhxPjAM6UT'
+- 'file://K6kRrMlGiKB5XkJr'
+- 'file://3QZrsVrMRkKkEVHZ'
+- 'file://DMsAVZ2GmaoLidCW'
+- 'file://iwfp3VjfZ1o0C7c3'
+- 'file://YYxFfvj42Rz1DcIz'
+- 'file://1cHZUS7AOsgD5lom'
+- 'file://gyIvaiTePH6ZgnQY'
+- 'file://hEiHZgXwQra2enj2'
+- 'file://s6LmAnUl2Jx3t0sJ'
+- 'file://5qqMWbLYAQDI2fE1'
+- 'file://WW5THYetjhKovlBQ'
+- 'file://oAmjjkzzmw2SPdje'
+- 'file://0yHjTFQRJ0LfkDaH'
+- 'file://JFvBqOgu5oxDIOmw'
+- 'file://YgWUDFgq9KPhpw6s'
+- 'file://6pGbdDOAxUMmlqNF'
+- 'file://AxKGMiU6I5UqU3WF'
+- 'file://4mBwbclZESgJlepx'
+- 'file://NKnSCIUBJWygSE34'
+- 'file://Ky0jAW6Plm0XP3mo'
+- 'file://QE9DddRk2KOqYHMU'
 
 ----
 
-Map: - 'file://cK2KWY3zmJVKqlhE'
+Map: - 'file://5gtdnhKzf2qYJZc1'
+
+----
+
+Texte-de: 
 
 ----
 
