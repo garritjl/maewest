@@ -164,30 +164,24 @@ function selectImg(imgs) {
 
     </article>
 
-<nav id="arrows">
-    
-<!--   <p id="prevnext">
-        <?php if ($page->hasPrevListed()): ?>
-          …<a class="scriptlink" href="<?= $page->prevListed()->url() ?>">previous</a>
-        <?php endif ?>
-
-        <?php if ($page->hasNextListed()): ?>
-            <a class="scriptlink" href="<?= $page->nextListed()->url() ?>">next</a>…
-        <?php endif ?>
-  </p> -->
-
+<nav id="arrows" aria-label="Previous and next project links">
   <div id="prevnext">
-    <p id="prevnext">
-  <?php if ($page->hasPrevListed()): ?>
-          <a class="scriptlink" href="<?= $page->prevListed()->url() ?>"><img src="/assets/images/leftarrow_iron.png" id="prevnext"></a>
-        <?php endif ?>
+    <?php if ($page->hasPrevListed()): ?>
+      <a class="scriptlink prev-arrow" href="<?= $page->prevListed()->url() ?>">
+        <img src="/assets/images/leftarrow_iron.png" alt="Previous project" class="nav-arrow-img">
+      </a>
+    <?php else: ?>
+      <span class="nav-arrow-placeholder" aria-hidden="true"></span>
+    <?php endif ?>
 
-<?php if ($page->hasNextListed()): ?>
-            <a class="scriptlink" href="<?= $page->nextListed()->url() ?>"><img src="/assets/images/rightarrow_iron.png" id="prevnext"></a>
-        <?php endif ?>
+    <?php if ($page->hasNextListed()): ?>
+      <a class="scriptlink next-arrow" href="<?= $page->nextListed()->url() ?>">
+        <img src="/assets/images/rightarrow_iron.png" alt="Next project" class="nav-arrow-img">
+      </a>
+    <?php else: ?>
+      <span class="nav-arrow-placeholder" aria-hidden="true"></span>
+    <?php endif ?>
   </div>
-        </p>
-
 </nav>
 
 <!-- <div id="lightswitch">

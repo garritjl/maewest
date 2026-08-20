@@ -4,11 +4,11 @@ Title: contact
 
 Text:
 
-info@maewest.ch
-
+info@maewest.ch<br>
+(link: https://www.instagram.com/starring.maewest/ class: blue text: instagram – @starring.maewest)<br>
+Mae West - Association La Placette 
 Pré-Du-Marché 19
 1004 Lausanne
-Switzerland
 
 ----
 

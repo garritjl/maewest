@@ -6,15 +6,17 @@ Text:
 
 Mae West, Mary Jane "Mae" West (August 17, 1893 – November 22, 1980) was an American actress, singer, comedian, screenwriter, and playwright. Recognized as a prominent sex symbol of her time, she was known for portraying sexually confident characters and for her use of double entendres, often delivering her lines in a distinctive contralto voice.
 
-<br>Mae West is also an artist-run space based in Lausanne exhibiting local / international artists.
+<br>Mae West is also an artist-run space based in Lausanne exhibiting multi-generational local and international artists.
 
 <br>
 Programmation : Nicolas Ponce & Virginie Sistek 
-Artistic Direction : Garrit J. Lichtenberg 
-Photographer : Guillaume Python 
+Graphic Design and Web Development : Garrit J. Lichtenberg 
+Documentation : Guillaume Python 
 Guards : Oana Cuozzo & Niki Loroch 
-Fundraiser : Christine Matthey 
+Fundraising : Christine Matthey 
 <br>
+2026 programmation is supported by 
+La Ville de Lausanne, Pro Helvetia, La Loterie Romande, Le Canton de Vaud et la Fondation Sandoz
 
 ----
 

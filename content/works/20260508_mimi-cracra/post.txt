@@ -14,11 +14,15 @@ Date: 2026-05-08
 
 ----
 
-Texte-de: 
+Description: 
 
 ----
 
-Description: 
+Textede: 
+
+----
+
+Footnotes: 
 
 ----
 
@@ -26,11 +30,27 @@ Poster: - 'file://n7UFCOyClmoD5cz7'
 
 ----
 
-Pics: - 'file://n7UFCOyClmoD5cz7'
+Pics:
+
+- 'file://n7UFCOyClmoD5cz7'
+- 'file://BLIRZx8qG2wQ3MgT'
+- 'file://I8U9anLwmIQMnBY9'
+- 'file://vqNPs6vljEtw9HZ1'
+- 'file://qExJSrjwP16MuGap'
+- 'file://y2YGm4kJdce0cIPQ'
+- 'file://iIWZzxGgwrv72nEo'
+- 'file://q2pE33MxyaiPgKNv'
+- 'file://1yMfnxnX6pRjDZSd'
+- 'file://bSBJ4m3tFyctzdYZ'
+- 'file://zzVeyJKCr1lgthFL'
 
 ----
 
 Map: []
+
+----
+
+Texte-de: 
 
 ----
 
