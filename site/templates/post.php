@@ -51,18 +51,20 @@
 <nav id="postpagenav">
     
   <p id="navtext">
-    <?php foreach ($site->children()->listed() as $pagename): ?>
-      
-        <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?></a>
-          <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
-          
+    <?php $children = $site->children()->listed(); ?>
+    <?php foreach ($children as $pagename): ?>
+      <a class="pink" href="<?= $pagename->url() ?>">
+        <?= $pagename->title()->esc() ?>
+      </a>
+      <?php if (!$children->last()->is($pagename)): ?>
+        <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
+      <?php endif ?>
     <?php endforeach ?>
 
       
-        <a class="blue" href="https://instagram.com/starring.maewest">
+<!--         <a class="blue" href="https://instagram.com/starring.maewest">
           instagram
-        </a>
+        </a> -->
     </p>
 </nav>
 
@@ -82,19 +84,33 @@
         <hr>
     </div>
 
+        <?php
+          $pics   = $page->pics()->toFiles();
+          $poster = $page->poster()->toFile();
+
+          
+          $gallery = $poster ? $pics->not($poster) : $pics;
+          $default = $gallery->first() ?? $poster;
+          $thumbs  = $poster && $pics->has($poster) ? $gallery->clone()->add($poster) : $gallery;
+
+          $hasCaptions = $thumbs->filter(fn ($image) => $image->caption()->isNotEmpty())->isNotEmpty();
+        ?>
+
         <div id="gallery">
 
-            <div id="gallerywindow">
-                <a id="expandedImgLink" href="<?= $page->poster()->toFile()->url() ?>"><img id="expandedImg" src="<?= $page->poster()->toFile()->url() ?>"></a>
+            <div id="gallerywindow"<?= $hasCaptions ? ' class="has-captions"' : '' ?>>
+                <?php if ($default): ?>
+                  <a id="expandedImgLink" href="<?= $default->url() ?>"><img id="expandedImg" src="<?= $default->url() ?>" alt="<?= $default->alt()->esc() ?>"></a>
+                <?php endif ?>
 
-                <div id="imgtext"></div>
+                <div id="imgtext"><?= $default ? $default->caption()->kti() : '' ?></div>
             </div>
 
             <div id="thumbs">
-                <?php foreach ($page->pics()->toFiles() as $image): ?>
-                    
+                <?php foreach ($thumbs as $image): ?>
+
                         <!-- <a href="<?= $image->url() ?>"> -->
-                            <img src="<?= $image->url() ?>" id="gallerythumb" onclick="selectImg(this);">
+                            <img src="<?= $image->url() ?>" id="gallerythumb"<?= $default && $image->is($default) ? ' class="is-selected"' : '' ?> alt="<?= $image->alt()->esc() ?>" data-caption="<?= esc($image->caption()->kti(), 'attr') ?>" onclick="selectImg(this);">
                         <!-- </a> -->
                     
                 <?php endforeach ?>
@@ -102,14 +118,33 @@
         </div>
 
         <script>
+
+var expandImg = document.querySelector("#gallerywindow #expandedImg");
+var imgText = document.getElementById("imgtext");
+var imgLink = document.getElementById("expandedImgLink");
+
+
+function syncCaptionWidth() {
+  if (!expandImg || !imgText) return;
+  imgText.style.width = expandImg.getBoundingClientRect().width + "px";
+}
+
 function selectImg(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  var imgLink = document.getElementById("expandedImgLink");
   expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
+  imgText.innerHTML = imgs.dataset.caption || "";
   expandImg.parentElement.style.display = "block";
-    imgLink.href = imgs.src; // Set the link to the full image
+  imgLink.href = imgs.src; // Set the link to the full image
+
+  var thumbs = document.querySelectorAll("#thumbs #gallerythumb");
+  for (var i = 0; i < thumbs.length; i++) {
+    thumbs[i].classList.toggle("is-selected", thumbs[i] === imgs);
+  }
+}
+
+if (expandImg) {
+  expandImg.addEventListener("load", syncCaptionWidth);
+  window.addEventListener("resize", syncCaptionWidth);
+  if (expandImg.complete) syncCaptionWidth();
 }
 </script>
 

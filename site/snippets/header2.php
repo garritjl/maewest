@@ -56,18 +56,19 @@
       Mae West
     </a>
     —
-    <?php foreach ($site->children()->listed() as $pagename): ?>
-      
-        <a class="pink" href="<?= $pagename->url() ?>">
-          <?= $pagename->title()->esc() ?></a>
-          <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
-      
+    <?php $children = $site->children()->listed(); ?>
+    <?php foreach ($children as $pagename): ?>
+      <a class="pink" href="<?= $pagename->url() ?>">
+        <?= $pagename->title()->esc() ?>
+      </a>
+      <?php if (!$children->last()->is($pagename)): ?>
+        <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
+      <?php endif ?>
     <?php endforeach ?>
 
-      
-        <a class="blue" href="https://instagram.com/starring.maewest">
+<!--         <a class="blue" href="https://instagram.com/starring.maewest">
           instagram
-        </a>
+        </a> -->
     </p>
 </nav>
 
