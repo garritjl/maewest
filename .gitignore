@@ -26,6 +26,7 @@ Icon
 *.sublime-workspace
 /.vscode
 /.idea
+/.claude/settings.local.json
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

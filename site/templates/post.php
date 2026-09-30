@@ -45,7 +45,7 @@
   <main class="main">
 
 <div id="toplogodiv">
-  <a href="<?= $site->url() ?>"><img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo"></a>
+  <a href="<?= $site->url() ?>"><img src="/assets/images/mwdotlogo.svg" alt="Mae West logo" id="logo" width="150"></a>
 </div>
 
 <nav id="postpagenav">
@@ -53,9 +53,7 @@
   <p id="navtext">
     <?php $children = $site->children()->listed(); ?>
     <?php foreach ($children as $pagename): ?>
-      <a class="pink" href="<?= $pagename->url() ?>">
-        <?= $pagename->title()->esc() ?>
-      </a>
+      <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
       <?php if (!$children->last()->is($pagename)): ?>
         <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
       <?php endif ?>
@@ -157,7 +155,7 @@ if (expandImg) {
         <hr>
     </div>
 
-        <p class="postdescription" >
+        <p class="postdescription" id="description">
             <?= $page->description()->kti() ?>
         </p>
 

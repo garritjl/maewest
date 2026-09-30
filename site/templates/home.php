@@ -33,9 +33,7 @@
   <h4>
     <?php $children = $site->children()->listed(); ?>
     <?php foreach ($children as $pagename): ?>
-      <a class="pink" href="<?= $pagename->url() ?>">
-        <?= $pagename->title()->esc() ?>
-      </a>
+      <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
       <?php if (!$children->last()->is($pagename)): ?>
         <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
       <?php endif ?>
