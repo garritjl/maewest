@@ -58,7 +58,7 @@
     <?php foreach ($children as $pagename): ?>
       <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
       <?php if (!$children->last()->is($pagename)): ?>
-        <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
+        <span class="navstar" aria-hidden="true">⍟</span>
       <?php endif ?>
     <?php endforeach ?>
 

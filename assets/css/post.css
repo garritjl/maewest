@@ -20,6 +20,10 @@
     font-size: 28pt;
     line-height: 32pt;
   }
+
+  nav#postpagenav {
+    padding: 2px 24px 6px;
+  }
 }
 
 
@@ -157,19 +161,43 @@ h1 {
 
   
 
-  p#navtext {
+  #navtext {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: 300;
     font-style: normal;
-    line-height: 20pt;
+    line-height: 16pt;
     word-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     padding: 0 0 0 0;
+  }
+
+  .navline {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .navstar {
+    color: rgb(15, 15, 15);
+    position: relative;
+    top: 1.2px;
+    margin: 0 1.5px;
+  }
+
+  .navfill {
+    flex: 1 1 0%;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    color: rgb(15, 15, 15);
+    font-size: 0.85em;
   }
 
   p#prevnext {
@@ -621,10 +649,50 @@ nav#arrows {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2px 40px 6px;
+    color: rgb(15, 15, 15);
   }
 
-  #postpagenav p a {
+  .navribbon {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .navribbon svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: visible;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1px;
+    stroke-linecap: square;
+  }
+
+  .ribbon-left {
+    left: 0;
+    width: 12px;
+  }
+
+  .ribbon-right {
+    right: 0;
+    width: 12px;
+  }
+
+  .ribbon-mid {
+    left: 12px;
+    width: calc(100% - 24px);
+  }
+
+  nav#postpagenav #navtext {
+    position: relative;
+    z-index: 1;
+  }
+
+  #postpagenav a {
   display: inline-block;
   white-space: nowrap;
 }

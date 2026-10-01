@@ -45,26 +45,200 @@
   <main class="main">
 
 <div id="toplogodiv">
-  <a href="<?= $site->url() ?>"><img src="/assets/images/mwdotlogo.svg" alt="Mae West logo" id="logo" width="150"></a>
+  <a href="<?= $site->url() ?>"><img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo"></a>
 </div>
 
 <nav id="postpagenav">
-    
-  <p id="navtext">
+
+  <span class="navribbon" aria-hidden="true">
+    <svg class="ribbon-end ribbon-left">
+      <line x1="12" y1="0" x2="0" y2="0"></line>
+      <line class="ribbon-v" x1="0" y1="0" x2="12" y2="50%"></line>
+      <line class="ribbon-v" x1="12" y1="50%" x2="0" y2="100%"></line>
+      <line class="ribbon-bot" x1="0" y1="100%" x2="12" y2="100%"></line>
+    </svg>
+    <svg class="ribbon-mid">
+      <line x1="0" y1="0" x2="100%" y2="0"></line>
+      <line x1="0" y1="100%" x2="100%" y2="100%"></line>
+    </svg>
+    <svg class="ribbon-end ribbon-right">
+      <line x1="0" y1="0" x2="12" y2="0"></line>
+      <line class="ribbon-v" x1="12" y1="0" x2="0" y2="50%"></line>
+      <line class="ribbon-v" x1="0" y1="50%" x2="12" y2="100%"></line>
+      <line class="ribbon-bot" x1="12" y1="100%" x2="0" y2="100%"></line>
+    </svg>
+  </span>
+
+  <div id="navtext">
     <?php $children = $site->children()->listed(); ?>
     <?php foreach ($children as $pagename): ?>
-      <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
-      <?php if (!$children->last()->is($pagename)): ?>
-        <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
+      <?php if (!$children->first()->is($pagename)): ?>
+        <span class="navstar" aria-hidden="true">⍟</span>
       <?php endif ?>
+      <a class="navitem pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
     <?php endforeach ?>
-
-      
-<!--         <a class="blue" href="https://instagram.com/starring.maewest">
-          instagram
-        </a> -->
-    </p>
+  </div>
 </nav>
+
+<script>
+(function () {
+  var nav = document.getElementById('postpagenav');
+  var navtext = document.getElementById('navtext');
+  if (!nav || !navtext) return;
+
+  var SEP = '\u00a0\u00a0';
+  var DOT = '\u2022';
+  var STAR = '\u235f';
+
+  var items = [].slice.call(navtext.querySelectorAll('.navitem'));
+  if (!items.length) return;
+  items.forEach(function (el) { el.parentNode.removeChild(el); });
+
+  function makeStar() {
+    var s = document.createElement('span');
+    s.className = 'navstar';
+    s.setAttribute('aria-hidden', 'true');
+    s.textContent = STAR;
+    return s;
+  }
+
+  function makeFill() {
+    var f = document.createElement('span');
+    f.className = 'navfill';
+    f.setAttribute('aria-hidden', 'true');
+    return f;
+  }
+
+  function measure() {
+    var probe = document.createElement('div');
+    probe.style.cssText =
+      'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0;';
+    navtext.appendChild(probe);
+    var widths = items.map(function (el) {
+      var clone = el.cloneNode(true);
+      probe.appendChild(clone);
+      return clone.getBoundingClientRect().width;
+    });
+    var star = makeStar();
+    probe.appendChild(star);
+    var cs = window.getComputedStyle(star);
+    var starTotal =
+      star.getBoundingClientRect().width +
+      parseFloat(cs.marginLeft || 0) +
+      parseFloat(cs.marginRight || 0);
+    navtext.removeChild(probe);
+    return { widths: widths, starTotal: starTotal };
+  }
+
+  function computeLines(containerW, widths, starTotal) {
+    var lines = [];
+    var cur = [];
+    var sum = 0;
+    for (var i = 0; i < widths.length; i++) {
+      var trySum = sum + widths[i];
+      var need = trySum + cur.length * starTotal;
+      if (cur.length && need > containerW) {
+        lines.push(cur);
+        cur = [i];
+        sum = widths[i];
+      } else {
+        cur.push(i);
+        sum = trySum;
+      }
+    }
+    if (cur.length) lines.push(cur);
+    return lines;
+  }
+
+  function build(lines) {
+    items.forEach(function (el) {
+      if (el.parentNode) el.parentNode.removeChild(el);
+    });
+    navtext.textContent = '';
+    lines.forEach(function (idxs) {
+      var line = document.createElement('div');
+      line.className = 'navline';
+      if (idxs.length === 1) {
+        line.appendChild(makeStar());
+        line.appendChild(makeFill());
+        line.appendChild(items[idxs[0]]);
+        line.appendChild(makeFill());
+        line.appendChild(makeStar());
+      } else {
+        idxs.forEach(function (idx, j) {
+          if (j > 0) {
+            line.appendChild(makeFill());
+            line.appendChild(makeStar());
+            line.appendChild(makeFill());
+          }
+          line.appendChild(items[idx]);
+        });
+      }
+      navtext.appendChild(line);
+    });
+  }
+
+  function measureText(host, text) {
+    var probe = document.createElement('span');
+    probe.style.position = 'absolute';
+    probe.style.visibility = 'hidden';
+    probe.style.whiteSpace = 'pre';
+    probe.textContent = text;
+    host.appendChild(probe);
+    var width = probe.getBoundingClientRect().width;
+    host.removeChild(probe);
+    return width;
+  }
+
+  function fillDots() {
+    var fills = [].slice.call(navtext.querySelectorAll('.navfill'));
+    if (!fills.length) return;
+    fills.forEach(function (el) { el.textContent = ''; });
+    var sepW = measureText(fills[0], SEP);
+    var dotW = measureText(fills[0], SEP + DOT) - sepW;
+    if (dotW <= 0) return;
+    fills.forEach(function (el) {
+      var available = el.getBoundingClientRect().width;
+      var count = Math.floor((available - sepW) / (sepW + dotW));
+      if (count <= 0) return;
+      var dots = [];
+      for (var i = 0; i < count; i++) dots.push(DOT);
+      el.textContent = SEP + dots.join(SEP) + SEP;
+    });
+  }
+
+  function syncRibbon() {
+    var h = nav.getBoundingClientRect().height;
+    if (!h) return;
+    nav.querySelectorAll('.ribbon-end').forEach(function (svg) {
+      var vs = svg.querySelectorAll('.ribbon-v');
+      if (vs.length === 2) {
+        vs[0].setAttribute('y2', h / 2);
+        vs[1].setAttribute('y1', h / 2);
+        vs[1].setAttribute('y2', h);
+      }
+      svg.querySelectorAll('.ribbon-bot').forEach(function (l) {
+        l.setAttribute('y1', h);
+        l.setAttribute('y2', h);
+      });
+    });
+  }
+
+  function layout() {
+    var containerW = navtext.getBoundingClientRect().width;
+    if (!containerW) return;
+    var m = measure();
+    build(computeLines(containerW, m.widths, m.starTotal));
+    fillDots();
+    syncRibbon();
+  }
+
+  window.addEventListener('resize', layout);
+  if (document.readyState === 'complete') layout();
+  else window.addEventListener('load', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+})();
+</script>
 
 <article id="mainblock">
 
