@@ -21,9 +21,6 @@
     line-height: 32pt;
   }
 
-  nav#postpagenav {
-    padding: 2px 24px 6px;
-  }
 }
 
 
@@ -157,6 +154,7 @@ h1 {
     padding: 0 0 0 0;
     line-height: 16pt;
     word-wrap: break-word;
+    text-align: justify;
   }
 
   
@@ -353,7 +351,7 @@ tr:nth-of-type(even) {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 5px 0 5px 0;
+    padding: 5px 0 10px 0;
 
     /* pointer-events: none; */
     /** border: red 1px solid; **/
@@ -651,8 +649,14 @@ nav#arrows {
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
-    padding: 2px 40px 6px;
+    padding: 2px 40px 5px;
     color: rgb(15, 15, 15);
+  }
+
+  @media (max-width: 700px) {
+    nav#postpagenav {
+      padding: 2px 24px 5px;
+    }
   }
 
   .navribbon {
@@ -670,6 +674,7 @@ nav#arrows {
     stroke: currentColor;
     stroke-width: 1px;
     stroke-linecap: square;
+    stroke-linejoin: round;
   }
 
   .ribbon-left {
@@ -724,8 +729,8 @@ nav#arrows {
     text-align: center;
     height: 0px;
     padding: 0;
-    margin: 4px;
-    
+    margin: 4px 0;
+
   }
   div.fourstripe {
     text-align: center;

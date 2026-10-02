@@ -52,20 +52,14 @@
 
   <span class="navribbon" aria-hidden="true">
     <svg class="ribbon-end ribbon-left">
-      <line x1="12" y1="0" x2="0" y2="0"></line>
-      <line class="ribbon-v" x1="0" y1="0" x2="12" y2="50%"></line>
-      <line class="ribbon-v" x1="12" y1="50%" x2="0" y2="100%"></line>
-      <line class="ribbon-bot" x1="0" y1="100%" x2="12" y2="100%"></line>
+      <polyline class="ribbon-outline" points="12,0 0,0 12,14.5 0,29 12,29"></polyline>
     </svg>
     <svg class="ribbon-mid">
       <line x1="0" y1="0" x2="100%" y2="0"></line>
       <line x1="0" y1="100%" x2="100%" y2="100%"></line>
     </svg>
     <svg class="ribbon-end ribbon-right">
-      <line x1="0" y1="0" x2="12" y2="0"></line>
-      <line class="ribbon-v" x1="12" y1="0" x2="0" y2="50%"></line>
-      <line class="ribbon-v" x1="0" y1="50%" x2="12" y2="100%"></line>
-      <line class="ribbon-bot" x1="12" y1="100%" x2="0" y2="100%"></line>
+      <polyline class="ribbon-outline" points="0,0 12,0 0,14.5 12,29 0,29"></polyline>
     </svg>
   </span>
 
@@ -210,18 +204,16 @@
   function syncRibbon() {
     var h = nav.getBoundingClientRect().height;
     if (!h) return;
-    nav.querySelectorAll('.ribbon-end').forEach(function (svg) {
-      var vs = svg.querySelectorAll('.ribbon-v');
-      if (vs.length === 2) {
-        vs[0].setAttribute('y2', h / 2);
-        vs[1].setAttribute('y1', h / 2);
-        vs[1].setAttribute('y2', h);
-      }
-      svg.querySelectorAll('.ribbon-bot').forEach(function (l) {
-        l.setAttribute('y1', h);
-        l.setAttribute('y2', h);
-      });
-    });
+    var left = nav.querySelector('.ribbon-left .ribbon-outline');
+    var right = nav.querySelector('.ribbon-right .ribbon-outline');
+    if (left) {
+      left.setAttribute('points',
+        '12,0 0,0 12,' + (h / 2) + ' 0,' + h + ' 12,' + h);
+    }
+    if (right) {
+      right.setAttribute('points',
+        '0,0 12,0 0,' + (h / 2) + ' 12,' + h + ' 0,' + h);
+    }
   }
 
   function layout() {
