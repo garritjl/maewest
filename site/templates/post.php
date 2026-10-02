@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://use.typekit.net/sak3gzo.css">
 
   <?= css([
-    'assets/css/post.css',
-    'assets/css/nav.css',
+    assetv('assets/css/post.css'),
+    assetv('assets/css/nav.css'),
     '@auto'
   ]) ?>
 
@@ -53,7 +53,7 @@
   <?php snippet('ribbonnav') ?>
 </nav>
 
-<?= js('assets/js/nav.js') ?>
+<?= js(assetv('assets/js/nav.js')) ?>
 
 <article id="mainblock">
 

@@ -7,12 +7,10 @@
 
   <title><?= $site->title()->esc() ?></title>
 
-  <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all">
-
   <?= css([
-    'assets/css/home.css',
-    'assets/css/nav.css',
-    '@auto'
+    assetv('assets/css/home.css'),
+    assetv('assets/css/nav.css'),
+    assetv('assets/css/templates/home.css')
   ]) ?>
 
   
@@ -146,9 +144,9 @@ if ($item && !$item->isEmpty()) {
   const carouselNumbers = <?= json_encode($numbers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 </script>
 
-<script type="module" src="assets/js/coverflow.js"></script>
+<script type="module" src="<?= assetv('assets/js/coverflow.js') ?>"></script>
 
-<?= js('assets/js/nav.js') ?>
+<?= js(assetv('assets/js/nav.js')) ?>
 
 <div id="address">
   <p id="address">Pré-Du-Marché 19 1004 Lausanne Suisse</p>
