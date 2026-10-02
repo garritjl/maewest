@@ -25,6 +25,7 @@
 
   <?= css([
     'assets/css/post.css',
+    'assets/css/nav.css',
     '@auto'
   ]) ?>
 
@@ -48,189 +49,11 @@
   <a href="<?= $site->url() ?>"><img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo"></a>
 </div>
 
-<nav id="postpagenav">
-
-  <span class="navribbon" aria-hidden="true">
-    <svg class="ribbon-end ribbon-left">
-      <polyline class="ribbon-outline" points="12,0 0,0 12,14.5 0,29 12,29"></polyline>
-    </svg>
-    <svg class="ribbon-mid">
-      <line x1="0" y1="0" x2="100%" y2="0"></line>
-      <line x1="0" y1="100%" x2="100%" y2="100%"></line>
-    </svg>
-    <svg class="ribbon-end ribbon-right">
-      <polyline class="ribbon-outline" points="0,0 12,0 0,14.5 12,29 0,29"></polyline>
-    </svg>
-  </span>
-
-  <div id="navtext">
-    <?php $children = $site->children()->listed(); ?>
-    <?php foreach ($children as $pagename): ?>
-      <?php if (!$children->first()->is($pagename)): ?>
-        <span class="navstar" aria-hidden="true">⍟</span>
-      <?php endif ?>
-      <a class="navitem pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
-    <?php endforeach ?>
-  </div>
+<nav id="postpagenav" class="ribbonnav">
+  <?php snippet('ribbonnav') ?>
 </nav>
 
-<script>
-(function () {
-  var nav = document.getElementById('postpagenav');
-  var navtext = document.getElementById('navtext');
-  if (!nav || !navtext) return;
-
-  var SEP = '\u00a0\u00a0';
-  var DOT = '\u2022';
-  var STAR = '\u235f';
-
-  var items = [].slice.call(navtext.querySelectorAll('.navitem'));
-  if (!items.length) return;
-  items.forEach(function (el) { el.parentNode.removeChild(el); });
-
-  function makeStar() {
-    var s = document.createElement('span');
-    s.className = 'navstar';
-    s.setAttribute('aria-hidden', 'true');
-    s.textContent = STAR;
-    return s;
-  }
-
-  function makeFill() {
-    var f = document.createElement('span');
-    f.className = 'navfill';
-    f.setAttribute('aria-hidden', 'true');
-    return f;
-  }
-
-  function measure() {
-    var probe = document.createElement('div');
-    probe.style.cssText =
-      'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0;';
-    navtext.appendChild(probe);
-    var widths = items.map(function (el) {
-      var clone = el.cloneNode(true);
-      probe.appendChild(clone);
-      return clone.getBoundingClientRect().width;
-    });
-    var star = makeStar();
-    probe.appendChild(star);
-    var cs = window.getComputedStyle(star);
-    var starTotal =
-      star.getBoundingClientRect().width +
-      parseFloat(cs.marginLeft || 0) +
-      parseFloat(cs.marginRight || 0);
-    navtext.removeChild(probe);
-    return { widths: widths, starTotal: starTotal };
-  }
-
-  function computeLines(containerW, widths, starTotal) {
-    var lines = [];
-    var cur = [];
-    var sum = 0;
-    for (var i = 0; i < widths.length; i++) {
-      var trySum = sum + widths[i];
-      var need = trySum + cur.length * starTotal;
-      if (cur.length && need > containerW) {
-        lines.push(cur);
-        cur = [i];
-        sum = widths[i];
-      } else {
-        cur.push(i);
-        sum = trySum;
-      }
-    }
-    if (cur.length) lines.push(cur);
-    return lines;
-  }
-
-  function build(lines) {
-    items.forEach(function (el) {
-      if (el.parentNode) el.parentNode.removeChild(el);
-    });
-    navtext.textContent = '';
-    lines.forEach(function (idxs) {
-      var line = document.createElement('div');
-      line.className = 'navline';
-      if (idxs.length === 1) {
-        line.appendChild(makeStar());
-        line.appendChild(makeFill());
-        line.appendChild(items[idxs[0]]);
-        line.appendChild(makeFill());
-        line.appendChild(makeStar());
-      } else {
-        idxs.forEach(function (idx, j) {
-          if (j > 0) {
-            line.appendChild(makeFill());
-            line.appendChild(makeStar());
-            line.appendChild(makeFill());
-          }
-          line.appendChild(items[idx]);
-        });
-      }
-      navtext.appendChild(line);
-    });
-  }
-
-  function measureText(host, text) {
-    var probe = document.createElement('span');
-    probe.style.position = 'absolute';
-    probe.style.visibility = 'hidden';
-    probe.style.whiteSpace = 'pre';
-    probe.textContent = text;
-    host.appendChild(probe);
-    var width = probe.getBoundingClientRect().width;
-    host.removeChild(probe);
-    return width;
-  }
-
-  function fillDots() {
-    var fills = [].slice.call(navtext.querySelectorAll('.navfill'));
-    if (!fills.length) return;
-    fills.forEach(function (el) { el.textContent = ''; });
-    var sepW = measureText(fills[0], SEP);
-    var dotW = measureText(fills[0], SEP + DOT) - sepW;
-    if (dotW <= 0) return;
-    fills.forEach(function (el) {
-      var available = el.getBoundingClientRect().width;
-      var count = Math.floor((available - sepW) / (sepW + dotW));
-      if (count <= 0) return;
-      var dots = [];
-      for (var i = 0; i < count; i++) dots.push(DOT);
-      el.textContent = SEP + dots.join(SEP) + SEP;
-    });
-  }
-
-  function syncRibbon() {
-    var h = nav.getBoundingClientRect().height;
-    if (!h) return;
-    var left = nav.querySelector('.ribbon-left .ribbon-outline');
-    var right = nav.querySelector('.ribbon-right .ribbon-outline');
-    if (left) {
-      left.setAttribute('points',
-        '12,0 0,0 12,' + (h / 2) + ' 0,' + h + ' 12,' + h);
-    }
-    if (right) {
-      right.setAttribute('points',
-        '0,0 12,0 0,' + (h / 2) + ' 12,' + h + ' 0,' + h);
-    }
-  }
-
-  function layout() {
-    var containerW = navtext.getBoundingClientRect().width;
-    if (!containerW) return;
-    var m = measure();
-    build(computeLines(containerW, m.widths, m.starTotal));
-    fillDots();
-    syncRibbon();
-  }
-
-  window.addEventListener('resize', layout);
-  if (document.readyState === 'complete') layout();
-  else window.addEventListener('load', layout);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
-})();
-</script>
+<?= js('assets/js/nav.js') ?>
 
 <article id="mainblock">
 
@@ -263,9 +86,15 @@
         <div id="gallery">
 
             <div id="gallerywindow"<?= $hasCaptions ? ' class="has-captions"' : '' ?>>
-                <?php if ($default): ?>
-                  <a id="expandedImgLink" href="<?= $default->url() ?>"><img id="expandedImg" src="<?= $default->url() ?>" alt="<?= $default->alt()->esc() ?>"></a>
-                <?php endif ?>
+                <div id="galleryviewport">
+                  <?php if ($default): ?>
+                    <a id="expandedImgLink" href="<?= $default->url() ?>"><img id="expandedImg" src="<?= $default->url() ?>" alt="<?= $default->alt()->esc() ?>"></a>
+                  <?php endif ?>
+                  <button type="button" class="galleryzone zone-prev" aria-label="Previous image"></button>
+                  <button type="button" class="galleryzone zone-next" aria-label="Next image"></button>
+                  <div class="zoneband band-prev" aria-hidden="true"></div>
+                  <div class="zoneband band-next" aria-hidden="true"></div>
+                </div>
 
                 <div id="imgtext"><?= $default ? $default->caption()->kti() : '' ?></div>
             </div>
@@ -305,10 +134,91 @@ function selectImg(imgs) {
   }
 }
 
+function syncZoneBands() {
+  [["zone-prev", "band-prev"], ["zone-next", "band-next"]].forEach(function (pair) {
+    var zone = document.querySelector("." + pair[0]);
+    var band = document.querySelector("." + pair[1]);
+    if (!zone || !band) return;
+    var rect = zone.getBoundingClientRect();
+    band.style.left = rect.left + "px";
+    band.style.width = rect.width + "px";
+  });
+}
+
 if (expandImg) {
   expandImg.addEventListener("load", syncCaptionWidth);
   window.addEventListener("resize", syncCaptionWidth);
   if (expandImg.complete) syncCaptionWidth();
+}
+
+window.addEventListener("resize", syncZoneBands);
+if (document.readyState === "complete") syncZoneBands();
+else window.addEventListener("load", syncZoneBands);
+
+function galleryThumbs() {
+  return [].slice.call(document.querySelectorAll("#thumbs #gallerythumb"));
+}
+
+function step(delta) {
+  var thumbs = galleryThumbs();
+  if (!thumbs.length) return;
+  var current = 0;
+  for (var i = 0; i < thumbs.length; i++) {
+    if (thumbs[i].classList.contains("is-selected")) {
+      current = i;
+      break;
+    }
+  }
+  selectImg(thumbs[(current + delta + thumbs.length) % thumbs.length]);
+}
+
+var viewport = document.getElementById("galleryviewport");
+var zonePrev = document.querySelector(".zone-prev");
+var zoneNext = document.querySelector(".zone-next");
+var swiped = false;
+var SWIPE_MIN = 40;
+
+if (zonePrev) {
+  zonePrev.addEventListener("click", function () {
+    if (swiped) return;
+    step(-1);
+  });
+}
+
+if (zoneNext) {
+  zoneNext.addEventListener("click", function () {
+    if (swiped) return;
+    step(1);
+  });
+}
+
+if (viewport) {
+  var startX = 0;
+  var startY = 0;
+
+  viewport.addEventListener("touchstart", function (e) {
+    if (e.touches.length !== 1) return;
+    swiped = false;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  viewport.addEventListener("touchend", function (e) {
+    if (!e.changedTouches.length) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    var dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > SWIPE_MIN && Math.abs(dx) > Math.abs(dy)) {
+      swiped = true;
+      step(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+
+  viewport.addEventListener("click", function (e) {
+    if (!swiped) return;
+    e.preventDefault();
+    e.stopPropagation();
+    swiped = false;
+  }, true);
 }
 </script>
 
@@ -363,11 +273,11 @@ if (expandImg) {
 
     </article>
 
-<nav id="arrows" aria-label="Previous and next project links">
+<nav id="arrows" aria-label="Previous and next exhibition links">
   <div id="prevnext">
     <?php if ($page->hasPrevListed()): ?>
       <a class="scriptlink prev-arrow" href="<?= $page->prevListed()->url() ?>">
-        <img src="/assets/images/leftarrow_iron.png" alt="Previous project" class="nav-arrow-img">
+        <img src="/assets/images/leftarrow_iron.png" alt="Previous exhibition" class="nav-arrow-img">
       </a>
     <?php else: ?>
       <span class="nav-arrow-placeholder" aria-hidden="true"></span>
@@ -375,7 +285,7 @@ if (expandImg) {
 
     <?php if ($page->hasNextListed()): ?>
       <a class="scriptlink next-arrow" href="<?= $page->nextListed()->url() ?>">
-        <img src="/assets/images/rightarrow_iron.png" alt="Next project" class="nav-arrow-img">
+        <img src="/assets/images/rightarrow_iron.png" alt="Next exhibition" class="nav-arrow-img">
       </a>
     <?php else: ?>
       <span class="nav-arrow-placeholder" aria-hidden="true"></span>
@@ -383,7 +293,17 @@ if (expandImg) {
   </div>
 </nav>
 
-<!-- <div id="lightswitch">
-    <img src="/assets/images/lightswitch_right.png" alt="lightswitch" height="240" width="109">
-</div> -->
-<?php snippet('footer2') ?>
+<div id="tilescontainer">
+  <img src="/assets/images/tilefooter.jpg" id="tilefooter" alt="Black and white floor tiles with embossed letter reading: 'MAE WEST  EST. 2025  LAUSANNE, SUISSE.'">
+</div>
+
+  </main>
+
+  <footer class="footerpostpage">
+    <div>
+      <?= $site->footer()->esc() ?>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+.ribbonnav {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2px 40px 5px;
+}
+
+@media (max-width: 700px) {
+  .ribbonnav {
+    padding: 2px 24px 5px;
+  }
+}
+
+.ribbonnav-text {
+  font-family: Satoshi-Regular, sans-serif;
+  font-variant-alternates: styleset(singlestory);
+  font-size: 14pt;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 16pt;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ribbonnav a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.navline {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.navstar {
+  color: inherit;
+  position: relative;
+  top: 1.2px;
+  margin: 0 1.5px;
+}
+
+.navfill {
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  color: inherit;
+  font-size: 0.85em;
+}
+
+.navribbon {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.navribbon svg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1px;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+}
+
+.ribbon-left {
+  left: 0;
+  width: 12px;
+}
+
+.ribbon-right {
+  right: 0;
+  width: 12px;
+}
+
+.ribbon-mid {
+  left: 12px;
+  width: calc(100% - 24px);
+}

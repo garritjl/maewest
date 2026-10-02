@@ -1,7 +1,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footertxtpage">
     <div>
       <?= $site->footer()->esc() ?>
     </div>

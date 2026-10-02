@@ -174,30 +174,6 @@ h1 {
     padding: 0 0 0 0;
   }
 
-  .navline {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  .navstar {
-    color: rgb(15, 15, 15);
-    position: relative;
-    top: 1.2px;
-    margin: 0 1.5px;
-  }
-
-  .navfill {
-    flex: 1 1 0%;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    color: rgb(15, 15, 15);
-    font-size: 0.85em;
-  }
-
   p#prevnext {
     font-family: candydarling, sans-serif;
     font-size: 30pt;
@@ -329,7 +305,7 @@ tr:nth-of-type(even) {
     word-wrap: break-word;
   }
 
-  .footer {
+  .footertxtpage {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
     font-size: 12pt;
@@ -337,6 +313,20 @@ tr:nth-of-type(even) {
     font-style: normal;
     margin: 0pt 0pt 0pt 0pt;
     padding: 72pt 0pt 0pt 0pt;
+    line-height: 18pt;
+    word-wrap: break-word;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .footerpostpage {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 12pt;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0pt 0pt 0pt 0pt;
+    padding: 25pt 0pt 0pt 0pt;
     line-height: 18pt;
     word-wrap: break-word;
     text-align: center;
@@ -547,6 +537,58 @@ div#thumbs {
     margin-bottom: 15px;
   }
 
+  #galleryviewport {
+    position: relative;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: pan-y;
+  }
+
+  .galleryzone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .zoneband {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  @media (any-hover: hover) {
+    .zone-prev:hover ~ .band-prev,
+    .zone-next:hover ~ .band-next {
+      background: #f6ee20;
+    }
+  }
+
+  .zone-prev {
+    left: 0;
+  }
+
+  .zone-next {
+    right: 0;
+  }
+
   #expandedImgLink {
     display: block;
     line-height: 0;
@@ -644,63 +686,8 @@ nav#arrows {
   }
 
   nav#postpagenav {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
-    padding: 2px 40px 5px;
     color: rgb(15, 15, 15);
   }
-
-  @media (max-width: 700px) {
-    nav#postpagenav {
-      padding: 2px 24px 5px;
-    }
-  }
-
-  .navribbon {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .navribbon svg {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    overflow: visible;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1px;
-    stroke-linecap: square;
-    stroke-linejoin: round;
-  }
-
-  .ribbon-left {
-    left: 0;
-    width: 12px;
-  }
-
-  .ribbon-right {
-    right: 0;
-    width: 12px;
-  }
-
-  .ribbon-mid {
-    left: 12px;
-    width: calc(100% - 24px);
-  }
-
-  nav#postpagenav #navtext {
-    position: relative;
-    z-index: 1;
-  }
-
-  #postpagenav a {
-  display: inline-block;
-  white-space: nowrap;
-}
 
   #mainblock {
     margin: auto;
@@ -756,7 +743,13 @@ nav#arrows {
     text-align: center;
   }
 
-  div#lightswitch {
+  div#tilescontainer {
     width: 100%;
     text-align: center;
+    margin: 200px 0 0 0;
+  }
+
+  #tilefooter {
+    max-width: 100%;
+    width: 400px;
   }

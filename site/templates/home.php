@@ -11,6 +11,7 @@
 
   <?= css([
     'assets/css/home.css',
+    'assets/css/nav.css',
     '@auto'
   ]) ?>
 
@@ -28,22 +29,8 @@
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed() ?>
 
-<nav id="homenav">
-
-  <h4>
-    <?php $children = $site->children()->listed(); ?>
-    <?php foreach ($children as $pagename): ?>
-      <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
-      <?php if (!$children->last()->is($pagename)): ?>
-        <span style="color: rgb(15, 15, 15); vertical-align: -1.5px;">⍟</span>
-      <?php endif ?>
-    <?php endforeach ?>
-
-      
-<!--         <a class="blue" href="https://instagram.com/starring.maewest">
-          instagram
-        </a> -->
-      </h4>
+<nav id="homenav" class="ribbonnav">
+  <?php snippet('ribbonnav') ?>
 </nav>
 
 <div id="toplogodiv">
@@ -160,6 +147,8 @@ if ($item && !$item->isEmpty()) {
 </script>
 
 <script type="module" src="assets/js/coverflow.js"></script>
+
+<?= js('assets/js/nav.js') ?>
 
 <div id="address">
   <p id="address">Pré-Du-Marché 19 1004 Lausanne Suisse</p>

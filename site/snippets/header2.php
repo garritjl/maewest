@@ -25,6 +25,7 @@
 
   <?= css([
     'assets/css/post.css',
+    'assets/css/nav.css',
     '@auto'
   ]) ?>
 

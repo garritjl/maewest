@@ -312,23 +312,17 @@ html::-webkit-scrollbar {
 
 #homenav {
   position: fixed;
-  align-items: justify;
-  text-align: justify;
-  text-align-last: justify;
   top: 0;
   left: 0;
-  padding: 4px 4px;
-  z-index: 1005;
+  right: 0;
+  width: auto;
   margin: 0 auto;
-  width: 100%;
+  z-index: 1005;
+  color: #f8f4f8;
 /*   background-color: #ffffff;
   border-bottom: solid 2px #000000; */
 }
 
-#homenav h4 a {
-  display: inline-block;
-  white-space: nowrap;
-}
 
 #toplogodiv {
     display: flex;
