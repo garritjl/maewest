@@ -56,7 +56,11 @@ Pics:
 
 ----
 
-Map: - 'file://HwFMsVsqcOHJ6ccs'
+Map: - 'file://QDZ2yB9OXqeFhCI6'
+
+----
+
+Textepdf: - 'file://W8GKfEXXelSxuyDS'
 
 ----
 

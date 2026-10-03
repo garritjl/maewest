@@ -263,12 +263,69 @@ h1 {
   td {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: 300;
     font-style: normal;
-    line-height: 18pt;
+    line-height: 16pt;
     word-wrap: break-word;
     padding-bottom: 2px;
+  }
+
+  .indexlist {
+    width: 100%;
+  }
+
+  a.indexrow {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    width: 100%;
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 14pt;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 16pt;
+    padding-bottom: 2px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a.indexrow:nth-of-type(even) {
+    background-color: #e1e1e1;
+  }
+
+  a.indexrow:hover,
+  a.indexrow:active {
+    background-color: #f6ee20;
+  }
+
+  .indexrow .indexnum {
+    flex: 0 0 auto;
+    min-width: 4.5ch;
+    white-space: nowrap;
+  }
+
+  .indexrow .indexhash {
+    color: rgba(145, 145, 145, 1);
+  }
+
+  .indexrow .indexname,
+  .indexrow .indexartist {
+    flex: 1 1 0;
+    min-width: 0;
+    color: #c755c1;
+  }
+
+  a.indexrow:hover .indexname,
+  a.indexrow:hover .indexartist {
+    text-decoration: underline;
+  }
+
+  a.indexrow:active .indexname,
+  a.indexrow:active .indexartist {
+    color: #ff0000;
   }
 
 tr:nth-of-type(even) {
@@ -326,7 +383,7 @@ tr:nth-of-type(even) {
     font-weight: 300;
     font-style: normal;
     margin: 0pt 0pt 0pt 0pt;
-    padding: 25pt 0pt 0pt 0pt;
+    padding: 30pt 0pt 0pt 0pt;
     line-height: 18pt;
     word-wrap: break-word;
     text-align: center;
@@ -389,21 +446,21 @@ tr:nth-of-type(even) {
 
 /** social links (blue) **/
   .blue:link {
-    color: #0081ff;
+    color: #0096f3;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
   }
   
   .blue:hover {
-    color: #0081ff;
+    color: #0096f3;
     border-radius: 2.5pt;
     background-color: #f6ee20;
     text-decoration: underline;
   }
 
   .blue:visited {
-    color: #0081ff;
+    color: #0096f3;
     border-radius: 2.5pt;
     background-color: none; 
     text-decoration: none;
@@ -496,8 +553,8 @@ figure {
 
 #mapcontainer {
   max-width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
   text-align: center;
   padding: 0 1% 0 1%;
 }
@@ -611,6 +668,21 @@ div#thumbs {
     border-radius: 2px;
   }
 
+  .mapimg {
+    box-sizing: border-box;
+    max-height: 600px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  @media (orientation: portrait) {
+    .mapimg {
+      width: 100%;
+      max-height: none;
+    }
+  }
+
 
   #imgtext {
     font-family: Satoshi-Regular, sans-serif;
@@ -622,6 +694,13 @@ div#thumbs {
     text-align: justify;
     max-width: 100%;
     overflow: hidden;
+  }
+
+
+  @media (orientation: portrait) {
+    #imgtext {
+      width: 100%;
+    }
   }
 
 
@@ -666,6 +745,23 @@ nav#arrows {
   pointer-events: none;
 }
 
+  .arrowband {
+    position: fixed;
+    box-sizing: border-box;
+    border: 32px solid transparent;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1005;
+  }
+
+  @media (any-hover: hover) {
+    body:has(.prev-arrow:hover) .band-arrow-prev,
+    body:has(.next-arrow:hover) .band-arrow-next {
+      border-color: #c755c1;
+    }
+  }
+
   div#prevnext {
     max-width: 900px;
     width: calc(100% - 24px);
@@ -687,6 +783,11 @@ nav#arrows {
 
   nav#postpagenav {
     color: rgb(15, 15, 15);
+  }
+
+  nav#textepdfnav {
+    color: rgb(15, 15, 15);
+    margin-top: 24px;
   }
 
   #mainblock {

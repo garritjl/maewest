@@ -10,4 +10,23 @@
 return [
     'debug' => true,
     'yaml.handler' => 'symfony', // already makes use of the more modern Symfony YAML parser: https://getkirby.com/docs/reference/system/options/yaml (will become the default in a future Kirby version)
+    'panel' => [
+        'favicon' => [
+            [
+                'rel'  => 'apple-touch-icon',
+                'type' => 'image/png',
+                'href' => '/apple-touch-icon.png'
+            ],
+            [
+                'rel'  => 'alternate icon',
+                'type' => 'image/png',
+                'href' => '/favicon-32x32.png'
+            ],
+            [
+                'rel'  => 'shortcut icon',
+                'type' => 'image/vnd.microsoft.icon',
+                'href' => '/favicon.ico'
+            ]
+        ]
+    ],
 ];

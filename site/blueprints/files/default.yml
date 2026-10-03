@@ -1,11 +1,3 @@
-# Fields shown when you open a file in the Panel.
-#
-# Kirby picks a file blueprint from the `Template:` line in the file's .txt
-# sidecar and falls back to this one when there isn't any. The gallery images
-# under content/works/ have no template, so this is the blueprint they use.
-# (The starterkit's content/photography/ demo files do set Template: image and
-# therefore use image.yml instead.)
-
 title: Image
 
 columns:

@@ -62,8 +62,6 @@ Poster: - 'file://QgqwqrfKJNE89Gme'
 
 Pics:
 
-- 'file://QgqwqrfKJNE89Gme'
-- 'file://lX12SDIToAKdLlC2'
 - 'file://tF7bDZ8cdPADhNF4'
 - 'file://lgHw3A7lFKijKjwB'
 - 'file://a2CBRNq3eTp4QrBm'
@@ -74,10 +72,16 @@ Pics:
 - 'file://W75XDYJZ605Ud3Vh'
 - 'file://xOy1OS14ASZxYsWK'
 - 'file://NENq9rUtt2jbioOe'
+- 'file://QgqwqrfKJNE89Gme'
+- 'file://lX12SDIToAKdLlC2'
 
 ----
 
-Map: - 'file://XMCoyxbkAdHCLfp4'
+Map: - 'file://XmgSDNaj63y8AJdW'
+
+----
+
+Textepdf: - 'file://b8wSS2gzHimKmll9'
 
 ----
 

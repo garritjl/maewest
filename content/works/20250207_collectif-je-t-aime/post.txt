@@ -67,7 +67,11 @@ Pics:
 
 ----
 
-Map: - 'file://pqeerkUsrSc9Ha96'
+Map: - 'file://Zwac9jaX6HRVqRMM'
+
+----
+
+Textepdf: - 'file://UdCY3Srt5FvnDyfu'
 
 ----
 

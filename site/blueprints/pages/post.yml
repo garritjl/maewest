@@ -54,8 +54,16 @@ columns:
         min: 1
         size: small
 
-      map: 
+      map:
         type: files
         multiple: false
         template: image
+
+      textepdf:
+        label: Téléchargement de texte
+        type: files
+        layout: list
+        template: textepdf
+        uploads: textepdf
+        info: "{{ file.niceSize }}"
       

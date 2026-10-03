@@ -71,7 +71,7 @@ min-width: 40vw;
   }
 
   .vignette {
-    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    box-shadow: 0 0 100px rgba(0,0,0,0.9) inset;
   }
 }
 
@@ -105,7 +105,7 @@ min-width: 40vw;
   }
 
   .vignette {
-    box-shadow: 0 0 100px rgba(0,0,0,0.9) inset;
+    box-shadow: 0 0 60px rgba(0,0,0,0.9) inset;
   }
   button.next {
     display: none;
@@ -318,9 +318,40 @@ html::-webkit-scrollbar {
   width: auto;
   margin: 0 auto;
   z-index: 1005;
-  color: #f8f4f8;
+  color: rgb(15, 15, 15);
 /*   background-color: #ffffff;
   border-bottom: solid 2px #000000; */
+}
+
+#homenav .navribbon {
+  inset: 1px;
+}
+
+#homenav .ribbon-mid {
+  background: #ffffff;
+}
+
+#homenav .ribbon-outline {
+  fill: #ffffff;
+}
+
+#homenav .navitem:link,
+#homenav .navitem:visited {
+  color: #0096f3;
+  background-color: none;
+  text-decoration: none;
+}
+
+#homenav .navitem:hover {
+  color: #0096f3;
+  background-color: #f6ee20;
+  text-decoration: underline;
+}
+
+#homenav .navitem:active {
+  color: #ff0000;
+  background-color: #f6ee20;
+  text-decoration: underline;
 }
 
 

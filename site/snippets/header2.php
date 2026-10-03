@@ -20,7 +20,6 @@
 
   <title><?= $site->title()->esc() ?></title>
 
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   <link rel="stylesheet" href="https://use.typekit.net/sak3gzo.css">
 
   <?= css([
@@ -30,12 +29,14 @@
   ]) ?>
 
   
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= assetv('/apple-touch-icon.png') ?>">
+<link rel="icon" type="image/png" sizes="48x48" href="<?= assetv('/favicon-48x48.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= assetv('/favicon-32x32.png') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= assetv('/favicon-16x16.png') ?>">
+<link rel="icon" href="<?= assetv('/favicon.ico') ?>" sizes="any">
+<link rel="manifest" href="<?= assetv('/site.webmanifest') ?>">
 
-<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileColor" content="#c755c1">
 <meta name="theme-color" content="#ffffff">
 
 </head>

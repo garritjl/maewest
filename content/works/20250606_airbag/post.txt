@@ -49,7 +49,11 @@ Pics:
 
 ----
 
-Map: - 'file://JTAQ7ychGpKIOCPl'
+Map: - 'file://NA8B74sfAvtXS5V9'
+
+----
+
+Textepdf: - 'file://nQjHSAGY8kLFXQEA'
 
 ----
 

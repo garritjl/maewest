@@ -6,6 +6,6 @@ template: post
 empty: No notes yet
 sortBy: date desc
 image:
-  query: page.cover
+  query: page.poster.toFile
   cover: true
   ratio: 3/2

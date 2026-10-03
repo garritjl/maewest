@@ -1,4 +1,4 @@
-Title: Mimi Cracra
+Title: mimi cracra
 
 ----
 
@@ -46,7 +46,11 @@ Pics:
 
 ----
 
-Map: []
+Map: - 'file://NuN8qV6aPgz1BNE2'
+
+----
+
+Textepdf: - 'file://As28Qf4zA4Nub2KI'
 
 ----
 

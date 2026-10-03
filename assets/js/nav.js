@@ -125,7 +125,8 @@
     }
 
     function syncRibbon() {
-      var h = nav.getBoundingClientRect().height;
+      var ribbon = nav.querySelector('.navribbon');
+      var h = (ribbon || nav).getBoundingClientRect().height;
       if (!h) return;
       var left = nav.querySelector('.ribbon-left .ribbon-outline');
       var right = nav.querySelector('.ribbon-right .ribbon-outline');
@@ -149,19 +150,27 @@
     };
   }
 
-  var layouts = [].slice
-    .call(document.querySelectorAll('.ribbonnav'))
-    .map(setup)
-    .filter(Boolean);
+  function init() {
+    var layouts = [].slice
+      .call(document.querySelectorAll('.ribbonnav'))
+      .map(setup)
+      .filter(Boolean);
 
-  if (!layouts.length) return;
+    if (!layouts.length) return;
 
-  function layoutAll() {
-    layouts.forEach(function (fn) { fn(); });
+    function layoutAll() {
+      layouts.forEach(function (fn) { fn(); });
+    }
+
+    window.addEventListener('resize', layoutAll);
+    window.addEventListener('load', layoutAll);
+    layoutAll();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutAll);
   }
 
-  window.addEventListener('resize', layoutAll);
-  if (document.readyState === 'complete') layoutAll();
-  else window.addEventListener('load', layoutAll);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutAll);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

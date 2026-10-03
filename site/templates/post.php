@@ -20,7 +20,6 @@
 
   <title><?= $site->title()->esc() ?></title>
 
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   <link rel="stylesheet" href="https://use.typekit.net/sak3gzo.css">
 
   <?= css([
@@ -30,12 +29,14 @@
   ]) ?>
 
   
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= assetv('/apple-touch-icon.png') ?>">
+<link rel="icon" type="image/png" sizes="48x48" href="<?= assetv('/favicon-48x48.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= assetv('/favicon-32x32.png') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= assetv('/favicon-16x16.png') ?>">
+<link rel="icon" href="<?= assetv('/favicon.ico') ?>" sizes="any">
+<link rel="manifest" href="<?= assetv('/site.webmanifest') ?>">
 
-<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileColor" content="#c755c1">
 <meta name="theme-color" content="#ffffff">
 
 </head>
@@ -119,6 +120,10 @@ var imgLink = document.getElementById("expandedImgLink");
 
 function syncCaptionWidth() {
   if (!expandImg || !imgText) return;
+  if (window.matchMedia("(orientation: portrait)").matches) {
+    imgText.style.width = "";
+    return;
+  }
   imgText.style.width = expandImg.getBoundingClientRect().width + "px";
 }
 
@@ -134,14 +139,45 @@ function selectImg(imgs) {
   }
 }
 
+var ARROW_RING_PAD = 250;
+
 function syncZoneBands() {
-  [["zone-prev", "band-prev"], ["zone-next", "band-next"]].forEach(function (pair) {
-    var zone = document.querySelector("." + pair[0]);
+  [
+    ["zone-prev", "band-prev"],
+    ["zone-next", "band-next"]
+  ].forEach(function (pair) {
+    var source = document.querySelector("." + pair[0]);
     var band = document.querySelector("." + pair[1]);
-    if (!zone || !band) return;
-    var rect = zone.getBoundingClientRect();
+    if (!band) return;
+    if (!source) {
+      band.style.display = "none";
+      return;
+    }
+    var rect = source.getBoundingClientRect();
+    band.style.display = "";
     band.style.left = rect.left + "px";
     band.style.width = rect.width + "px";
+  });
+
+  [
+    ["prev-arrow", "band-arrow-prev"],
+    ["next-arrow", "band-arrow-next"]
+  ].forEach(function (pair) {
+    var source = document.querySelector("." + pair[0] + " .nav-arrow-img");
+    var band = document.querySelector("." + pair[1]);
+    if (!band) return;
+    if (!source) {
+      band.style.display = "none";
+      return;
+    }
+    var rect = source.getBoundingClientRect();
+    if (!rect.width) return;
+    var size = Math.max(rect.width, rect.height) + ARROW_RING_PAD * 2;
+    band.style.display = "";
+    band.style.width = size + "px";
+    band.style.height = size + "px";
+    band.style.left = (rect.left + rect.width / 2 - size / 2) + "px";
+    band.style.top = (rect.top + rect.height / 2 - size / 2) + "px";
   });
 }
 
@@ -259,7 +295,7 @@ if (viewport) {
       <?php if ($page->map()->isNotEmpty()): ?>
         <div id="mapcontainer">
           <div id="mapimagewindow">
-            <a href="<?= $page->map()->toFile()->url() ?>"><img id="expandedImg" src="<?= $page->map()->toFile()->url() ?>"></a>
+            <img class="mapimg" src="<?= $page->map()->toFile()->url() ?>" alt="The exhibition's floor plan">
           </div>
         </div>
       <?php endif ?>
@@ -270,6 +306,20 @@ if (viewport) {
         <img src="/content/backbut.svg" alt="back button" height="227" width="204">
         </a>
 </div> -->
+<?php $textepdf = $page->textepdf()->toFiles() ?>
+<?php if ($textepdf->isNotEmpty()): ?>
+  <nav id="textepdfnav" class="ribbonnav">
+    <?php snippet('ribbonframe') ?>
+
+    <div class="ribbonnav-text">
+      <?php if ($textepdf->count() === 1): ?>
+        <a class="navitem pink" href="<?= $textepdf->first()->url() ?>" download>texte &amp; plan de salle</a>
+      <?php else: ?>
+        <a class="navitem pink" href="<?= $page->url() ?>/texte.zip">texte &amp; plan de salle</a>
+      <?php endif ?>
+    </div>
+  </nav>
+<?php endif ?>
 
     </article>
 
@@ -292,6 +342,10 @@ if (viewport) {
     <?php endif ?>
   </div>
 </nav>
+
+<div class="arrowband band-arrow-prev" aria-hidden="true"></div>
+<div class="arrowband band-arrow-next" aria-hidden="true"></div>
+
 
 <div id="tilescontainer">
   <img src="/assets/images/tilefooter.jpg" id="tilefooter" alt="Black and white floor tiles with embossed letter reading: 'MAE WEST  EST. 2025  LAUSANNE, SUISSE.'">

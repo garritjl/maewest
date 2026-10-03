@@ -8,31 +8,11 @@
         <!-- <h1 class="indextitle"><?= $page->title()->kti() ?></h1> -->
         <img src="/assets/images/indexv2.png" width="214" height="104" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
 
-        <table class="styled-table">
-            <tbody>
+        <div class="indexlist">
             <?php foreach ($item as $item): ?>
-                <tr>
-
-                    <td style="color:rgba(145, 145, 145, 1);">
-                        #
-                    </td>
-
-                    <td>
-                        <?= $item->number()->kti() ?>
-                    </td>
-
-                    <td><a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
-                        <?= $item->title()->kti() ?>
-                    </a></td>
-
-                    <td><a class="pink" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
-                        <?= $item->subtitle()->kti() ?>
-                    </a></td>
-
-                </tr>
-            <?php endforeach ?>    
-            </tbody>
-        </table>
+                <a class="indexrow" <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><span class="indexnum"><span class="indexhash">#</span><?= $item->number()->kti() ?></span><span class="indexname"><?= $item->title()->kti() ?></span><span class="indexartist"><?= $item->subtitle()->kti() ?></span></a>
+            <?php endforeach ?>
+        </div>
 
 
 

@@ -1,25 +1,22 @@
 {
-  "name": "getkirby/starterkit",
-  "description": "Kirby Starterkit",
+  "name": "garritjl/maewest",
+  "description": "Website for Mae West, a gallery and art space in Lausanne, Switzerland",
   "type": "project",
   "keywords": [
     "kirby",
     "cms",
-    "starterkit"
+    "gallery"
   ],
   "authors": [
     {
-      "name": "Bastian Allgeier",
-      "email": "bastian@getkirby.com",
-      "homepage": "https://getkirby.com"
+      "name": "Garrit Lichtenberg",
+      "homepage": "https://garrit.net"
     }
   ],
-  "homepage": "https://getkirby.com",
+  "homepage": "https://maewest.ch",
   "support": {
-    "email": "support@getkirby.com",
-    "issues": "https://github.com/getkirby/starterkit/issues",
-    "forum": "https://forum.getkirby.com",
-    "source": "https://github.com/getkirby/starterkit"
+    "issues": "https://github.com/garritjl/maewest/issues",
+    "source": "https://github.com/garritjl/maewest"
   },
   "require": {
     "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
