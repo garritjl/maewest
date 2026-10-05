@@ -324,15 +324,15 @@ html::-webkit-scrollbar {
 }
 
 #homenav .navribbon {
-  inset: 1px;
+  inset: 3px;
 }
 
 #homenav .ribbon-mid {
-  background: #ffffff;
+  background: #ebebeb;
 }
 
 #homenav .ribbon-outline {
-  fill: #ffffff;
+  fill: #ebebeb;
 }
 
 #homenav .navitem:link,

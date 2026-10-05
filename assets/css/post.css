@@ -746,11 +746,12 @@ nav#arrows {
 }
 
   .arrowband {
+    
     position: fixed;
     box-sizing: border-box;
     border: 32px solid transparent;
     border-radius: 50%;
-    mix-blend-mode: multiply;
+    mix-blend-mode: lighten;
     pointer-events: none;
     z-index: 1005;
   }
@@ -759,6 +760,7 @@ nav#arrows {
     body:has(.prev-arrow:hover) .band-arrow-prev,
     body:has(.next-arrow:hover) .band-arrow-next {
       border-color: #c755c1;
+      background-color: #c755c1;
     }
   }
 
