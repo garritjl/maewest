@@ -223,7 +223,7 @@ h2 {
   .pink:hover {
     color: #c755c1;
     border-radius: 2.5pt;
-    background-color: #f6ee20;
+    background-color: #fce535;
     text-decoration: underline;
   }
   
@@ -237,7 +237,7 @@ h2 {
   .pink:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: #f6ee20;
+    background-color: #fce535;
     text-decoration: none;
   }
 
@@ -252,7 +252,7 @@ h2 {
   .blue:hover {
     color: #0081ff;
     border-radius: 2.5pt;
-    background-color: #f6ee20;
+    background-color: #fce535;
     text-decoration: underline
   }
   
@@ -266,7 +266,7 @@ h2 {
   .blue:active {
     color: #ff0000;
     border-radius: 2.5pt;
-    background-color: #f6ee20;
+    background-color: #fce535;
     text-decoration: none;
   }
 
@@ -344,13 +344,11 @@ html::-webkit-scrollbar {
 
 #homenav .navitem:hover {
   color: #0096f3;
-  background-color: #f6ee20;
   text-decoration: underline;
 }
 
 #homenav .navitem:active {
   color: #ff0000;
-  background-color: #f6ee20;
   text-decoration: underline;
 }
 

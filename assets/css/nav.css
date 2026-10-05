@@ -35,6 +35,53 @@
   white-space: nowrap;
 }
 
+.navitem {
+  position: relative;
+}
+
+.navitem::before,
+.navitem::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  width: var(--navcircle, 0px);
+  height: var(--navcircle, 0px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.navitem::before {
+  background: #fce535;
+}
+
+.navitem::after {
+  border: 1px solid rgb(15, 15, 15);
+  -webkit-mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  -webkit-mask-size: 100% var(--navcircle-top, 0px), 100% var(--navcircle-bottom, 0px);
+  mask-size: 100% var(--navcircle-top, 0px), 100% var(--navcircle-bottom, 0px);
+  -webkit-mask-position: top, bottom;
+  mask-position: top, bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.navitem:hover::before,
+.navitem:active::before,
+.navitem:hover::after,
+.navitem:active::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.navitem:hover,
+.navitem:active {
+  background-color: transparent;
+}
+
 .navline {
   display: flex;
   align-items: center;

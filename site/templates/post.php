@@ -127,6 +127,85 @@ function syncCaptionWidth() {
   imgText.style.width = expandImg.getBoundingClientRect().width + "px";
 }
 
+function syncViewportHeight() {
+  var box = document.getElementById("galleryviewport");
+  if (!box) return;
+
+  if (!window.matchMedia("(max-width: 700px)").matches) {
+    box.style.height = "";
+    return;
+  }
+
+  var thumbs = galleryThumbs();
+  if (!thumbs.length) return;
+
+  var limit = 0.95 * document.documentElement.clientWidth;
+  var width = box.getBoundingClientRect().width;
+  var tallest = 0;
+
+  for (var i = 0; i < thumbs.length; i++) {
+    var thumb = thumbs[i];
+    if (!thumb.naturalWidth || !thumb.naturalHeight) continue;
+    var scale = Math.min(1, width / thumb.naturalWidth, limit / thumb.naturalHeight);
+    var height = thumb.naturalHeight * scale;
+    if (height > tallest) tallest = height;
+  }
+
+  if (tallest) box.style.height = Math.ceil(tallest) + "px";
+}
+
+function syncCaptionHeight() {
+  var box = document.getElementById("galleryviewport");
+  if (!imgText || !box) return;
+
+  var thumbs = galleryThumbs();
+  if (!thumbs.length) return;
+
+  var rect = box.getBoundingClientRect();
+  var portrait = window.matchMedia("(orientation: portrait)").matches;
+  var savedHTML = imgText.innerHTML;
+  var savedWidth = imgText.style.width;
+
+  imgText.style.height = "auto";
+
+  var tallest = 0;
+
+  for (var i = 0; i < thumbs.length; i++) {
+    var thumb = thumbs[i];
+    var width = rect.width;
+
+    if (!portrait && thumb.naturalWidth && thumb.naturalHeight) {
+      var scale = Math.min(
+        1,
+        rect.width / thumb.naturalWidth,
+        rect.height / thumb.naturalHeight
+      );
+      width = thumb.naturalWidth * scale;
+    }
+
+    imgText.style.width = width + "px";
+    imgText.innerHTML = thumb.dataset.caption || "";
+    if (imgText.scrollHeight > tallest) tallest = imgText.scrollHeight;
+  }
+
+  imgText.innerHTML = savedHTML;
+  imgText.style.width = savedWidth;
+
+  var lineHeight = parseFloat(window.getComputedStyle(imgText).lineHeight);
+
+  if (lineHeight && tallest > lineHeight * 3 + 1) {
+    imgText.style.height = "auto";
+  } else {
+    imgText.style.height = tallest + "px";
+  }
+}
+
+function syncCaption() {
+  syncViewportHeight();
+  syncCaptionWidth();
+  syncCaptionHeight();
+}
+
 function selectImg(imgs) {
   expandImg.src = imgs.src;
   imgText.innerHTML = imgs.dataset.caption || "";
@@ -182,9 +261,10 @@ function syncZoneBands() {
 }
 
 if (expandImg) {
-  expandImg.addEventListener("load", syncCaptionWidth);
-  window.addEventListener("resize", syncCaptionWidth);
-  if (expandImg.complete) syncCaptionWidth();
+  expandImg.addEventListener("load", syncCaption);
+  window.addEventListener("resize", syncCaption);
+  window.addEventListener("load", syncCaption);
+  if (expandImg.complete) syncCaption();
 }
 
 window.addEventListener("resize", syncZoneBands);
@@ -227,6 +307,20 @@ if (zoneNext) {
     step(1);
   });
 }
+
+document.addEventListener("keydown", function (e) {
+  if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+
+  var el = e.target;
+  var tag = el && el.tagName ? el.tagName.toLowerCase() : "";
+  if (tag === "input" || tag === "textarea" || tag === "select" || (el && el.isContentEditable)) return;
+
+  if (!galleryThumbs().length) return;
+
+  step(e.key === "ArrowLeft" ? -1 : 1);
+  e.preventDefault();
+});
 
 if (viewport) {
   var startX = 0;
