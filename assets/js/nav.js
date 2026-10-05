@@ -5,7 +5,6 @@
   var SATOSHI_ASCENT = 1.010;
   var SATOSHI_DESCENT = 0.240;
   var DRIFT_EPSILON = 0.05;
-  var CIRCLE_PAD = 10;
   var RIBBON_STROKE = 1;
 
   function measuredBaseline(c) {
@@ -171,35 +170,22 @@
       }
     }
 
-    function sizeCircles() {
-      var lineHeight = parseFloat(getComputedStyle(navtext).lineHeight) || 0;
-      var widest = 0;
-
-      items.forEach(function (el) {
-        var w = el.getBoundingClientRect().width;
-        if (w > widest) widest = w;
-      });
-
-      if (!widest) return;
-
-      var size = Math.ceil(Math.sqrt(widest * widest + lineHeight * lineHeight)) + CIRCLE_PAD;
-      nav.style.setProperty('--navcircle', size + 'px');
-
+    function sizeHighlights() {
       var ribbon = nav.querySelector('.navribbon');
       if (!ribbon) return;
 
       var box = ribbon.getBoundingClientRect();
-      var innerTop = box.top + RIBBON_STROKE;
-      var innerBottom = box.bottom - RIBBON_STROKE;
+      if (!box.height) return;
+
+      var innerTop = box.top + RIBBON_STROKE / 2;
+      var innerBottom = box.bottom - RIBBON_STROKE / 2;
+
+      nav.style.setProperty('--navhl-height', (innerBottom - innerTop).toFixed(2) + 'px');
 
       items.forEach(function (el) {
         var r = el.getBoundingClientRect();
         if (!r.height) return;
-        var centre = r.top + r.height / 2;
-        var top = Math.max(0, innerTop - (centre - size / 2));
-        var bottom = Math.max(0, centre + size / 2 - innerBottom);
-        el.style.setProperty('--navcircle-top', top.toFixed(2) + 'px');
-        el.style.setProperty('--navcircle-bottom', bottom.toFixed(2) + 'px');
+        el.style.setProperty('--navhl-top', (innerTop - r.top).toFixed(2) + 'px');
       });
     }
 
@@ -219,7 +205,7 @@
       correctBaselines();
       fillDots();
       syncRibbon();
-      sizeCircles();
+      sizeHighlights();
     };
   }
 

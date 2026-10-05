@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 
   <title><?= $site->title()->esc() ?></title>
 
@@ -22,7 +22,7 @@
 <link rel="manifest" href="<?= assetv('/site.webmanifest') ?>">
 
 <meta name="msapplication-TileColor" content="#c755c1">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#47759b">
 
 </head>
 <body>

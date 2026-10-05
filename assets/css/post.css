@@ -709,7 +709,6 @@ div#thumbs {
   @media (max-width: 700px) {
     #galleryviewport {
       height: 95vw;
-      align-items: flex-end;
     }
 
     #expandedImg {
@@ -734,10 +733,10 @@ nav#arrows {
 
   .arrowband {
     position: fixed;
-    mix-blend-mode: lighten;
     pointer-events: none;
-    z-index: 1005;
+    z-index: 1007;
     clip-path: circle(0px at 50% 50%);
+/*  pink fill version
     background: radial-gradient(circle at 50% 50%,
       #ffffff 0 40px,
       #c755c1 40px 56px,   #ffffff 56px 57px,
@@ -746,7 +745,16 @@ nav#arrows {
       #c755c1 99px 126px,  #ffffff 126px 127px,
       #c755c1 127px 160px, #ffffff 160px 161px,
       #c755c1 161px 201px, #ffffff 201px 202px,
-      #c755c1 202px 250px, #ffffff 250px 100%);
+      #c755c1 202px 250px, #ffffff 250px 100%); */
+
+    background: radial-gradient(circle at 50% 50%,
+      transparent 0 56px,    #000000 56px 57px,
+      transparent 57px 75px, #000000 75px 76px,
+      transparent 76px 98px, #000000 98px 99px,
+      transparent 99px 126px,  #000000 126px 127px,
+      transparent 127px 160px, #000000 160px 161px,
+      transparent 161px 201px, #000000 201px 202px,
+      transparent 202px 100%);
   }
 
   @keyframes arrowbullseye {

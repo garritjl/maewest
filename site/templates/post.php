@@ -139,19 +139,22 @@ function syncViewportHeight() {
   var thumbs = galleryThumbs();
   if (!thumbs.length) return;
 
-  var limit = 0.95 * document.documentElement.clientWidth;
-  var width = box.getBoundingClientRect().width;
-  var tallest = 0;
+  var current = null;
 
   for (var i = 0; i < thumbs.length; i++) {
-    var thumb = thumbs[i];
-    if (!thumb.naturalWidth || !thumb.naturalHeight) continue;
-    var scale = Math.min(1, width / thumb.naturalWidth, limit / thumb.naturalHeight);
-    var height = thumb.naturalHeight * scale;
-    if (height > tallest) tallest = height;
+    if (thumbs[i].classList.contains("is-selected")) {
+      current = thumbs[i];
+      break;
+    }
   }
 
-  if (tallest) box.style.height = Math.ceil(tallest) + "px";
+  if (!current || !current.naturalWidth || !current.naturalHeight) return;
+
+  var limit = 0.95 * document.documentElement.clientWidth;
+  var width = box.getBoundingClientRect().width;
+  var scale = Math.min(1, width / current.naturalWidth, limit / current.naturalHeight);
+
+  box.style.height = Math.ceil(current.naturalHeight * scale) + "px";
 }
 
 function syncCaptionHeight() {
@@ -216,6 +219,8 @@ function selectImg(imgs) {
   for (var i = 0; i < thumbs.length; i++) {
     thumbs[i].classList.toggle("is-selected", thumbs[i] === imgs);
   }
+
+  syncViewportHeight();
 }
 
 var ARROW_RING_PAD = 250;
