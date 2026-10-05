@@ -47,7 +47,7 @@
   <main class="main">
 
 <div id="toplogodiv">
-  <a href="<?= $site->url() ?>"><img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo"></a>
+  <a href="<?= $site->url() ?>"><img src="<?= assetv('/assets/images/MWlogo_castiron.png') ?>" alt="Mae West logo" id="logo"></a>
 </div>
 
 <nav id="postpagenav" class="ribbonnav">
@@ -426,7 +426,7 @@ if (viewport) {
   <div id="prevnext">
     <?php if ($page->hasPrevListed()): ?>
       <a class="scriptlink prev-arrow" href="<?= $page->prevListed()->url() ?>">
-        <img src="/assets/images/leftarrow_iron.png" alt="Previous exhibition" class="nav-arrow-img">
+        <img src="<?= assetv('/assets/images/leftarrow_iron.png') ?>" alt="Previous exhibition" class="nav-arrow-img">
       </a>
     <?php else: ?>
       <span class="nav-arrow-placeholder" aria-hidden="true"></span>
@@ -434,7 +434,7 @@ if (viewport) {
 
     <?php if ($page->hasNextListed()): ?>
       <a class="scriptlink next-arrow" href="<?= $page->nextListed()->url() ?>">
-        <img src="/assets/images/rightarrow_iron.png" alt="Next exhibition" class="nav-arrow-img">
+        <img src="<?= assetv('/assets/images/rightarrow_iron.png') ?>" alt="Next exhibition" class="nav-arrow-img">
       </a>
     <?php else: ?>
       <span class="nav-arrow-placeholder" aria-hidden="true"></span>
@@ -447,7 +447,7 @@ if (viewport) {
 
 
 <div id="tilescontainer">
-  <img src="/assets/images/tilefooter.jpg" id="tilefooter" alt="Black and white floor tiles with embossed letter reading: 'MAE WEST  EST. 2025  LAUSANNE, SUISSE.'">
+  <img src="<?= assetv('/assets/images/tilefooter.jpg') ?>" id="tilefooter" alt="Black and white floor tiles with embossed letter reading: 'MAE WEST  EST. 2025  LAUSANNE, SUISSE.'">
 </div>
 
   </main>

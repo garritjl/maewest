@@ -6,7 +6,7 @@
 <?php $item = $workspage->children()->listed()->flip() ?>
 
         <!-- <h1 class="indextitle"><?= $page->title()->kti() ?></h1> -->
-        <img src="/assets/images/indexv2.png" width="214" height="104" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
+        <img src="<?= assetv('/assets/images/indexv2.png') ?>" width="214" height="104" style="max-width: 100%; height: auto; margin-left: -4px;" alt="index">
 
         <div class="indexlist">
             <?php foreach ($item as $item): ?>

@@ -34,7 +34,7 @@
 </nav>
 
 <div id="toplogodiv">
-  <img src="/assets/images/MWlogo_castiron.png" alt="Mae West logo" id="logo">
+  <img src="<?= assetv('/assets/images/MWlogo_castiron.png') ?>" alt="Mae West logo" id="logo">
 </div>
 
 <div class="boxes">
@@ -53,12 +53,12 @@
 <!--   <div class="controls">
 
     <button class="next"><span>Previous album</span>
-      <img src="/assets/images/arrowdraft2.png" title="Previous Album">
+      <img src="<?= assetv('/assets/images/arrowdraft2.png') ?>" title="Previous Album">
       </img>
     </button>
 
     <button class="prev"><span>Next album</span>
-    <img src="/assets/images/arrowdraft2right.png" title="Next Album">
+    <img src="<?= assetv('/assets/images/arrowdraft2right.png') ?>" title="Next Album">
     </img>
     </button>
 
@@ -71,7 +71,7 @@
 
 <div class="titleblock">
   <button class="next">
-    <img src="/assets/images/leftarrow_iron.png" id="bookendimg">
+    <img src="<?= assetv('/assets/images/leftarrow_iron.png') ?>" id="bookendimg">
   </button>
 
 <div class="current-title-box">
@@ -83,7 +83,7 @@
 </div>
 
 <button class="prev">
-<img src="/assets/images/rightarrow_iron.png" id="bookendimg">
+<img src="<?= assetv('/assets/images/rightarrow_iron.png') ?>" id="bookendimg">
 </button>
 </div>
 
