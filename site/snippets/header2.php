@@ -54,11 +54,11 @@
   <nav id="homenav">
     
   <p id="navtext">
-    <a class="pink" href="<?= $site->url() ?>">Mae West</a>
+    <a class="navitem pink" href="<?= $site->url() ?>">Mae West</a>
     —
     <?php $children = $site->children()->listed(); ?>
     <?php foreach ($children as $pagename): ?>
-      <a class="pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
+      <a class="navitem pink" href="<?= $pagename->url() ?>"><?= $pagename->title()->esc() ?></a>
       <?php if (!$children->last()->is($pagename)): ?>
         <span class="navstar" aria-hidden="true">⍟</span>
       <?php endif ?>

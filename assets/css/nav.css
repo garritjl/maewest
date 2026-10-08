@@ -35,8 +35,14 @@
   white-space: nowrap;
 }
 
+:root {
+  --navhl-top: -1.5px;
+  --navhl-height: 27.33px;
+}
+
 .navitem {
   position: relative;
+  display: inline-block;
 }
 
 .navitem::before {
@@ -44,8 +50,8 @@
   position: absolute;
   left: -5px;
   right: -5px;
-  top: var(--navhl-top, 0px);
-  height: var(--navhl-height, 100%);
+  top: var(--navhl-top);
+  height: var(--navhl-height);
   background: #fce535;
   z-index: -1;
   pointer-events: none;

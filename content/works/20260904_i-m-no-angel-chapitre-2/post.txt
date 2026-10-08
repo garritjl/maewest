@@ -6,11 +6,11 @@ Subtitle: Exposition Collective
 
 ----
 
-Number: 
+Number: 14
 
 ----
 
-Date: 2026-09-21
+Date: 2026-09-04
 
 ----
 
@@ -26,15 +26,19 @@ Footnotes:
 
 ----
 
-Poster: []
+Poster: - 'file://H8FPclaXHXruialh'
 
 ----
 
-Pics: []
+Pics: - 'file://H8FPclaXHXruialh'
 
 ----
 
 Map: []
+
+----
+
+Textepdf: []
 
 ----
 

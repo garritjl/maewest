@@ -3,43 +3,28 @@
 
 
 :root {
-  --poster-size: 200px;
+  --poster-size: min(200px, 28vh);
 }
 
 @media (orientation: portrait) {
   :root {
-    --poster-size: 150px;
-  }
-}
-
-@media (orientation: landscape) {
-  :root {
-    --poster-size: 200px;
-  }
-}
-
-@media (max-height: 600px) {
-  :root {
-    --poster-size: 125px;
-  }
-}
-
-@media (max-width: 400px) {
-  :root {
-    --poster-size: 75px;
-  }
-}
-
-@media (max-height: 400px) {
-  :root {
-    --poster-size: 75px;
+    --vph: calc(var(--vh, 1vh) * 100);
+    --poster-size: clamp(
+      130px,
+      min(
+        54vw,
+        calc(var(--vph) * 0.56 - 188px),
+        calc(var(--vph) * 0.56 - 33px - min(calc(var(--vph) * 0.243), 48.7vw))
+      ),
+      380px
+    );
   }
 }
 
 @media (max-width: 1320px) {
   
 .titleblock {
-  align-items: end;
+  align-items: stretch;
 }
 .controls {
   width: 90vw; 
@@ -58,16 +43,19 @@ min-width: 40vw;
 }
 
 @media (min-width: 801px) {
+  :root {
+    --title-fs: 24pt;
+    --title-lh: 1;
+  }
+
   h3, h2 {
-    font-size: 24pt;
-    line-height: 24pt;
     margin-top: 2pt;
   }
   h3 {
     margin-bottom: 8pt;
   }
   h5 {
-    font-size: 10pt;
+    --date-fs: 10pt;
   }
 
   .vignette {
@@ -76,24 +64,30 @@ min-width: 40vw;
 }
 
 @media (min-width: 1000px) {
+  :root {
+    --title-fs: 28pt;
+    --title-lh: 1;
+  }
+
   h3, h2 {
-    font-size: 28pt;
-    line-height: 28pt;
     margin-top: 4pt;
   }
   h3 {
     margin-bottom: 8pt;
   }
   h5 {
-    font-size: 12pt;
+    --date-fs: 12pt;
     line-height: 12pt;
   }
 }
 
 @media (max-width: 800px) or (max-height: 300px) {
+  :root {
+    --title-fs: 18pt;
+    --title-lh: 1.22;
+  }
+
   h3, h2 {
-    font-size: 18pt;
-    line-height: 22pt;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -101,7 +95,7 @@ min-width: 40vw;
     margin-bottom: 4pt;
   }
   h5 {
-    font-size: 10pt;
+    --date-fs: 10pt;
   }
 
   .vignette {
@@ -115,30 +109,23 @@ min-width: 40vw;
   }
 }
 
-
 @media (min-height: 800px) {
-.titleblock {
-  bottom: 5vh;
-}
+  .titleblock {
+    bottom: 5vh;
+  }
 }
 
 @media (min-height: 1200px) {
-.titleblock {
-  bottom: 12vh;
-}
+  .titleblock {
+    bottom: 12vh;
+  }
 }
 
 @media (max-height: 799px) {
   .titleblock {
-    bottom: -8pt;
+    bottom: 28px;
   }
-  }
-
-@media (orientation: portrait) and (max-height: 1250px) and (max-width: 800px) {
-  .titleblock {
-      bottom: -8pt;
-    }
-    }
+}
 
 
 * {
@@ -155,9 +142,11 @@ h2 {
     font-variant-alternates: styleset(singlestory);
     font-weight: 300;
     font-style: normal;
-    
+    font-size: calc(var(--title-fs, 18pt) * var(--title-fit, 1));
+    line-height: var(--title-lh, 1.22);
+
     word-wrap: break-word;
-    
+
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -170,7 +159,9 @@ h2 {
     font-variant-alternates: styleset(singlestory);
     font-weight: 300;
     font-style: normal;
-    
+    font-size: calc(var(--title-fs, 18pt) * var(--title-fit, 1));
+    line-height: var(--title-lh, 1.22);
+
     word-wrap: break-word;
     
     
@@ -199,6 +190,10 @@ h2 {
    h5 {
     font-family: Satoshi-Regular, sans-serif;
     font-variant-alternates: styleset(singlestory);
+    font-size: min(
+      var(--date-fs, 10pt),
+      calc(var(--title-fs, 18pt) * var(--title-fit, 1) * 0.8)
+    );
     
     font-weight: 300;
     font-style: normal;
@@ -271,9 +266,8 @@ h2 {
   }
 
 html {
-    height: 100vh; /* set viewport constraint */
-    height: 100svh;
-    min-height: 100%; /* enforce height */
+    height: 100vh; 
+    min-height: 100%;
 }
   
 html::-webkit-scrollbar {
@@ -284,7 +278,6 @@ html::-webkit-scrollbar {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    min-height: 100svh;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -299,7 +292,6 @@ html::-webkit-scrollbar {
     left: 0;
     width: 100%;
     height: 100%;
-    height: 100lvh;
     z-index: -1;
     background-image: url('/content/bg-landscape.jpg');
     background-size: cover;
@@ -315,9 +307,9 @@ html::-webkit-scrollbar {
 
 #homenav {
   position: fixed;
-  top: env(safe-area-inset-top, 0px);
-  left: env(safe-area-inset-left, 0px);
-  right: env(safe-area-inset-right, 0px);
+  top: 0;
+  left: 0;
+  right: 0;
   width: auto;
   margin: 0 auto;
   z-index: 1005;
@@ -372,7 +364,7 @@ html::-webkit-scrollbar {
 
   #logo {
     max-width: 98vw;
-    max-height: 30vh;
+    max-height: 26vh;
     display: block;
     margin: 0 auto;
     z-index: 1001;
@@ -380,23 +372,26 @@ html::-webkit-scrollbar {
 
 .titleblock {
     position: fixed;
-    
+    top: calc(50% + var(--poster-size) * 0.8925 + 12px);
+    bottom: 39px;
+
     left: 50%;
     transform: translateX(-50%);
     background-color: none;
     /* border: .5px solid black; */
     color: black;
-    padding: 10px 10px;
+    padding: 0 10px;
     /* font-size: 1.2rem; */
     border-radius: 6px;
     z-index: 500;
     text-align: center;
     
-    width: 100vw;
+    width: calc(100vw - 24px);
+    max-width: 900px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    align-items: stretch;
+    justify-content: space-between;
+
   }
 
   .current-title-box {
@@ -406,16 +401,22 @@ html::-webkit-scrollbar {
     background-color: none;
     /* border: .5px solid black; */
     color: black;
-    padding: 14px 10px 30px 10px;
+    padding: 0 10px;
     /* font-size: 1.2rem; */
     border-radius: 6px;
     z-index: 500;
     text-align: center;
-    
-    max-width: 1000px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
+
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .titleblock > button {
+    align-self: center;
   }
 
   #bookendimg {
@@ -442,6 +443,9 @@ html::-webkit-scrollbar {
     max-width: 98vw;
     z-index: 1050;
   }
+
+.arrowband { --ring-boost: .7; }
+
 
   button {
     cursor: pointer;
@@ -535,9 +539,8 @@ html::-webkit-scrollbar {
     width: var(--poster-size);
     height: 400px;
     max-height: 100%;
-    transform: translate(-50%, -50%);
-    border-radius: 6px;
-    /* border: 0.5px solid rgb(255, 0, 0); */
+    border-radius: 2px;
+    border: 0.5px solid rgb(25, 25, 25);
     /* display: none; */ /* Comment this out */
   }
   .box:after {
@@ -551,6 +554,8 @@ html::-webkit-scrollbar {
     background-size: cover;
     transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin);
     opacity: 0.75;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 60%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 60%, #000 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,15 +575,36 @@ html::-webkit-scrollbar {
     align-items: center;
   } 
   
+  .box a {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  @media (any-hover: hover) {
+    .box a::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #c755c1;
+      mix-blend-mode: lighten;
+      border-radius: 2px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .box a:hover::after {
+      opacity: 1;
+    }
+  }
+
   .box img {
     position: absolute;
-    height: auto;
-    max-width: 100%;
-    height: auto;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     display: block;
-    top: 0;
-    left: 0;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 2px;
     /* border: 0.5px solid rgb(230, 230, 230); */
   }
@@ -602,7 +628,7 @@ html::-webkit-scrollbar {
 
   div#address {
     position: fixed;
-    bottom: env(safe-area-inset-bottom, 0px);
+    bottom: 0;
     width: 100%;
     text-align: center;
   }

@@ -217,10 +217,6 @@ const scrollToPosition = position => {
   TRIGGER.scroll(SCROLL)
 }
 
-ScrollTrigger.addEventListener('scrollEnd', () =>
-  scrollToPosition(SCRUB.vars.position)
-)
-
 const NEXT = () => scrollToPosition(SCRUB.vars.position - 1 / BOXES.length)
 const PREV = () => scrollToPosition(SCRUB.vars.position + 1 / BOXES.length)
 
@@ -341,15 +337,7 @@ const initialIndex = Math.max(0, BOXES.length - 1);
 const normalized = initialIndex / BOXES.length;
 const initialTime = normalized * LOOP_HEAD.duration();
 
-// set the playhead + scrub to that time-based position
-PLAYHEAD.position = initialTime;
-SCRUB.vars.position = initialTime;
-
-// align the loop timeline to that position (wraps to valid time)
-LOOP_HEAD.totalTime(POSITION_WRAP(PLAYHEAD.position));
-
-// ensure the animation/scrub reflects it and UI updates
-SCRUB.invalidate().restart();
+scrollToPosition(initialTime);
 updateTitle();
 
 

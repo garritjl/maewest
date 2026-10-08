@@ -1,0 +1,66 @@
+.arrowband {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1007;
+  clip-path: circle(0px at 50% 50%);
+/*  pink fill version
+  background: radial-gradient(circle at 50% 50%,
+    #ffffff 0 40px,
+    #c755c1 40px 56px,   #ffffff 56px 57px,
+    #c755c1 57px 75px,   #ffffff 75px 76px,
+    #c755c1 76px 98px,   #ffffff 98px 99px,
+    #c755c1 99px 126px,  #ffffff 126px 127px,
+    #c755c1 127px 160px, #ffffff 160px 161px,
+    #c755c1 161px 201px, #ffffff 201px 202px,
+    #c755c1 202px 250px, #ffffff 250px 100%); */
+
+  --ring: 1;
+  background: radial-gradient(circle at 50% 50%,
+    transparent 0 calc(56px * var(--ring)),
+    #000000 calc(56px * var(--ring)) calc(57px * var(--ring)),
+    transparent calc(57px * var(--ring)) calc(75px * var(--ring)),
+    #000000 calc(75px * var(--ring)) calc(76px * var(--ring)),
+    transparent calc(76px * var(--ring)) calc(98px * var(--ring)),
+    #000000 calc(98px * var(--ring)) calc(99px * var(--ring)),
+    transparent calc(99px * var(--ring)) calc(126px * var(--ring)),
+    #000000 calc(126px * var(--ring)) calc(127px * var(--ring)),
+    transparent calc(127px * var(--ring)) calc(160px * var(--ring)),
+    #000000 calc(160px * var(--ring)) calc(161px * var(--ring)),
+    transparent calc(161px * var(--ring)) calc(201px * var(--ring)),
+    #000000 calc(201px * var(--ring)) calc(202px * var(--ring)),
+    transparent calc(202px * var(--ring)) 100%);
+}
+
+@keyframes arrowbullseye {
+  0%   { clip-path: circle(calc(98px  * var(--ring)) at 50% 50%); }
+  33%  { clip-path: circle(calc(160px * var(--ring)) at 50% 50%); }
+  67%  { clip-path: circle(calc(250px * var(--ring)) at 50% 50%); }
+  100% { clip-path: circle(calc(250px * var(--ring)) at 50% 50%); }
+}
+
+@media (any-hover: hover) {
+  body:has(.prev-arrow:hover) .band-arrow-prev,
+  body:has(.next-arrow:hover) .band-arrow-next {
+    animation: arrowbullseye .15s step-end forwards;
+  }
+}
+
+body:has(.prev-arrow:active) .band-arrow-prev,
+body:has(.next-arrow:active) .band-arrow-next {
+  animation: arrowbullseye .15s step-end forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(.prev-arrow:hover) .band-arrow-prev,
+  body:has(.next-arrow:hover) .band-arrow-next,
+  body:has(.prev-arrow:active) .band-arrow-prev,
+  body:has(.next-arrow:active) .band-arrow-next {
+    animation: none;
+    clip-path: circle(calc(250px * var(--ring)) at 50% 50%);
+  }
+}
+
+.prev-arrow,
+.next-arrow {
+  -webkit-tap-highlight-color: transparent;
+}

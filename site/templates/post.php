@@ -25,6 +25,7 @@
   <?= css([
     assetv('assets/css/post.css'),
     assetv('assets/css/nav.css'),
+    assetv('assets/css/arrows.css'),
     '@auto'
   ]) ?>
 
@@ -223,8 +224,6 @@ function selectImg(imgs) {
   syncViewportHeight();
 }
 
-var ARROW_RING_PAD = 250;
-
 function syncZoneBands() {
   [
     ["zone-prev", "band-prev"],
@@ -243,26 +242,6 @@ function syncZoneBands() {
     band.style.width = rect.width + "px";
   });
 
-  [
-    ["prev-arrow", "band-arrow-prev"],
-    ["next-arrow", "band-arrow-next"]
-  ].forEach(function (pair) {
-    var source = document.querySelector("." + pair[0] + " .nav-arrow-img");
-    var band = document.querySelector("." + pair[1]);
-    if (!band) return;
-    if (!source) {
-      band.style.display = "none";
-      return;
-    }
-    var rect = source.getBoundingClientRect();
-    if (!rect.width) return;
-    var size = Math.max(rect.width, rect.height) + ARROW_RING_PAD * 2;
-    band.style.display = "";
-    band.style.width = size + "px";
-    band.style.height = size + "px";
-    band.style.left = (rect.left + rect.width / 2 - size / 2) + "px";
-    band.style.top = (rect.top + rect.height / 2 - size / 2) + "px";
-  });
 }
 
 if (expandImg) {
@@ -312,6 +291,8 @@ if (zoneNext) {
     step(1);
   });
 }
+
+document.addEventListener("touchstart", function () {}, { passive: true });
 
 document.addEventListener("keydown", function (e) {
   if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
@@ -444,6 +425,8 @@ if (viewport) {
 
 <div class="arrowband band-arrow-prev" aria-hidden="true"></div>
 <div class="arrowband band-arrow-next" aria-hidden="true"></div>
+
+<?= js(assetv('assets/js/arrows.js')) ?>
 
 
 <div id="tilescontainer">

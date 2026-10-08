@@ -3,13 +3,14 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <title><?= $site->title()->esc() ?></title>
 
   <?= css([
     assetv('assets/css/home.css'),
     assetv('assets/css/nav.css'),
+    assetv('assets/css/arrows.css'),
     assetv('assets/css/templates/home.css')
   ]) ?>
 
@@ -22,7 +23,7 @@
 <link rel="manifest" href="<?= assetv('/site.webmanifest') ?>">
 
 <meta name="msapplication-TileColor" content="#c755c1">
-<meta name="theme-color" content="#47759b">
+<meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
@@ -70,7 +71,7 @@
 <div class="vignette"></div>
 
 <div class="titleblock">
-  <button class="next">
+  <button class="next prev-arrow">
     <img src="<?= assetv('/assets/images/leftarrow_iron.png') ?>" id="bookendimg">
   </button>
 
@@ -82,10 +83,13 @@
   <h5>#<span id="current-number"></span> – <span id="current-date">5 Nov 2025</span></h5>
 </div>
 
-<button class="prev">
+<button class="prev next-arrow">
 <img src="<?= assetv('/assets/images/rightarrow_iron.png') ?>" id="bookendimg">
 </button>
 </div>
+
+<div class="arrowband band-arrow-prev" aria-hidden="true"></div>
+<div class="arrowband band-arrow-next" aria-hidden="true"></div>
 
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed() ?>
@@ -149,6 +153,10 @@ if ($item && !$item->isEmpty()) {
 <script type="module" src="<?= assetv('assets/js/coverflow.js') ?>"></script>
 
 <?= js(assetv('assets/js/nav.js')) ?>
+
+<?= js(assetv('assets/js/arrows.js')) ?>
+
+<?= js(assetv('assets/js/titlefit.js')) ?>
 
 <div id="address">
   <p id="address">Pré-Du-Marché 19 1004 Lausanne Suisse</p>
