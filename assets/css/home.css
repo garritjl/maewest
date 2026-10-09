@@ -99,7 +99,7 @@ min-width: 40vw;
   }
 
   .vignette {
-    box-shadow: 0 0 60px rgba(0,0,0,0.9) inset;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9) inset;
   }
   button.next {
     display: none;
@@ -276,7 +276,7 @@ html::-webkit-scrollbar {
 
   body {
     display: grid;
-    place-items: center;
+    place-items: start center;
     min-height: 100vh;
     padding: 0;
     margin: 0;
@@ -368,6 +368,12 @@ html::-webkit-scrollbar {
     display: block;
     margin: 0 auto;
     z-index: 1001;
+  }
+
+  @media (min-width: 1000px) and (min-height: 800px) {
+    #logo {
+      max-height: 30vh;
+    }
   }
 
 .titleblock {
@@ -579,23 +585,28 @@ html::-webkit-scrollbar {
     position: absolute;
     inset: 0;
     display: block;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .box a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #c755c1;
+    mix-blend-mode: lighten;
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
   }
 
   @media (any-hover: hover) {
-    .box a::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: #c755c1;
-      mix-blend-mode: lighten;
-      border-radius: 2px;
-      opacity: 0;
-      pointer-events: none;
-    }
-
     .box a:hover::after {
       opacity: 1;
     }
+  }
+
+  .box a:active::after {
+    opacity: 1;
   }
 
   .box img {
