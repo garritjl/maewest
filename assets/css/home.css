@@ -4,6 +4,7 @@
 
 :root {
   --poster-size: min(200px, 28vh);
+  --render-scale: 2;
 }
 
 @media (orientation: portrait) {
@@ -323,12 +324,12 @@ html::-webkit-scrollbar {
 }
 
 #homenav .ribbon-mid {
-  background: #ebebeb;
+  background: #f0f0f0;
 }
 
 #homenav .ribbon-outline {
-  fill: #ebebeb;
-}
+  fill: #f0f0f0;
+} 
 
 #homenav .navitem:link,
 #homenav .navitem:visited {
@@ -542,11 +543,11 @@ html::-webkit-scrollbar {
     
     left: 50%;
     top: 50%;
-    width: var(--poster-size);
+    width: calc(var(--poster-size) * var(--render-scale));
     height: 400px;
-    max-height: 100%;
-    border-radius: 2px;
-    border: 0.5px solid rgb(25, 25, 25);
+    max-height: calc(100% * var(--render-scale));
+    border-radius: calc(2px * var(--render-scale));
+    border: calc(0.5px * var(--render-scale)) solid rgb(25, 25, 25);
     /* display: none; */ /* Comment this out */
   }
   .box:after {
@@ -558,7 +559,7 @@ html::-webkit-scrollbar {
     width: 100%;
     background-image: var(--src);
     background-size: cover;
-    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin);
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, calc(-0.5vmin * var(--render-scale)));
     opacity: 0.75;
     -webkit-mask-image: linear-gradient(to bottom, transparent 60%, #000 100%);
     mask-image: linear-gradient(to bottom, transparent 60%, #000 100%);
@@ -574,7 +575,7 @@ html::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     /** background: linear-gradient(var(--bg) 50%, transparent); **/
-    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin) scale(1.01);
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, calc(-0.5vmin * var(--render-scale))) scale(1.01);
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -585,28 +586,37 @@ html::-webkit-scrollbar {
     position: absolute;
     inset: 0;
     display: block;
+    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
 
-  .box a::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #c755c1;
-    mix-blend-mode: lighten;
-    border-radius: 2px;
-    opacity: 0;
-    pointer-events: none;
+  html.is-grabbing,
+  html.is-grabbing * {
+    cursor: grabbing !important;
   }
 
   @media (any-hover: hover) {
-    .box a:hover::after {
-      opacity: 1;
+    .box.is-hovered img {
+      filter: url(#pinkmap);
+    }
+
+    .box.is-hovered {
+      box-shadow: 0 0 calc(10px * var(--render-scale)) calc(7px * var(--render-scale)) #fce535;
+    }
+
+    .box.is-hovered:has(a:active) {
+      box-shadow: 0 0 calc(20px * var(--render-scale)) calc(4px * var(--render-scale)) #fce535;
     }
   }
 
-  .box a:active::after {
-    opacity: 1;
+  @media (any-hover: none) {
+    .box a:active img {
+      filter: url(#pinkmap);
+    }
+
+    .box:has(a:active) {
+      box-shadow: 0 0 calc(20px * var(--render-scale)) calc(4px * var(--render-scale)) #fce535;
+    }
   }
 
   .box img {
@@ -616,7 +626,7 @@ html::-webkit-scrollbar {
     height: 100%;
     display: block;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: calc(2px * var(--render-scale));
     /* border: 0.5px solid rgb(230, 230, 230); */
   }
 

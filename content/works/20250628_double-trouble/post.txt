@@ -34,26 +34,20 @@ Z va se coucher et devient signature de N tandis que M carotte ses rayures.
 
 Et Zobi la mouche !
 
-----
 
-Textede:
-
+::: right
 Nicolas Chardon
 Paris, 01.07.2025
+:::
 
 ----
 
-Footnotes: 
-
-----
-
-Poster: - 'file://yYKseWxNBN6Rg9Hb'
+Poster: - 'file://Q4qPZZgEXCsVSmki'
 
 ----
 
 Pics:
 
-- 'file://yYKseWxNBN6Rg9Hb'
 - 'file://wadX8PDrjPBAcOzZ'
 - 'file://pztOchReIgbdznES'
 - 'file://mDWOI5KAts8HdhNl'
@@ -66,6 +60,7 @@ Pics:
 - 'file://wxypl9eSqmaUQ6JK'
 - 'file://3SpypKdKgRdM0QA8'
 - 'file://ZAmm7kBgg8PDD8Ez'
+- 'file://Q4qPZZgEXCsVSmki'
 
 ----
 
@@ -74,10 +69,6 @@ Map: - 'file://niwMfgnddv2WxCki'
 ----
 
 Textepdf: - 'file://Xn0c3iO402NRMETp'
-
-----
-
-Texte-de: 
 
 ----
 

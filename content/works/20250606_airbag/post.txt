@@ -14,19 +14,14 @@ Date: 2025-06-06
 
 ----
 
-Description: 
+Description:
+
+(image: airbagtexte_1.webp)
+(image: airbagtexte_2.webp)
 
 ----
 
-Textede: 
-
-----
-
-Footnotes: 
-
-----
-
-Poster: - 'file://YH4188pCN5GezBPb'
+Poster: - 'file://9c4dPSZRlhSCW6mq'
 
 ----
 
@@ -45,7 +40,7 @@ Pics:
 - 'file://UHCiNB5c5RtZfBek'
 - 'file://dmxJDNryFVDPkDbN'
 - 'file://DdAEymQ20jSVzYh4'
-- 'file://YH4188pCN5GezBPb'
+- 'file://9c4dPSZRlhSCW6mq'
 
 ----
 
@@ -54,10 +49,6 @@ Map: - 'file://NA8B74sfAvtXS5V9'
 ----
 
 Textepdf: - 'file://nQjHSAGY8kLFXQEA'
-
-----
-
-Texte-de: 
 
 ----
 

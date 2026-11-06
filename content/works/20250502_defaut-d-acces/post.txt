@@ -26,18 +26,16 @@ L’artiste refuse le cynisme et nous offre aussi des plaisirs simples, loin du 
 
 La touriste tient à son souvenir comme le pèlerin à sa relique, la détective à sa preuve, le collectionneur à sa trouvaille. Le trésor de l’une peut être le déchet de l’autre. Ce qui est sûr, c’est qu’ici le déchet n’est pas le dégueu (on finit par s’attacher aux pigeons), ni le banal d’ailleurs, comme le prouvent les sculptures Kit Carresse et Caffè Opera.
 
-Au mur, Kit Carresse est constituée d’une petite boîte transparente remplie de bouchons de stylos, un trésor familial appartenant à la grand-mère de l’artiste qui donne son nom au titre, dont l’orthographe rappelle une étiquette mal traduite. Le mapping et son graphisme évoquent les presses hydrauliques des déchetteries et de l’algorithme, et font diversion aux questions qu’on se pose face à l’objet (Pourquoi? Combien de lettres ou dessins pour autant de stylos? etc.). Dans le Caffè Opera version diorama, on retrouve un lieu culturel hybride comme
-Dezoteux les aime, en mêlant musée immersif, Montmartre et l’Italie pour le prix d’un. Un mapping qui brille, un coup de peinture, et c’est reparti. La serviette, le déchet prend le statut de trouvaille, une relique du Sacré Cœur et d’un café sicilien.
+Au mur, Kit Carresse est constituée d’une petite boîte transparente remplie de bouchons de stylos, un trésor familial appartenant à la grand-mère de l’artiste qui donne son nom au titre, dont l’orthographe rappelle une étiquette mal traduite. Le mapping et son graphisme évoquent les presses hydrauliques des déchetteries et de l’algorithme, et font diversion aux questions qu’on se pose face à l’objet (Pourquoi? Combien de lettres ou dessins pour autant de stylos? etc.). Dans le Caffè Opera version diorama, on retrouve un lieu culturel hybride comme Dezoteux les aime, en mêlant musée immersif, Montmartre et l’Italie pour le prix d’un. Un mapping qui brille, un coup de peinture, et c’est reparti. La serviette, le déchet prend le statut de trouvaille, une relique du Sacré Cœur et d’un café sicilien.
 
 La vitrine invite, protège, rappelle que l’on se trouve face à un objet de valeur, prêt à se faire désirer. Les chef-d’œuvres des galeries de la place du Tertre restent moins intéressantes que le reflet de la vie du quartier. La structure du Caffè Opera fait dos à la vitrine, presque pour se moquer, et les Pokémon qui ornent ses murs rient eux aussi car on ne peut pas les attraper. Dans Kit Carresse, la vitrine miniature expose un héritage trivial rendu précieux par le geste de le garder. Défaut d’accès propose une expérience de lèche vitrine qui questionne nos pulsions et sème la confusion quant à notre façon de faire sens de ce qui nous entoure. Rien n’est vraiment saisissable mais tout est gratuit, message reçu.
 
-----
 
-Textede: Flavia Vuagniaux
+::: right
+Flavia Vuagniaux
+:::
 
-----
 
-Footnotes:
 
 ¹ « The precondition for kitsch...is the availability close at hand of a fully matured cultural tradition » (Clement Greenberg, Avant-Garde and Kitsch. 1961), (Abraham Moles, Le kitsch: L’art du bonheur. 1971) 
 ² « First, I want to suggest the state of being suspended, a looking or listening so rapt that it is an exemption from ordinary conditions, that it becomes a suspended temporality, a hovering out of time...It implies the possibility of a fixation, of holding something in wonder or contemplation, in which the attentive subject is both immobile and ungrounded. » (Jonathan Crary, Suspensions of Perception: Attention, Spectacle, and Modern Culture. 1999) 
@@ -46,7 +44,7 @@ Footnotes:
 
 ----
 
-Poster: - 'file://KezU0NiDFGkjFzde'
+Poster: - 'file://nNDQexgx6aN93G4e'
 
 ----
 
@@ -64,7 +62,7 @@ Pics:
 - 'file://t5Y8c8nWrvZR6hDj'
 - 'file://3FRhZBG7m8Z6qu9E'
 - 'file://TqZ7UaL0TQPAsyfR'
-- 'file://KezU0NiDFGkjFzde'
+- 'file://nNDQexgx6aN93G4e'
 
 ----
 
@@ -73,10 +71,6 @@ Map: - 'file://9b54kMOuZ4Xjs9hw'
 ----
 
 Textepdf: - 'file://r1sGgQrfxDwIfeLz'
-
-----
-
-Texte-de: 
 
 ----
 

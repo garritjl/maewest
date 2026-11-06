@@ -15,7 +15,6 @@ columns:
         create: default
         templates:
           - about
-          - home
           - contact
           - default
       

@@ -74,13 +74,8 @@
     </div>
 
         <?php
-          $pics   = $page->pics()->toFiles();
-          $poster = $page->poster()->toFile();
-
-          
-          $gallery = $poster ? $pics->not($poster) : $pics;
-          $default = $gallery->first() ?? $poster;
-          $thumbs  = $poster && $pics->has($poster) ? $gallery->clone()->add($poster) : $gallery;
+          $thumbs  = $page->pics()->toFiles();
+          $default = $thumbs->first() ?? $page->poster()->toFile();
 
           $hasCaptions = $thumbs->filter(fn ($image) => $image->caption()->isNotEmpty())->isNotEmpty();
         ?>
@@ -347,28 +342,11 @@ if (viewport) {
         <hr>
     </div>
 
-        <p class="postdescription" id="description">
-            <?= $page->description()->kti() ?>
-        </p>
+        <div class="postdescription" id="description">
+            <?= $page->description()->kt() ?>
+        </div>
 
         <br>
-
-        <p class="postdescription" id="textede">
-          <?= $page->textede()->kti() ?>
-        </p>
-
-      <?php if ($page->footnotes()->isNotEmpty()): ?>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <p class="postdescription" >
-          <?= $page->footnotes()->kti() ?>
-        </p>
-      <?php endif ?>
 
         <br>
 

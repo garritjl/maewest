@@ -39,17 +39,18 @@ t’aime
 *Je
 t’aime.*
 
+
+::: right
+Julie / Julot Wuhrmann
+:::
+
+
+
+Le Collectif je t’aime est composé d’Achille Meier, Anna Kawahara, Charlie Jannes, Giada Gollin, Romane Roy, Romain Rochat, Seline Symons et Tom Paul Grbic
+
 ----
 
-Textede: Julie / Julot Wuhrmann
-
-----
-
-Footnotes: Le Collectif je t’aime est composé d’Achille Meier, Anna Kawahara, Charlie Jannes, Giada Gollin, Romane Roy, Romain Rochat, Seline Symons et Tom Paul Grbic
-
-----
-
-Poster: - 'file://9IPQnXDiGwgVpR4C'
+Poster: - 'file://QtKyjmhqq8SFw8Pf'
 
 ----
 
@@ -63,7 +64,7 @@ Pics:
 - 'file://eBuwvBUnEXS9J8UR'
 - 'file://Sa1XEJyHgr5eKHwf'
 - 'file://E2Y9Dgss60DDhSh8'
-- 'file://9IPQnXDiGwgVpR4C'
+- 'file://QtKyjmhqq8SFw8Pf'
 
 ----
 
@@ -72,10 +73,6 @@ Map: - 'file://Zwac9jaX6HRVqRMM'
 ----
 
 Textepdf: - 'file://UdCY3Srt5FvnDyfu'
-
-----
-
-Texte-de: 
 
 ----
 

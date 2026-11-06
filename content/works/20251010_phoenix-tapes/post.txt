@@ -48,15 +48,7 @@ BEDROOM finds its continuation in the silence and frozen motion of a single shot
 
 ----
 
-Textede: 
-
-----
-
-Footnotes: 
-
-----
-
-Poster: - 'file://QgqwqrfKJNE89Gme'
+Poster: - 'file://JaQdQjZiu8bfa88i'
 
 ----
 
@@ -72,8 +64,8 @@ Pics:
 - 'file://W75XDYJZ605Ud3Vh'
 - 'file://xOy1OS14ASZxYsWK'
 - 'file://NENq9rUtt2jbioOe'
-- 'file://QgqwqrfKJNE89Gme'
-- 'file://lX12SDIToAKdLlC2'
+- 'file://JaQdQjZiu8bfa88i'
+- 'file://wGXghd90CuVAAjQb'
 
 ----
 
@@ -82,10 +74,6 @@ Map: - 'file://XmgSDNaj63y8AJdW'
 ----
 
 Textepdf: - 'file://b8wSS2gzHimKmll9'
-
-----
-
-Texte-de: 
 
 ----
 

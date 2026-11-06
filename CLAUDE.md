@@ -12,7 +12,7 @@ Website for Mae West, a gallery/art space in Lausanne, Switzerland (see README.m
 
 Content lives in `content/` as `.txt` files (Kirby fields separated by `----`), one folder per page.
 
-- `content/works/<YYYYMMDD>_<slug>/` — the exhibitions/projects. Each is a `post` page with fields: `title`, `subtitle`, `number` (sequential exhibition number), `date`, `description`, `textede` (the "Texte de" author credit), `footnotes`, `poster` (cover image), `pics` (gallery files), `map` (optional). Images sit in the same folder with `.jpg.txt` sidecars (uuid metadata).
+- `content/works/<YYYYMMDD>_<slug>/` — the exhibitions/projects. Each is a `post` page with fields: `title`, `subtitle`, `number` (sequential exhibition number), `date`, `description`, `poster` (cover image), `pics` (gallery files, shown in the order saved), `map` (optional), `textepdf` (optional text download). Images sit in the same folder with `.jpg.txt` sidecars (uuid metadata).
 - `content/works/works.txt` is the parent "Works Index"; unlisted (no number prefix).
 - Numbered folders `1_table`, `2_about`, `3_contact` are the listed top-level pages that make up the nav (`$site->children()->listed()`). `home`, `coverflow`, `sandbox`, `photography`, `error` are unnumbered/unlisted.
 - `content/site.txt` holds site title and footer.
@@ -23,7 +23,7 @@ Content lives in `content/` as `.txt` files (Kirby fields separated by `----`), 
 The live design uses the `*2` variants and the templates below; much of the rest is unused Starterkit boilerplate (`header.php`, `footer.php`, `album`, `note(s)`, `photography`, `works`, `coverflow.*`, `layouts`, models/controllers/collections for notes and albums).
 
 - `templates/home.php` — standalone HTML page (does not use header2). Renders a GSAP "infinite cover flow" carousel of works' posters. PHP builds `carouselTitles/Subtitles/Dates/Numbers` arrays from `page('works')->children()->listed()` and injects them as JS globals for `assets/js/coverflow.js`. Dates are formatted in French via `IntlDateFormatter('fr_FR')`. Styles: `assets/css/home.css`.
-- `templates/post.php` — a single work; standalone HTML (does not use a header snippet, only `footer2`). Poster + thumbnail gallery with inline `selectImg()` JS, description, textede, footnotes, optional map, and previous/next arrows via `prevListed()/nextListed()`. Styles: `assets/css/post.css`.
+- `templates/post.php` — a single work; standalone HTML (does not use a header snippet, only `footer2`). Poster + thumbnail gallery with inline `selectImg()` JS, description, optional map, and previous/next arrows via `prevListed()/nextListed()`. Styles: `assets/css/post.css`.
 - `templates/table.php` — the "index" table of all works (reverse order) using `header2`/`footer2`. Styles: `assets/css/index.css`.
 - `templates/about.php`, `contact.php`, `default.php` — text pages using `header2`/`footer2`.
 - `snippets/header2.php` / `footer2.php` — current shared header/footer for text pages.

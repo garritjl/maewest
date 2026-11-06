@@ -33,13 +33,28 @@ columns:
       
       description:
         type: textarea
-
-      textede:
-        type: textarea
-        label: Texte de
-
-      footnotes:
-        type: textarea
+        size: large
+        buttons:
+          - headlines
+          - "|"
+          - bold
+          - italic
+          - code
+          - "|"
+          - link
+          - email
+          - file
+          - "|"
+          - ul
+          - ol
+          - "|"
+          - alignleft
+          - aligncenter
+          - alignright
+        help: Use the file button in the toolbar to place an image on its own line between paragraphs.
+        files:
+          query: page.images
+        uploads: image
 
       poster: fields/poster
 
@@ -47,7 +62,7 @@ columns:
         type: files
         layout: cards
         template: image
-        info: "{{ file.dimensions }}"
+        info: '{{ file.dimensions }}{< file.caption.isNotEmpty ? "<br>“" : "" >}{{ file.caption.excerpt(40) }}{< file.caption.isNotEmpty ? "”" : "" >}'
         image:
           ratio: 5/4
           cover: true

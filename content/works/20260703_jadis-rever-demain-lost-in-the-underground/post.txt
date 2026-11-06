@@ -14,26 +14,29 @@ Date: 2026-07-03
 
 ----
 
-Description: 
+Description:
+
+**Jadis Rêver Demain, Lost in the Underground** (2023) est une installation photographique composée de huit caissons lumineux qui déploie une fable visuelle autour du devenir.
+
+Entre rêve et fiction, elle met en scène un personnage extraterrestre évoluant dans un monde souterrain, métaphore d’un espace intérieur où s’opèrent les transformations qui accompagnent la construction de soi.
+
+Inspirée par les logiques du surréalisme ainsi que par les structures narratives d’Alice au Pays des Merveilles, l’installation construit un récit où le réel se déforme pour laisser émerger des dimensions plus intérieures, souvent invisibles.
+En élaborant sa propre fiction, Ianne Kenfack Kitio s’empare de la photographie comme d’un outil de narration pour explorer l’identité, non comme un état figé mais comme un processus de transformation perpétuelle.
+
+Présentées sous forme de caissons lumineux, les photographies empruntent au langage de l’affiche publicitaire et de l’image urbaine. Inspirée notamment par le travail de Jeff Wall, cette forme interroge la manière dont les images sont montrées, diffusées et perçues. À la frontière entre œuvre photographique et dispositif de présentation, chaque image acquiert une présence physique qui invite autant à la contemplation qu’à l’immersion.
+
+Avec **Jadis Rêver Demain, Lost in the Underground,** Ianne Kenfack Kitio pose les fondements d’une recherche qu’elle poursuit aujourd’hui autour du devenir.
+Considérée non comme une identité fixe mais comme un état transitoire, cette notion traverse désormais sa pratique et nourrit une réflexion sur la manière dont les images participent à la construction de nos identités en particulier à travers les représentations de la féminité.
 
 ----
 
-Textede: 
-
-----
-
-Footnotes: 
-
-----
-
-Poster: - 'file://qwUlgz4vC53LMXmt'
+Poster: - 'file://tdyjMfZvbSvliKVu'
 
 ----
 
 Pics:
 
 - 'file://zHhrWkZAn0eMWNsG'
-- 'file://qwUlgz4vC53LMXmt'
 - 'file://PbsQ1jXXqMJpxn4k'
 - 'file://XulI2MGi6i1O6dM2'
 - 'file://PW0wka82URXYEPYg'
@@ -47,10 +50,15 @@ Pics:
 - 'file://9h1mmHgMfCZ77gTs'
 - 'file://TVaKq2HZR0aaebXg'
 - 'file://8YTyE47gTe7mYAMG'
+- 'file://tdyjMfZvbSvliKVu'
 
 ----
 
-Map: []
+Map: - 'file://ha2HnqzDqLGxmVat'
+
+----
+
+Textepdf: - 'file://9te4UVQpydWmXiVx'
 
 ----
 

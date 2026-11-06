@@ -44,26 +44,20 @@ In the lucid cruelty of the Marquis de Sade’s world, Bataille discerned a deep
 
 *Let them eat cake.*
 
-----
 
-Textede:
-
+::: right
 Aïcha Revellat
 Basel, October 2025
+:::
 
 ----
 
-Footnotes: 
-
-----
-
-Poster: - 'file://gC35IF2o9TyreBWY'
+Poster: - 'file://HmKfaVTxFtllhGuV'
 
 ----
 
 Pics:
 
-- 'file://gC35IF2o9TyreBWY'
 - 'file://uy7aFvThOpA4EsJp'
 - 'file://D1UXiWeWw8Uho4KF'
 - 'file://vkyJvNTCHR8JjeHp'
@@ -81,6 +75,7 @@ Pics:
 - 'file://Xa0qof1yPpdTODHV'
 - 'file://n44CVjpmKR6Vixjw'
 - 'file://XvAuj5KtLPLa7Uul'
+- 'file://HmKfaVTxFtllhGuV'
 
 ----
 
@@ -89,10 +84,6 @@ Map: - 'file://1eJng813GXtllrMG'
 ----
 
 Textepdf: - 'file://b80013YCn8kor4SQ'
-
-----
-
-Texte-de: texte de Aïcha Revellat
 
 ----
 

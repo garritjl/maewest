@@ -14,15 +14,16 @@ Date: 2026-09-04
 
 ----
 
-Description: 
+Description:
 
-----
+**Adam Chodzko** (1965, London, UK) is a visual artist exploring collective imagination – its visions, knowledge, desires, ambiguities, and contradictions – shaping our connections with each another and the worlds we inhabit. His multimedia works often take the form of searches; trying to see collectively, in relation with others. But also trying to glimpse with others what we’re keen to look awayfrom. Investigating the spectrum between what we think we are and what we could become, his heterogeneous body of work ranges from video, performance, drawing, and sculpture to socially-engaged processes, often questioning what art might be. His work is exhibited across diverse places and audiences, from traditional museums and galleries to ordinary – or even obscure – urban or rural spaces, often questioning where art might be. Wherever it encounters its audience Chodzko’s art practice aims to catalyse new collective imaginaries, co-creating communities of seeing. His work investigates how our play with the visual might deepen our perception of the world, reshape our connections with others, and enable a more equal sharing of power.
 
-Textede: 
+**Taleb Lachheb** (2003, Lyon, FR) développe une pratique fondée sur la recherche en études culturelles et l’étude des processus de disparition, de consommation et de reconfiguration des représentations en tant qu’espace de protestation politique, de discours critique et sur notre besoin de nous confronter aux problèmes contemporains, à travers des œuvres sur papier, des sculptures, des installations, des photographies et par l’image en mouvement, ainsi que des textes et des paroles. Son ambition est de révéler les troubles, les doutes, les controverses et les frictions plutôt que de chercher à synthétiser ou à fournir des conclusions univoques, dévoilant ainsi les forces et les facteurs sous-jacent·e·s de la pensée et de la formation de soi à travers une interaction constante entre les tensions et les processus. Théo mario Coppola
 
-----
+**Clara Roumégoux** (1998, Boulogne-Billancourt, FR) s’intéresse autant aux relations de production qu’à la pression d’être productif. Abordant des sujets tels que l’alimentation, le design ou le sommeil, son regard critique se déploie à travers la subversion d’objets si familiers qu’ils en deviennent les signifiants de notre époque. Par l’image en mouvement, l’impression, l’installation ou des clins d’œil (taquins) à la peinture, le travail de Clara interroge ce qui va de soi et s’attaque à une tendance à l’anomie. Sa pratique brouille les frontières entre domesticité et industrie, entre soin et efficacité. C. Chavan
 
-Footnotes: 
+
+Son travail a fait l’objet d’expositions personnelles à la Salle Crosnier, Genève (2026) et à Portland, Zurich (2025), et a figuré dans plusieurs expositions collectives, notamment à l’Inside-Out Art Museum, Pékin (2025) ; au CAN - Centre d’art de Neuchâtel, Neuchâtel (2025) ; à Live In Your Head, Genève (2024) ; Popgunart, New York (2024) ; La Rada, Locarno (2023) ; Tunnel Tunnel, Lausanne (2023) ; Wallstreet, Fribourg (2023) ; et One gee in Fog, Genève (2023). Sa pratique s’est aussi déployée à travers un projet de vitrine à Marseille (2025) et une performance en duo avec Thomas Prost à Forde, Genève (2026). En septembre, son travail sera visible à Geneva Art Week, à 3353, Genève ; Not Today, Paris ; ainsi qu’à Forde, Genève.
 
 ----
 
@@ -34,11 +35,11 @@ Pics: - 'file://H8FPclaXHXruialh'
 
 ----
 
-Map: []
+Map: - 'file://Fe056PxWLsfFO5y1'
 
 ----
 
-Textepdf: []
+Textepdf: - 'file://AxnivnOw5HsoGFX1'
 
 ----
 

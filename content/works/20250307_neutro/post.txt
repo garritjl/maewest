@@ -26,17 +26,14 @@ A curator friend once confessed to me, “I don’t want to be too bold or too c
 
 Mosset’s move to the desert feels like a statement, whether he intended it or not. Maybe, in the end, neutrality is just another mirage, shimmering under the staggering heat.
 
-----
 
-Textede: Alan Sierra
-
-----
-
-Footnotes: 
+::: right
+Alan Sierra
+:::
 
 ----
 
-Poster: - 'file://DsazSZN4Ik64AdgU'
+Poster: - 'file://0eVt1KANhSYmWDV8'
 
 ----
 
@@ -52,7 +49,7 @@ Pics:
 - 'file://Vn96BZ1GXsobRgBU'
 - 'file://vrZr3abzzfcGIhrd'
 - 'file://gfu4sZo5CjvZXC6h'
-- 'file://DsazSZN4Ik64AdgU'
+- 'file://0eVt1KANhSYmWDV8'
 
 ----
 
@@ -61,10 +58,6 @@ Map: - 'file://QDZ2yB9OXqeFhCI6'
 ----
 
 Textepdf: - 'file://W8GKfEXXelSxuyDS'
-
-----
-
-Texte-de: 
 
 ----
 

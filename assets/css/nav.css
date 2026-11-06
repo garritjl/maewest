@@ -36,8 +36,8 @@
 }
 
 :root {
-  --navhl-top: -1.5px;
-  --navhl-height: 27.33px;
+  --navhl-top: 1.5px;
+  --navhl-height: 21.33px;
 }
 
 .navitem {

@@ -14,15 +14,29 @@ Date: 2026-10-02
 
 ----
 
-Description: 
+Description:
 
-----
+I said, “Maybe. But this song I like.”
 
-Textede: 
+“All right, if you like it.”
 
-----
+After Sam Coslow left, I said, “I’ve got the new story line.”
 
-Footnotes: 
+Emanuel Cohen gave me a quick worried look. “You what, Mae?”
+
+“A story for your damned sets.”
+
+When Sam Coslow was playing the chorus of “Mademoiselle Fifi,” the entire story came to me, right from the beginning to the end. The fake French girl from Tenth Avenue. I told Emanuel Cohen and Eddie Sutherland to remember every word of the story I was going to tell them, because I might forget what I said. They didn’t want to trust to memory either, so they called in a stenographer to take it down in shorthand.
+
+In about an hour and a half I dictated the story line, with plot and incidents, and introduced the main and minor characters. Later we called it *Every Day’s a Holiday.*
+
+In my part as Peaches O’Day, who, after selling the Brooklyn Bridge once too often, became Mademoiselle Fifi, I used a black wig. Somehow I had always wanted to have dark hair. “Peaches” was what the boys back in Brooklyn used to call me when I was a kid.
+
+
+::: right
+Cassidy Toner
+Taken from Mae West - Goodness Had Nothing To Do With It, 1959.
+:::
 
 ----
 
@@ -34,11 +48,11 @@ Pics: - 'file://5O2ttsdvvGZWoW2Q'
 
 ----
 
-Map: []
+Map: - 'file://ppAgHgVNMLFhQyZj'
 
 ----
 
-Textepdf: []
+Textepdf: - 'file://NQZP1eToE3a2tUTL'
 
 ----
 

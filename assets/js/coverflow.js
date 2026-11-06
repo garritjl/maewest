@@ -35,6 +35,10 @@
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(Draggable);
 
+const RENDER_SCALE = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--render-scale')) || 1
+const X_START = -50 + 300 / RENDER_SCALE
+const X_END = -50 - 300 / RENDER_SCALE
+
 gsap.set('.box', {
   yPercent: -50,
 })
@@ -56,17 +60,17 @@ SHIFTS.forEach((BOX, index) => {
   const BOX_TL = gsap
     .timeline()
     .set(BOX, {
-      xPercent: 250,
+      xPercent: X_START,
       rotateY: -50,
       opacity: 0,
-      scale: 0.5,
+      scale: 0.5 / RENDER_SCALE,
     })
     // Opacity && Scale
     .to(
       BOX,
       {
         opacity: 1,
-        scale: 1,
+        scale: 1 / RENDER_SCALE,
         duration: 0.1,
       },
       0
@@ -75,7 +79,7 @@ SHIFTS.forEach((BOX, index) => {
       BOX,
       {
         opacity: 0,
-        scale: 0.5,
+        scale: 0.5 / RENDER_SCALE,
         duration: 0.1,
       },
       0.9
@@ -84,10 +88,10 @@ SHIFTS.forEach((BOX, index) => {
     .fromTo(
       BOX,
       {
-        xPercent: 250,
+        xPercent: X_START,
       },
       {
-        xPercent: -350,
+        xPercent: X_END,
         duration: 1,
         immediateRender: false,
         ease: 'power1.inOut',
@@ -113,7 +117,7 @@ SHIFTS.forEach((BOX, index) => {
       BOX,
       {
         z: 100,
-        scale: 1.25,
+        scale: 1.25 / RENDER_SCALE,
         duration: 0.1,
         repeat: 1,
         yoyo: true,
@@ -288,8 +292,14 @@ gsap.set('button', {
 Draggable.create('.drag-proxy', {
   type: 'x',
   trigger: '.box',
+  cursor: 'pointer',
+  activeCursor: 'grabbing',
   onPress() {
     this.startOffset = SCRUB.vars.position
+    document.documentElement.classList.add('is-grabbing')
+  },
+  onRelease() {
+    document.documentElement.classList.remove('is-grabbing')
   },
   onDrag() {
     SCRUB.vars.position = this.startOffset + (this.startX - this.x) * 0.001
@@ -299,6 +309,23 @@ Draggable.create('.drag-proxy', {
     scrollToPosition(SCRUB.vars.position)
   },
 })
+
+let hoveredBox = null
+
+const setHoveredBox = box => {
+  if (box === hoveredBox) return
+  if (hoveredBox) hoveredBox.classList.remove('is-hovered')
+  hoveredBox = box
+  if (hoveredBox) hoveredBox.classList.add('is-hovered')
+}
+
+document.addEventListener('pointermove', e => {
+  if (e.pointerType !== 'mouse') return
+  setHoveredBox(e.target.closest ? e.target.closest('.box') : null)
+})
+
+document.documentElement.addEventListener('pointerleave', () => setHoveredBox(null))
+window.addEventListener('blur', () => setHoveredBox(null))
 
 const updateTitle = () => {
   const currentIndex = Math.round(SCRUB.vars.position * BOXES.length) % BOXES.length;

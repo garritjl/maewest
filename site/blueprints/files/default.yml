@@ -9,7 +9,6 @@ columns:
           caption:
             label: Caption
             type: text
-            help: Shown in grey under the image when it is selected in the gallery.
 
   - width: 1/3
     sections:

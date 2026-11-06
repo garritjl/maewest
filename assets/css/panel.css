@@ -1,0 +1,9 @@
+@media screen and (max-width: 60rem) {
+  .k-sections.k-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .k-sections.k-grid > .k-column {
+    grid-column: 1 / -1;
+  }
+}

@@ -27,6 +27,16 @@
 
 </head>
 <body>
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+  <filter id="pinkmap" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0"/>
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues="0.169 0.780 0.925"/>
+      <feFuncG type="table" tableValues="0.059 0.333 0.969"/>
+      <feFuncB type="table" tableValues="0.165 0.757 0.933"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
 <?php $workspage = page('works'); ?>  
 <?php $item = $workspage->children()->listed() ?>
 
@@ -43,7 +53,19 @@
   <?php if ($poster = $item->poster()->toFile()): ?>
     <div class="box" >
       <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
-        <img src="<?= $poster->resize(850)->url() ?>">
+        <img
+          src="<?= $poster->thumb(['width' => 1200, 'format' => 'webp'])->url() ?>"
+          srcset="<?= $poster->srcset([
+            '600w'  => ['width' => 600, 'format' => 'webp'],
+            '900w'  => ['width' => 900, 'format' => 'webp'],
+            '1200w' => ['width' => 1200, 'format' => 'webp'],
+            '1600w' => ['width' => 1600, 'format' => 'webp'],
+            '2000w' => ['width' => 2000, 'format' => 'webp'],
+            '2400w' => ['width' => 2400, 'format' => 'webp'],
+          ]) ?>"
+          sizes="(orientation: portrait) min(108vw, 760px), min(400px, 56vh)"
+          alt="<?= $item->title()->esc() ?>"
+        >
       </a>
     </div>
 

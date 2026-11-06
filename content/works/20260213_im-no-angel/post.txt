@@ -27,21 +27,12 @@ weecolors
 
 ----
 
-Textede: 
-
-----
-
-Footnotes: 
-
-----
-
-Poster: - 'file://MHiHCPCKRxTAgVuz'
+Poster: - 'file://jE6M0nTJlCgo37jE'
 
 ----
 
 Pics:
 
-- 'file://MHiHCPCKRxTAgVuz'
 - 'file://BFHKOFlhxPjAM6UT'
 - 'file://K6kRrMlGiKB5XkJr'
 - 'file://3QZrsVrMRkKkEVHZ'
@@ -64,6 +55,7 @@ Pics:
 - 'file://NKnSCIUBJWygSE34'
 - 'file://Ky0jAW6Plm0XP3mo'
 - 'file://QE9DddRk2KOqYHMU'
+- 'file://jE6M0nTJlCgo37jE'
 
 ----
 
@@ -72,10 +64,6 @@ Map: - 'file://tdgT4kWQ1MuCOp6r'
 ----
 
 Textepdf: - 'file://DIqMrXiXnWhaNsmH'
-
-----
-
-Texte-de: 
 
 ----
 

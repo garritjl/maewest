@@ -18,21 +18,12 @@ Description:
 
 ----
 
-Textede: 
-
-----
-
-Footnotes: 
-
-----
-
-Poster: - 'file://g3t4jlfksrbgIeIy'
+Poster: - 'file://fBbWQV8M7Z9yGsgt'
 
 ----
 
 Pics:
 
-- 'file://g3t4jlfksrbgIeIy'
 - 'file://OQ0iM9QoTJ2I1cOM'
 - 'file://VTRHkhOG3EHHxtBI'
 - 'file://vm8WlBWnXBUADdgg'
@@ -60,6 +51,7 @@ Pics:
 - 'file://dFBcDI9iTaUaT2D5'
 - 'file://MHeEvNWzk9iv6zAS'
 - 'file://yNj6LBMgjuBA5iq0'
+- 'file://fBbWQV8M7Z9yGsgt'
 
 ----
 
@@ -67,7 +59,7 @@ Map: []
 
 ----
 
-Texte-de: 
+Textepdf: []
 
 ----
 

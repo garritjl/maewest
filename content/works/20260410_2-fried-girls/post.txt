@@ -22,13 +22,7 @@ Vous êtes cordialement invitées à la dream blunt rotation apocalyptique de Th
 
 Aux duos de BFF éclatées au sol mais plus complémentaires qu’un cold brew et son Lotus Biscoff Surprise donut (Thilda recommande), aux grumpy girls et leur silly girls attitrées, vous êtes invitées à vous réfugier de la fin du monde dans ce hameau de paix à l’intersection de l’art et de la pharmacologie, sous les nuages qui recouvrent un rooftop en pleine ville. Si votre amitié fusionnelle ne suffit pas pour vaincre l’ennemi, l’ennui, les zombies, alors le combo café dilué et pause clope avec les 2 Fried Girls sera votre antidote. Rendez-vous au Krispy Kreme le plus proche, matching outfit recommandé.
 
-----
-
-Textede: 
-
-----
-
-Footnotes: 
+(image: big-bisou.png)
 
 ----
 
@@ -38,7 +32,6 @@ Poster: - 'file://xdC4wxqbS306DfKw'
 
 Pics:
 
-- 'file://xdC4wxqbS306DfKw'
 - 'file://7Mdd5t7HeIWD2ghR'
 - 'file://u3r3KfHepD4bheko'
 - 'file://d70dB4wSKIhmxdIv'
@@ -55,6 +48,7 @@ Pics:
 - 'file://l75vzaqQ8QgSNisJ'
 - 'file://9qlyPEFrQdBF3KCI'
 - 'file://inPq81YMw9p0EJwO'
+- 'file://xdC4wxqbS306DfKw'
 
 ----
 
@@ -63,10 +57,6 @@ Map: - 'file://RgEcgzgSx7iH2YKV'
 ----
 
 Textepdf: - 'file://9IG7vkt209NqA1xL'
-
-----
-
-Texte-de: 
 
 ----
 

@@ -2,7 +2,7 @@
 @import url("candydarling.css");
 
 @media (max-width: 700px) {
-  p.postdescription {
+  .postdescription {
     margin-left: 10pt;
     margin-right: 10pt;
   }
@@ -25,7 +25,7 @@
 
 
 @media (min-width: 701px) {
-  p.postdescription {
+  .postdescription {
     margin-left: 50pt;
     margin-right: 50pt;
   }
@@ -46,7 +46,7 @@
 }
   
 @media (min-width: 1000px) {
-    p.postdescription {
+    .postdescription {
       margin-left: 80pt;
       margin-right: 80pt;
     }
@@ -174,6 +174,14 @@ h1 {
     padding: 0 0 0 0;
   }
 
+  #navtext a {
+    display: inline-block;
+    line-height: 16pt;
+    padding-bottom: 2px;
+    margin-bottom: -2px;
+    border-radius: 0;
+  }
+
   p#prevnext {
     font-family: candydarling, sans-serif;
     font-size: 30pt;
@@ -193,8 +201,77 @@ h1 {
     margin-top: 36pt;
   }
 
-  #textede {
-    text-align: right;
+  #description > * + * {
+    margin-top: 16pt;
+  }
+
+  #description [class^="align-"] > * + * {
+    margin-top: 16pt;
+  }
+
+  #description [class^="align-"],
+  #description [class^="align-"] p {
+    text-align: justify;
+  }
+
+  #description .align-left,
+  #description .align-left p {
+    text-align-last: left;
+  }
+
+  #description .align-center,
+  #description .align-center p {
+    text-align-last: center;
+  }
+
+  #description .align-right,
+  #description .align-right p {
+    text-align-last: right;
+  }
+
+  #description h1,
+  #description h2 {
+    font-family: Satoshi-Bold, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  #description h1 {
+    font-size: 30pt;
+  }
+
+  #description h2 {
+    font-size: 26pt;
+  }
+
+  #description .blank-lines {
+    margin-top: 0;
+  }
+
+  #description figure {
+    margin: 32pt 0;
+    text-align: center;
+  }
+
+  #description figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #description figcaption {
+    font-family: Satoshi-Regular, sans-serif;
+    font-variant-alternates: styleset(singlestory);
+    font-size: 10pt;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #9c989c;
+    margin-top: 8px;
   }
 
 .nav-arrow-img {
@@ -333,7 +410,9 @@ tr:nth-of-type(even) {
 
 }
 
-  strong {
+  strong,
+  b {
+    font-family: Satoshi-Medium, sans-serif;
     font-weight: 500;
   }
   
@@ -448,28 +527,28 @@ tr:nth-of-type(even) {
 
   .pink:link {
     color: #c755c1;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: none; 
     text-decoration: none;
   }
   
   .pink:hover {
     color: #c755c1;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: #fce535;
     text-decoration: underline;
   }
 
   .pink:visited {
     color: #c755c1;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: none; 
     text-decoration: none;
   }
   
   .pink:active {
     color: #ff0000;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: #fce535;
     text-decoration: underline;
   }
@@ -477,28 +556,28 @@ tr:nth-of-type(even) {
 /** social links (blue) **/
   .blue:link {
     color: #0096f3;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: none; 
     text-decoration: none;
   }
   
   .blue:hover {
     color: #0096f3;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: #fce535;
     text-decoration: underline;
   }
 
   .blue:visited {
     color: #0096f3;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: none; 
     text-decoration: none;
   }
   
   .blue:active {
     color: #ff0000;
-    border-radius: 2.5pt;
+    border-radius: 0;
     background-color: #fce535;
     text-decoration: underline;
   }
@@ -612,6 +691,13 @@ div#thumbs {
   img#gallerythumb.is-selected {
     border-color: #fce535;
     box-shadow: 0 0 0 3px #fce535, 0 0 0 3.5px #3d3d3d;
+  }
+
+  @media (hover: hover) {
+    img#gallerythumb:not(.is-selected):hover {
+      outline: 0.5px solid #3d3d3d;
+      outline-offset: 3px;
+    }
   }
 
   #gallerywindow {

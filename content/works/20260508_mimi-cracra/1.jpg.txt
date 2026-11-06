@@ -1,4 +1,4 @@
-Caption: this is a test caption for images
+Caption: 
 
 ----
 

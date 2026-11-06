@@ -1,0 +1,37 @@
+Title: Friend Part I
+
+----
+
+Subtitle: Lydia Belevich
+
+----
+
+Number: 16
+
+----
+
+Date: 2026-10-30
+
+----
+
+Description: 
+
+----
+
+Poster: - 'file://En7p7mtu4LJaHCON'
+
+----
+
+Pics: - 'file://En7p7mtu4LJaHCON'
+
+----
+
+Map: []
+
+----
+
+Textepdf: []
+
+----
+
+Uuid: 8PSgUy0kL5XXJnqC

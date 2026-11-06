@@ -39,23 +39,23 @@ Alors Crystal fantôme explose, Crystal fantôme heurte, se brise, brise tout, n
 
 Crystal ne fera plus jamais de gâteaux.
 
+
+::: right
+Margaux Bonopera
+:::
+
+
+
+Texte annonce du film en préparation de Camille Aleña, Miss Crystal, les films du Blaireau
+
 ----
 
-Textede: Margaux Bonopera
-
-----
-
-Footnotes: Texte annonce du film en préparation de Camille Aleña, Miss Crystal, les films du Blaireau
-
-----
-
-Poster: - 'file://8L7qUXg62IY8bhdl'
+Poster: - 'file://uEa1gOWwxfcjw3Hj'
 
 ----
 
 Pics:
 
-- 'file://8L7qUXg62IY8bhdl'
 - 'file://b10wH2QT2fyQU2jI'
 - 'file://TLQrB06dKIaPrdUe'
 - 'file://TJiLEXpENjxBMAmL'
@@ -71,6 +71,7 @@ Pics:
 - 'file://KlMx2Q0wC8s5L6tZ'
 - 'file://zftK1EzffGLw82DQ'
 - 'file://J0biUHMzXAB0mbW7'
+- 'file://uEa1gOWwxfcjw3Hj'
 
 ----
 
@@ -79,10 +80,6 @@ Map: []
 ----
 
 Textepdf: - 'file://ALJRVEyNaOHqwg90'
-
-----
-
-Texte-de: 
 
 ----
 
