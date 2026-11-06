@@ -195,14 +195,11 @@ abstract class Model
 		$image = $this->model->query($query ?? null);
 
 		// validate the query result
-		if (
-			$image instanceof CmsFile ||
-			$image instanceof Asset
-		) {
-			return $image;
-		}
-
-		return null;
+		return match (true) {
+			$image instanceof CmsFile === true && $image->isListable() === true => $image,
+			$image instanceof Asset === true => $image,
+			default => null
+		};
 	}
 
 	/**
@@ -231,8 +228,12 @@ abstract class Model
 		// for card layouts with `cover: true` provide
 		// crops based on the card ratio
 		if ($layout === 'cards') {
-			$ratio = explode('/', $settings['ratio'] ?? '1/1');
-			$ratio = $ratio[0] / $ratio[1];
+			$ratio = $settings['ratio'] ?? '1/1';
+
+			if (is_numeric($ratio) === false) {
+				$ratio = explode('/', $ratio);
+				$ratio = $ratio[0] / $ratio[1];
+			}
 
 			return $image->srcset([
 				$sizes[0] . 'w' => [
