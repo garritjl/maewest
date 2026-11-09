@@ -48,7 +48,7 @@
   <main class="main">
 
 <div id="toplogodiv">
-  <a href="<?= $site->url() ?>"><img src="<?= assetv('/assets/images/MWlogo_castiron.png') ?>" alt="Mae West logo" id="logo"></a>
+  <a href="<?= $site->url() ?>"><img src="<?= assetv('/assets/images/MWlogo_castiron.webp') ?>" alt="Mae West logo" id="logo"></a>
 </div>
 
 <nav id="postpagenav" class="ribbonnav">

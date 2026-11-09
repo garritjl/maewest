@@ -14,6 +14,13 @@
     assetv('assets/css/templates/home.css')
   ]) ?>
 
+  <?= js([
+    assetv('assets/js/vendor/gsap.min.js'),
+    assetv('assets/js/vendor/ScrollTrigger.min.js'),
+    assetv('assets/js/vendor/Draggable.min.js')
+  ], ['defer' => true]) ?>
+  <script type="module" src="<?= assetv('assets/js/coverflow.js') ?>"></script>
+
   
 <link rel="apple-touch-icon" sizes="180x180" href="<?= assetv('/apple-touch-icon.png') ?>">
 <link rel="icon" type="image/png" sizes="48x48" href="<?= assetv('/favicon-48x48.png') ?>">
@@ -45,15 +52,19 @@
 </nav>
 
 <div id="toplogodiv">
-  <img src="<?= assetv('/assets/images/MWlogo_castiron.png') ?>" alt="Mae West logo" id="logo">
+  <img src="<?= assetv('/assets/images/MWlogo_castiron.webp') ?>" alt="Mae West logo" id="logo">
 </div>
 
 <div class="boxes">
-<?php foreach ($item as $item): ?>
-  <?php if ($poster = $item->poster()->toFile()): ?>
+<?php $works = $item->filter(fn ($work) => $work->poster()->toFile() !== null) ?>
+<?php $last = $works->count() - 1 ?>
+<?php foreach ($works->values() as $index => $work): ?>
+  <?php $poster = $work->poster()->toFile() ?>
+  <?php $away = min($last - $index, $index + 1) ?>
     <div class="box" >
-      <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+      <a <?php e($work->isOpen(), 'aria-current="page"') ?> href="<?= $work->url() ?>">
         <img
+          <?php if ($away === 0): ?>fetchpriority="high"<?php elseif ($away > 4): ?>fetchpriority="low"<?php endif ?>
           src="<?= $poster->thumb(['width' => 1200, 'format' => 'webp'])->url() ?>"
           srcset="<?= $poster->srcset([
             '600w'  => ['width' => 600, 'format' => 'webp'],
@@ -63,13 +74,12 @@
             '2000w' => ['width' => 2000, 'format' => 'webp'],
             '2400w' => ['width' => 2400, 'format' => 'webp'],
           ]) ?>"
-          sizes="(orientation: portrait) min(108vw, 760px), min(400px, 56vh)"
-          alt="<?= $item->title()->esc() ?>"
+          sizes="(orientation: portrait) min(76vw, 543px), min(286px, 40vh)"
+          alt="<?= $work->title()->esc() ?>"
         >
       </a>
     </div>
 
-  <?php endif ?>
 <?php endforeach ?>
   
 
@@ -171,8 +181,6 @@ if ($item && !$item->isEmpty()) {
   const carouselDates = <?= json_encode($dates, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
   const carouselNumbers = <?= json_encode($numbers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 </script>
-
-<script type="module" src="<?= assetv('assets/js/coverflow.js') ?>"></script>
 
 <?= js(assetv('assets/js/nav.js')) ?>
 

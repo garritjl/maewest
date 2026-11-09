@@ -562,6 +562,7 @@ html::-webkit-scrollbar {
     top: 50%;
     width: calc(var(--poster-size) * var(--render-scale));
     height: 400px;
+    opacity: 0;
     max-height: calc(100% * var(--render-scale));
     border-radius: calc(2px * var(--render-scale));
     border: calc(0.5px * var(--render-scale)) solid rgb(25, 25, 25);
