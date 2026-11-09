@@ -182,6 +182,8 @@ if ($item && !$item->isEmpty()) {
 
 <?= js(assetv('assets/js/glitter.js')) ?>
 
+<?= js(assetv('assets/js/shimmer.js')) ?>
+
 <div id="address">
   <p id="address">Pré-Du-Marché 19 1004 Lausanne Suisse</p>
 </div>
