@@ -207,6 +207,8 @@ void main() {
   gl.enable(gl.BLEND)
 
   const scratch = document.createElement('canvas')
+  const probe = document.createElement('div')
+  probe.style.cssText = 'position:fixed;top:0;left:0;height:0;visibility:hidden;pointer-events:none;width:var(--bg-width, 0px)'
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   let img = null
@@ -225,14 +227,19 @@ void main() {
     const width = Math.max(2, Math.round(rect.width * scale))
     const height = Math.max(2, Math.round(rect.height * scale))
 
+    const ratio = img.naturalHeight / img.naturalWidth
+    const w = Math.max(probe.getBoundingClientRect().width, rect.width, rect.height / ratio)
+    const h = w * ratio
+    const [left, top] = getComputedStyle(document.body, '::before').backgroundPosition.split(' ')
+    const place = (value, room) => value.endsWith('%') ? room * parseFloat(value) / 100 : parseFloat(value)
+    const sx = width / rect.width
+    const sy = height / rect.height
+
     scratch.width = width
     scratch.height = height
     const ctx = scratch.getContext('2d')
-    const cover = Math.max(width / img.naturalWidth, height / img.naturalHeight)
-    const w = img.naturalWidth * cover
-    const h = img.naturalHeight * cover
     ctx.imageSmoothingQuality = 'high'
-    ctx.drawImage(img, (width - w) / 2, (height - h) / 2, w, h)
+    ctx.drawImage(img, place(left, rect.width - w) * sx, place(top, rect.height - h) * sy, w * sx, h * sy)
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, scratch)
     scratch.width = 1
     scratch.height = 1
@@ -317,6 +324,8 @@ void main() {
   }
 
   document.body.prepend(canvas)
+  document.body.append(probe)
   window.addEventListener('resize', refit)
+  document.addEventListener('DOMContentLoaded', refit)
   refit()
 })()

@@ -285,7 +285,12 @@ html::-webkit-scrollbar {
     background: var(--bg);
   }
 
- 
+
+  body {
+    --disc-radius: calc(var(--poster-size) * 1.315);
+    --bg-width: max(100vw, 125vh, calc(var(--disc-radius) * 5.47));
+  }
+
   body::before {
     content: "";
     position: fixed;
@@ -295,12 +300,16 @@ html::-webkit-scrollbar {
     height: 100%;
     z-index: -1;
     background-image: url('/content/bg-landscape.jpg');
-    background-size: cover;
+    background-size: var(--bg-width) auto;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   @media (orientation: portrait) {
+    body {
+      --bg-width: max(100vw, 80vh, calc(var(--disc-radius) * 4.38));
+    }
+
     body::before {
       background-image: url('/content/bg-portrait.jpg');
     }
@@ -381,8 +390,9 @@ html::-webkit-scrollbar {
   }
 
   #logo {
+    --logo-fit: calc((var(--vh, 1vh) * 50 - var(--poster-size) * 0.8925 - 22pt) / 0.89);
     max-width: 98vw;
-    max-height: 26vh;
+    max-height: clamp(10vh, var(--logo-fit), 26vh);
     display: block;
     margin: 0 auto;
     z-index: 1001;
@@ -390,7 +400,7 @@ html::-webkit-scrollbar {
 
   @media (min-width: 1000px) and (min-height: 800px) {
     #logo {
-      max-height: 30vh;
+      max-height: clamp(10vh, var(--logo-fit), 30vh);
     }
   }
 
